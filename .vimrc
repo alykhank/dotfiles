@@ -29,6 +29,7 @@ if has("gui_running")           " GUI is running or is about to start
     colorscheme solarized		" Use solarized colorscheme
     " set guifont=Consolas:h11
     " set guifont=Inconsolata:h11
+	set guifont=Menlo:h15
     set guioptions-=T           " No toolbar
     set guioptions-=m           " Disallows gui menubar
     set guioptions-=r           " No scrollbars
@@ -40,8 +41,8 @@ set tabstop=4					" Set tab width
 set shiftwidth=4                " Set CTRL-T, > (add indent) & CTRL-D, < (remove indent) widths
 set shiftround					" Round indents to multiples of shiftwidth
 set autoindent                  " Enable autoindentation for new lines to match indent level of previous line
-set smartindent                 " Automatically indent lines after opening braces
-set cindent                     " Enable indenting for C-style source code (including C++ and Java)
+" set smartindent                 " Automatically indent lines after opening braces
+" set cindent                     " Enable indenting for C-style source code (including C++ and Java)
 set backspace=indent,eol,start  " Backspace through everything in insert mode
 
 "" Searching
