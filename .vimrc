@@ -69,7 +69,7 @@ nnoremap <CR> :nohlsearch<CR>
 " Clear search buffer by pressing Return
 
 "" Clipboard
-" set clipboard=unnamed         " Use system clipboard for yank and put - deprecated in OS X Mountain Lion
+set clipboard=unnamed           " Use system clipboard for yank and put in MacVim - terminal vim functionality deprecated in OS X Mountain Lion
 " set go+=a                     " Automatically copy visual selection to the clipboard
 
 "" Mappings
