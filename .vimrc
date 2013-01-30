@@ -24,20 +24,6 @@ set linespace=4                 " Set line widths
 set scrolloff=3                 " Keep lines visible
 " set visualbell                    " Flash instead of beeping
 
-"" GUI
-if has("gui_running")           " GUI is running or is about to start
-    set lines=40 columns=160    " Set gvim window size
-    set cursorline              " Highlight the current row
-    set background=dark         " Use dark background
-    colorscheme solarized       " Use 'Solarized' colorscheme
-    " set guifont=Consolas:h11
-    " set guifont=Inconsolata:h11
-    set guifont=Menlo:h14       " Use Menlo 14pt
-    set guioptions-=T           " No toolbar
-    set guioptions-=m           " No GUI menubar
-    " set guioptions-=r         " No scrollbars
-endif
-
 "" Wrapping
 set linebreak                   " Wrap only at word boundaries
 set showbreak=↪                 " Use character to indicate wrapped lines
@@ -48,7 +34,7 @@ set listchars=tab:\.\ ,trail:-  " Display tabs as '.   ' and trailing spaces as 
 set tabstop=4                   " Set literal tab width and display
 set softtabstop=4               " Set tab width for insertion and <BS>
 set shiftwidth=4                " Set CTRL-T, > (add indent) & CTRL-D, < (remove indent) widths
-set expandtab                   " Set tab to expand to spaces
+set noexpandtab                 " Disable expanding tab to spaces
 set shiftround                  " Round indents to multiples of shiftwidth
 set autoindent                  " Enable autoindentation for new lines to match indent level of previous line
 " set smartindent               " Automatically indent lines after opening braces
@@ -76,3 +62,5 @@ set clipboard=unnamed           " Use system clipboard for yank and put in MacVi
 let mapleader = ","             " Map comma as leader key
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 " Map <leader>ev to edit .vimrc
+nmap <silent> <leader>eg :e $MYGVIMRC<CR>
+" Map <leader>eg to edit .gvimrc
