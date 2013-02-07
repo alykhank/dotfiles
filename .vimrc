@@ -41,11 +41,6 @@ set autoindent                  " Enable autoindentation for new lines to match 
 " set cindent                   " Enable indenting for C-style source code (including C++ and Java)
 set backspace=indent,eol,start  " Backspace through everything in insert mode
 
-"" Folding
-" set foldmethod=indent         " Enable code folding based on indentation
-" set nofoldenable              " Disable default folding
-" set viewoptions=folds         " Preserve folds across sessions
-
 "" Searching
 set hlsearch                    " Highlight search terms...
 set incsearch                   " ...dynamically as they are typed
