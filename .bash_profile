@@ -22,7 +22,7 @@ fi
 
 ### Set environment variables for Android SDK, EDITOR
 export ANDROID_SDK="/usr/local/android/"
-export PATH="$PATH:/usr/local/android/tools:/usr/local/android/platform-tools:/usr/local/sbin"
+export PATH="/usr/local/bin:/usr/local/share/python:/usr/local/sbin:$PATH:/usr/local/android/tools:/usr/local/android/platform-tools"
 export EDITOR="mvim -v"
 
 ### Added by the Heroku Toolbelt
