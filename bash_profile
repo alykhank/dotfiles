@@ -1,15 +1,7 @@
 ### Customize prompt to show 'user@host' in green, current working directory in red, and prompt character in red
 export PS1='\[\e[0;31m\][\u]\[\e[0m\] \[\e[0;33m\]\W \$ \[\e[0m\]'
 #from IBM export PS1="\[\e[36;1m\]\u@\[\e[32;1m\]\H> \[\e[0m\]"
-
-### Enable colourized output for listing directory contents, append '/' to directories, and extra symbols after various filetypes for differentiation
-alias ls='ls -GpFah'
-### Use terminal mvim instead of vim (provides clipboard support)
-alias vim='mvim -v'
-
-### Instead of ls -G, may use CLICOLOR setting
-#CLICOLOR=1
-#export CLICOLOR
+export CLICOLOR=1
 
 ### If git completion script exists, enable it
 if [ -f ~/.git-completion.bash ]; then
@@ -24,6 +16,11 @@ fi
 export ANDROID_SDK="/usr/local/android/"
 export PATH="/usr/local/bin:/usr/local/share/python:/usr/local/sbin:$PATH:/usr/local/android/tools:/usr/local/android/platform-tools"
 export EDITOR="mvim -v"
+
+### Enable colourized output for listing directory contents, append '/' to directories, and extra symbols after various filetypes for differentiation
+alias ls='ls -Fah'
+### Use terminal mvim instead of vim (provides clipboard support)
+alias vim=$EDITOR
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
