@@ -7,3 +7,4 @@ ln -s $(pwd)/gvimrc ~/.gvimrc
 ln -s $(pwd)/gitconfig ~/.gitconfig
 ln -s $(pwd)/gitignore ~/.gitignore
 ln -s $(pwd)/git-completion.bash ~/.git-completion.bash
+ln -s $(pwd)/ftplugin/ ~/.vim/ftplugin
