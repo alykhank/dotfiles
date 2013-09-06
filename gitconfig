@@ -9,3 +9,5 @@
 	st = status
 	ci = commit
 	co = checkout
+[core]
+	excludesfile = ~/.gitignore
