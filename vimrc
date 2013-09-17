@@ -15,6 +15,7 @@ Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-commentary'
 Bundle 'lepture/vim-velocity'
+Bundle 'Valloric/YouCompleteMe'
 
 "" Syntax
 syntax enable                   " Enable syntax highlighting
