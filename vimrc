@@ -8,7 +8,13 @@
 set nocompatible                " Don't force vi compatibility
 
 "" Plugins
-call pathogen#infect()          " Enable pathogen plugin
+filetype off                    " required!
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'tpope/vim-commentary'
+Bundle 'lepture/vim-velocity'
 
 "" Syntax
 syntax enable                   " Enable syntax highlighting

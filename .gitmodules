@@ -1,9 +1,0 @@
-[submodule "vim-pathogen"]
-	path = vim-pathogen
-	url = https://github.com/tpope/vim-pathogen.git
-[submodule "vim-colors-solarized"]
-	path = vim-colors-solarized
-	url = https://github.com/altercation/vim-colors-solarized.git
-[submodule "vim-commentary"]
-	path = vim-commentary
-	url = https://github.com/tpope/vim-commentary.git
