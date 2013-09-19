@@ -1,1 +1,7 @@
+# NOTE: The `~/.inputrc` file sets the options for GNU Readline. GNU Readline
+# is used in bash but also in a variety of other prompts.
+
+# Show all completions as soon as I press tab, even if there's more than one
+set show-all-if-ambiguous on
+# Ignore case
 set completion-ignore-case on
