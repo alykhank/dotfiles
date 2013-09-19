@@ -1,4 +1,10 @@
+# Mac OS
 .DS_Store
+
+# Vim
 *.swp
+.netrwhist
+
+# Xcode
 project.xcworkspace/
 xcuserdata/
