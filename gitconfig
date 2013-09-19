@@ -1,6 +1,8 @@
 [user]
 	name = Alykhan Kanji
 	email = github@alykhan.com
+[github]
+	user = alykhank
 [credential]
 	helper = osxkeychain
 [color]
@@ -9,3 +11,7 @@
 	st = status
 	ci = commit
 	co = checkout
+[core]
+	excludesfile = ~/.gitignore
+[push]
+	default = simple

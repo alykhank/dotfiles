@@ -8,7 +8,16 @@
 set nocompatible                " Don't force vi compatibility
 
 "" Plugins
-call pathogen#infect()          " Enable pathogen plugin
+filetype off                    " required!
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'tpope/vim-commentary'
+Bundle 'lepture/vim-velocity'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'kien/ctrlp.vim'
+set rtp^=~/.vim/bundle/ctrlp.vim
 
 "" Syntax
 syntax enable                   " Enable syntax highlighting
@@ -30,7 +39,7 @@ set showbreak=↪                 " Use character to indicate wrapped lines
 
 "" Whitespace
 set list                        " Show invisibles
-set listchars=tab:\.\ ,trail:-  " Display tabs as '.   ' and trailing spaces as '-'
+set listchars=tab:>\ ,trail:•   " Display tabs as '>   ' and trailing spaces as '•'
 set tabstop=4                   " Set literal tab width and display
 set softtabstop=4               " Set tab width for insertion and <BS>
 set shiftwidth=4                " Set CTRL-T, > (add indent) & CTRL-D, < (remove indent) widths
@@ -46,7 +55,7 @@ set hlsearch                    " Highlight search terms...
 set incsearch                   " ...dynamically as they are typed
 set ignorecase                  " Ignore case when searching...
 set smartcase                   " ...except when at least one uppercase letter is included
-nnoremap <CR> :nohlsearch<CR>
+nnoremap <silent> <CR> :nohlsearch<CR>
 " Clear search buffer by pressing Return
 
 "" Clipboard
