@@ -7,6 +7,7 @@ ln -s $(pwd)/gvimrc ~/.gvimrc
 ln -s $(pwd)/gitconfig ~/.gitconfig
 ln -s $(pwd)/gitignore ~/.gitignore
 ln -s $(pwd)/git-completion.bash ~/.git-completion.bash
+ln -s $(pwd)/svn-completion.bash ~/.svn-completion.bash
 
 git submodule init
 git submodule update
@@ -14,5 +15,5 @@ mkdir -p ~/.vim/bundle/
 ln -s $(pwd)/vundle/ ~/.vim/bundle/vundle
 ln -s $(pwd)/ftplugin/ ~/.vim/ftplugin
 vim +BundleInstall +qall
-cd ~/.vim/bundle/YouCompleteMe
-./install.sh --clang-completer
+# cd ~/.vim/bundle/YouCompleteMe
+# ./install.sh --clang-completer
