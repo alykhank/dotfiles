@@ -67,23 +67,25 @@ set number                      " Show line numbers
 set ruler                       " Show the current row and column
 set linespace=4                 " Set line widths
 set scrolloff=3                 " Keep lines visible
-" set visualbell                    " Flash instead of beeping
+" set visualbell                  " Flash instead of beeping
 
 "" Wrapping
 set linebreak                   " Wrap only at word boundaries
 set showbreak=↪                 " Use character to indicate wrapped lines
+set textwidth=120               " Set wrap width to 120 characters
+set colorcolumn+=1              " Highlight the column after `textwidth`
 
 "" Whitespace
-set list                        " Show invisibles
-set listchars=tab:>\ ,trail:•   " Display tabs as '>   ' and trailing spaces as '•'
+set list                        " Show invisibles, display tabs as '▸   ', trailing spaces as '•', and eol as '¬'
+set listchars=tab:▸\ ,trail:•,eol:¬
 set tabstop=4                   " Set literal tab width and display
 set softtabstop=4               " Set tab width for insertion and <BS>
 set shiftwidth=4                " Set CTRL-T, > (add indent) & CTRL-D, < (remove indent) widths
-set noexpandtab                 " Disable expanding tab to spaces
+set expandtab                   " Ensure tabs are expanded spaces
 set shiftround                  " Round indents to multiples of shiftwidth
 set autoindent                  " Enable autoindentation for new lines to match indent level of previous line
-" set smartindent               " Automatically indent lines after opening braces
-" set cindent                   " Enable indenting for C-style source code (including C++ and Java)
+set smartindent               " Automatically indent lines after opening braces
+set cindent                   " Enable indenting for C-style source code (including C++ and Java)
 set backspace=indent,eol,start  " Backspace through everything in insert mode
 
 "" Searching
@@ -91,16 +93,20 @@ set hlsearch                    " Highlight search terms...
 set incsearch                   " ...dynamically as they are typed
 set ignorecase                  " Ignore case when searching...
 set smartcase                   " ...except when at least one uppercase letter is included
+" Clear search highlights by pressing return
 nnoremap <silent> <CR> :nohlsearch<CR>
-" Clear search buffer by pressing Return
 
 "" Clipboard
 set clipboard=unnamed           " Use system clipboard for yank and put in MacVim - terminal vim functionality deprecated in OS X Mountain Lion
 " set go+=a                     " Automatically copy visual selection to the clipboard
 
 "" Mappings
-let mapleader = ","             " Map comma as leader key
-nmap <silent> <leader>ev :e $MYVIMRC<CR>
-" Map <leader>ev to edit .vimrc
-nmap <silent> <leader>eg :e $MYGVIMRC<CR>
-" Map <leader>eg to edit .gvimrc
+" By default `j` and `k` both move in a file by lines delimited by `\n` which
+" is not helpful when linewrapping is enabled. These mappings ensure that I
+" move up and down by display lines and not just lines delimited by `\n`.
+noremap j gj
+noremap k gk
+" In order to not lose the original functionality of the `j` and `k` keys I
+" map their functionality to `gj` and `gk` respectively.
+noremap gj j
+noremap gk k
