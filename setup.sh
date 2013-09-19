@@ -12,8 +12,7 @@ ln -s $(pwd)/svn-completion.bash ~/.svn-completion.bash
 git submodule init
 git submodule update
 mkdir -p ~/.vim/bundle/
-ln -s $(pwd)/vundle/ ~/.vim/bundle/vundle
+ln -s $(pwd)/neobundle.vim/ ~/.vim/bundle/neobundle.vim
 ln -s $(pwd)/ftplugin/ ~/.vim/ftplugin
-vim +BundleInstall +qall
 # cd ~/.vim/bundle/YouCompleteMe
 # ./install.sh --clang-completer
