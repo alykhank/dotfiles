@@ -5,19 +5,55 @@
 " ~/.vimrc
 " ==============================
 
-set nocompatible                " Don't force vi compatibility
+"" Basics
+set nocompatible                " Be iMproved
 
-"" Plugins
-filetype off                    " required!
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'tpope/vim-commentary'
-Bundle 'lepture/vim-velocity'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'kien/ctrlp.vim'
-set rtp^=~/.vim/bundle/ctrlp.vim
+"" Map Leaders
+let mapleader = ","             " Map comma as leader key
+" Map <leader>ev to edit .vimrc
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
+" Map <leader>eg to edit .gvimrc
+nmap <silent> <leader>eg :e $MYGVIMRC<CR>
+
+"" NeoBundle
+if has('vim_starting')
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+call neobundle#rc(expand('~/.vim/bundle/'))
+" Let NeoBundle manage NeoBundle
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+"" Plugins {{{
+"" Core Improvements
+" Recommended to install
+" After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
+NeoBundle 'Shougo/vimproc'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'tpope/vim-repeat'
+NeoBundle 'tpope/vim-commentary'
+NeoBundle 'matchit.zip'
+NeoBundle 'IndexedSearch'
+NeoBundle 'Raimondi/delimitMate'
+
+"" Colours
+NeoBundle 'altercation/vim-colors-solarized'
+set background=dark
+
+"" Language Support
+NeoBundle 'lepture/vim-velocity'
+
+"" Autocomplete
+" NeoBundle 'Valloric/YouCompleteMe'
+
+"" File Search
+NeoBundle 'kien/ctrlp.vim'
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+
+"" Installation check and clean
+NeoBundleCheck
+silent NeoBundleClean!
+" }}}
 
 "" Syntax
 syntax enable                   " Enable syntax highlighting
