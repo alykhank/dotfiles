@@ -1,0 +1,2 @@
+# Ignore installed vim plugins
+.vim/bundle/
