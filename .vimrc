@@ -46,9 +46,12 @@ NeoBundle 'lepture/vim-velocity'
 "" Autocomplete
 " NeoBundle 'Valloric/YouCompleteMe'
 
-"" File Search
-NeoBundle 'kien/ctrlp.vim'
-set runtimepath^=~/.vim/bundle/ctrlp.vim
+"" Unite
+NeoBundle 'Shougo/unite.vim'
+let g:unite_enable_start_insert=1
+let g:unite_prompt='»'
+nnoremap <leader>f :Unite file<CR>
+nnoremap <leader>r :Unite file_rec<CR>
 
 "" Installation check and clean
 NeoBundleCheck
