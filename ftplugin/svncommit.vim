@@ -1,1 +1,1 @@
-set colorcolumn=50
+set textwidth=50
