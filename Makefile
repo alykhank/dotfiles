@@ -2,7 +2,7 @@ SHELL := /bin/bash
 
 all: shells vim vcs submodules
 
-shells: .bash_profile .inputrc
+shells: .bash_profile .inputrc .ackrc
 	@echo Removing $^; \
 	$(foreach df, $^, rm -rf ~/$(df))
 	@echo Installing $^; \
