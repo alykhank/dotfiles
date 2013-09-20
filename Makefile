@@ -14,7 +14,7 @@ vim: .vim .vimrc .gvimrc
 	@echo Installing $^; \
 	$(foreach df, $^, ln -s $(CURDIR)/$(df) ~; )
 
-vcs: .gitconfig .gitignore .git-completion.bash .svn-completion.bash
+vcs: .gitconfig .gitignore_global .git-completion.bash .svn-completion.bash
 	@echo Removing $^; \
 	$(foreach df, $^, rm -rf ~/$(df))
 	@echo Installing $^; \
