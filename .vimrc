@@ -36,6 +36,9 @@ NeoBundle 'matchit.zip'
 NeoBundle 'IndexedSearch'
 NeoBundle 'Raimondi/delimitMate'
 
+"" VCS
+NeoBundle 'mhinz/vim-signify'
+
 "" Colours
 NeoBundle 'altercation/vim-colors-solarized'
 set background=dark
@@ -44,7 +47,11 @@ set background=dark
 NeoBundle 'lepture/vim-velocity'
 
 "" Autocomplete
-" NeoBundle 'Valloric/YouCompleteMe'
+NeoBundle 'Valloric/YouCompleteMe'
+
+"" File Search
+NeoBundle 'kien/ctrlp.vim'
+set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 "" Unite
 NeoBundle 'Shougo/unite.vim'
