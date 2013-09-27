@@ -39,7 +39,8 @@ NeoBundle 'Raimondi/delimitMate'
 "" VCS
 NeoBundle 'mhinz/vim-signify'
 
-"" Statusline
+"" Status Line
+set noshowmode                  " Hide default mode indicator
 set laststatus=2                " Always display status line
 NeoBundle 'bling/vim-airline'
 
