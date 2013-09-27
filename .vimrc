@@ -82,7 +82,6 @@ set scrolloff=3                 " Keep lines visible
 "" Wrapping
 set linebreak                   " Wrap only at word boundaries
 set showbreak=↪                 " Use character to indicate wrapped lines
-set textwidth=80                " Set wrap width to 80 characters
 set colorcolumn=+1              " Highlight the column after `textwidth`
 " Set column highlight colour to black
 highlight ColorColumn ctermbg=black guibg=black
