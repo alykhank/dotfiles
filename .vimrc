@@ -39,6 +39,10 @@ NeoBundle 'Raimondi/delimitMate'
 "" VCS
 NeoBundle 'mhinz/vim-signify'
 
+"" Statusline
+set laststatus=2                " Always display status line
+NeoBundle 'bling/vim-airline'
+
 "" Colours
 NeoBundle 'altercation/vim-colors-solarized'
 set background=dark
