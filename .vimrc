@@ -43,6 +43,7 @@ NeoBundle 'mhinz/vim-signify'
 set noshowmode                  " Hide default mode indicator
 set laststatus=2                " Always display status line
 NeoBundle 'bling/vim-airline'
+let g:airline_powerline_fonts=1
 
 "" Colours
 NeoBundle 'altercation/vim-colors-solarized'
@@ -50,6 +51,7 @@ set background=dark
 
 "" Language Support
 NeoBundle 'lepture/vim-velocity'
+NeoBundle 'scrooloose/syntastic'
 
 "" Autocomplete
 NeoBundle 'Valloric/YouCompleteMe'
