@@ -15,3 +15,7 @@
 # Highlight the matching text (default: on unless
 # output is redirected, or on Windows) 
 --color
+
+# Files with the given FILTERARGS applied to the
+# given FILTER are recognized as being type TYPE.
+--type-add=velocity=.vm
