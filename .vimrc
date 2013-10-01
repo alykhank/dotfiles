@@ -56,6 +56,9 @@ NeoBundle 'scrooloose/syntastic'
 "" Autocomplete
 NeoBundle 'Valloric/YouCompleteMe'
 
+"" Project Search
+NeoBundle 'mileszs/ack.vim'
+
 "" File Search
 NeoBundle 'kien/ctrlp.vim'
 set runtimepath^=~/.vim/bundle/ctrlp.vim
