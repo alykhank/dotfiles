@@ -11,4 +11,5 @@ set cursorcolumn            " Highlight the current column
 set background=dark         " Use dark background
 colorscheme solarized       " Use 'Solarized' colorscheme
 set transparency=4          " Make window slightly transparent
-set guifont=Menlo:h14       " Use Menlo 14pt
+" set guifont=Menlo:h14       " Use Menlo 14pt
+set guifont=Meslo\ LG\ M\ for\ Powerline:h14
