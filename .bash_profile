@@ -12,18 +12,5 @@ if [ -f ~/.svn-completion.bash ]; then
 	. ~/.svn-completion.bash
 fi
 
-### Set environment variable for PATH, EDITOR
-export PATH="/usr/local/bin:$PATH"
-export EDITOR="mvim -v"
-
 ### Enable colourized output for listing directory contents, append '/' to directories, and extra symbols after various filetypes for differentiation
 alias ls='ls -Fah'
-### Use terminal mvim instead of vim (provides clipboard support)
-alias vim=$EDITOR
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-export RBENV_ROOT=/usr/local/var/rbenv
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
