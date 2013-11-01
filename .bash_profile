@@ -14,3 +14,5 @@ fi
 
 ### Enable colourized output for listing directory contents, append '/' to directories, and extra symbols after various filetypes for differentiation
 alias ls='ls -Fah'
+
+[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
