@@ -1,2 +1,5 @@
-# Ignore installed vim plugins
+# vim plugins
 .vim/bundle/
+
+# netrw history file
+.netrwhist

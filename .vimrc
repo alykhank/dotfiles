@@ -99,10 +99,10 @@ highlight ColorColumn ctermbg=black guibg=black
 "" Whitespace
 set list                        " Show invisibles, display tabs as '▸   ', trailing spaces as '•', and eol as '¬'
 set listchars=tab:▸\ ,trail:•,eol:¬
-set tabstop=4                   " Set literal tab width and display
-set softtabstop=4               " Set tab width for insertion and <BS>
-set shiftwidth=4                " Set CTRL-T, > (add indent) & CTRL-D, < (remove indent) widths
-set expandtab                   " Ensure tabs are expanded spaces
+set tabstop=2                   " Set literal tab width and display
+set softtabstop=2               " Set tab width for insertion and <BS>
+set shiftwidth=2                " Set CTRL-T, > (add indent) & CTRL-D, < (remove indent) widths
+set expandtab                   " Ensure tabs are expanded to spaces
 set shiftround                  " Round indents to multiples of shiftwidth
 set autoindent                  " Enable autoindentation for new lines to match indent level of previous line
 set smartindent               " Automatically indent lines after opening braces
