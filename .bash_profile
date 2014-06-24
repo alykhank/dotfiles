@@ -1,7 +1,23 @@
-### Customize prompt to show path in red, git branch and prompt character in red
-export PS1='\[\e[0;31m\]\w\[\e[0m\] \[\e[0;33m\]`git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`→ \[\e[0m\]'
+### Retrieve git branch name
+function get_git_branch {
+	git branch | awk '/^\*/ { print $2 }'
+}
+### Retrieve git dirty state marker
+function get_git_dirty {
+	git diff --quiet || echo '☢'
+}
+
+### Retrieve git metadata
+function get_git_prompt {
+	git branch &> /dev/null || return 1
+	echo " ($(get_git_branch))$(get_git_dirty)"
+}
+
+### Customize prompt to show path in red, git info and prompt character in yellow
+export PS1='\[\e[0;31m\]\w\[\e[0m\]\[\e[0;33m\]$(get_git_prompt) → \[\e[0m\]'
 
 export CLICOLOR=1
+export EDITOR=atom
 
 ### If git completion script exists, enable it
 if [ -f ~/.git-completion.bash ]; then
