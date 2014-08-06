@@ -17,7 +17,7 @@ function get_git_prompt {
 export PS1='\[\e[0;31m\]\w\[\e[0m\]\[\e[0;33m\]$(get_git_prompt) → \[\e[0m\]'
 
 export CLICOLOR=1
-export EDITOR="atom --wait"
+export EDITOR='atom --wait'
 
 ### If git completion script exists, enable it
 if [ -f ~/.git-completion.bash ]; then
@@ -30,5 +30,8 @@ fi
 
 ### Enable colourized output for listing directory contents, append '/' to directories, and extra symbols after various filetypes for differentiation
 alias ls='ls -Fah'
+
+### Create shorthand for git
+alias g='git'
 
 [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
