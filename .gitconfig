@@ -6,7 +6,7 @@
 [credential]
 	helper = osxkeychain
 [color]
-	ui = true
+	ui = auto
 [alias]
 	st = status
 	ci = commit
