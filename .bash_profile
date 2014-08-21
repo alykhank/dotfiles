@@ -18,7 +18,7 @@ export PS1='\[\e[0;31m\]\w\[\e[0m\]\[\e[0;33m\]$(get_git_prompt) → \[\e[0m\]'
 
 export CLICOLOR=1
 export EDITOR='atom --wait'
-export PATH=$PATH:/Applications/Postgres93.app/Contents/MacOS/bin
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin
 
 ### If git completion script exists, enable it
 if [ -f ~/.git-completion.bash ]; then
