@@ -43,7 +43,7 @@ NeoBundle 'mhinz/vim-signify'
 set noshowmode                  " Hide default mode indicator
 set laststatus=2                " Always display status line
 NeoBundle 'bling/vim-airline'
-let g:airline_powerline_fonts=1
+let g:airline_powerline_fonts=0
 
 "" Colours
 NeoBundle 'altercation/vim-colors-solarized'
@@ -87,7 +87,8 @@ set number                      " Show line numbers
 set ruler                       " Show the current row and column
 set linespace=4                 " Set line widths
 set scrolloff=3                 " Keep lines visible
-" set visualbell                  " Flash instead of beeping
+set visualbell                  " Flash instead of beeping
+set colorcolumn                 " Display vertical guide at selected character
 
 "" Wrapping
 set linebreak                   " Wrap only at word boundaries
@@ -105,8 +106,8 @@ set shiftwidth=2                " Set CTRL-T, > (add indent) & CTRL-D, < (remove
 set expandtab                   " Ensure tabs are expanded to spaces
 set shiftround                  " Round indents to multiples of shiftwidth
 set autoindent                  " Enable autoindentation for new lines to match indent level of previous line
-set smartindent               " Automatically indent lines after opening braces
-set cindent                   " Enable indenting for C-style source code (including C++ and Java)
+set smartindent                 " Automatically indent lines after opening braces
+set cindent                     " Enable indenting for C-style source code (including C++ and Java)
 set backspace=indent,eol,start  " Backspace through everything in insert mode
 
 "" Searching
@@ -125,8 +126,7 @@ set foldcolumn=4                " Set width of column containing fold info
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 
 "" Clipboard
-set clipboard=unnamed           " Use system clipboard for yank and put in MacVim - terminal vim functionality deprecated in OS X Mountain Lion
-" set go+=a                     " Automatically copy visual selection to the clipboard
+set clipboard=unnamed           " Use system clipboard for yank and put
 
 "" Mappings
 " By default `j` and `k` both move in a file by lines delimited by `\n` which
