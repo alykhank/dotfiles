@@ -88,7 +88,7 @@ set ruler                       " Show the current row and column
 set linespace=4                 " Set line widths
 set scrolloff=3                 " Keep lines visible
 set visualbell                  " Flash instead of beeping
-set colorcolumn                 " Display vertical guide at selected character
+set cursorcolumn                " Display vertical guide at selected character
 
 "" Wrapping
 set linebreak                   " Wrap only at word boundaries
