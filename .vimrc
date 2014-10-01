@@ -50,7 +50,6 @@ NeoBundle 'altercation/vim-colors-solarized'
 set background=dark
 
 "" Language Support
-NeoBundle 'lepture/vim-velocity'
 NeoBundle 'scrooloose/syntastic'
 
 "" Autocomplete
