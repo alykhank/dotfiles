@@ -1,6 +1,3 @@
-"" Wrapping
-set textwidth=120               " Set wrap width to 120 characters
-
 "" Whitespace
 set tabstop=4                   " Set literal tab width and display
 set softtabstop=4               " Set tab width for insertion and <BS>
