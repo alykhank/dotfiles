@@ -13,6 +13,11 @@ function get_git_prompt {
 	echo " ($(get_git_branch))$(get_git_dirty)"
 }
 
+### Pretty print JSON files
+function pprintjson {
+	cat $1 | python -m json.tool
+}
+
 ### Customize prompt to show path in red, git info and prompt character in yellow
 export PS1='\[\e[0;31m\]\w\[\e[0m\]\[\e[0;33m\]$(get_git_prompt) → \[\e[0m\]'
 
