@@ -19,5 +19,8 @@
 # Ignore Virtualenv directories
 --ignore-dir=venv
 
+# Ignore Jekyll generated directories
+--ignore-dir=_site
+
 # Ignore SQLite db files
 --ignore-file=ext:db
