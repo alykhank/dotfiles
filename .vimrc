@@ -51,6 +51,8 @@ set background=dark
 
 "" Language Support
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'Glench/Vim-Jinja2-Syntax'
+autocmd FileType jinja set commentstring={#\ %s\ #}
 
 "" Autocomplete
 NeoBundle 'Valloric/YouCompleteMe'
