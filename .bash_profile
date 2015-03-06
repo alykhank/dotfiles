@@ -18,6 +18,12 @@ function pprintjson {
 	cat $1 | python -m json.tool
 }
 
+### Generate ctags for current Git repo
+function generate_ctags {
+  dir="`git rev-parse --git-dir`"
+  git ls-files | ctags --tag-relative -L - -f "$dir/tags"
+}
+
 ### Customize prompt to show path in red, git info and prompt character in yellow
 export PS1='\[\e[0;31m\]\w\[\e[0m\]\[\e[0;33m\]$(get_git_prompt) → \[\e[0m\]'
 
