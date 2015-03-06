@@ -36,9 +36,9 @@ Plugin 'vim-scripts/matchit.zip'
 Plugin 'airblade/vim-gitgutter'
 
 "" Status Line
-" set noshowmode                  " Hide default mode indicator
-" set laststatus=2                " Always display status line
-" Plugin 'bling/vim-airline'
+set noshowmode                  " Hide default mode indicator
+set laststatus=2                " Always display status line
+Plugin 'bling/vim-airline'
 " let g:airline_powerline_fonts=0
 
 "" Colours
@@ -54,8 +54,8 @@ autocmd FileType jinja set commentstring={#\ %s\ #}
 Plugin 'Valloric/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+call vundle#end()               " required
+filetype plugin indent on       " required
 " }}}
 
 "" Syntax
@@ -72,6 +72,8 @@ set linespace=4                 " Set line widths
 set scrolloff=3                 " Scroll frame when close to top or bottom
 set visualbell                  " Flash instead of beeping
 set cursorcolumn                " Display vertical guide at selected character
+" Set cursor column highlight colour to black
+highlight CursorColumn ctermbg=black guibg=black
 
 "" Wrapping
 set linebreak                   " Wrap only at word boundaries
@@ -79,7 +81,7 @@ set showbreak=↪                 " Use character to indicate wrapped lines
 " Highlight the column after `textwidth` and all after column 120 (max 256)
 let &colorcolumn="+1,".join(range(120,375),",")
 set formatoptions-=t            " Prevent automatic text wrapping
-" Set column highlight colour to black
+" Set colorcolumn highlight colour to black
 highlight ColorColumn ctermbg=black guibg=black
 
 "" Whitespace
