@@ -88,14 +88,15 @@ set showcmd                     " Display incomplete commands
 set number                      " Show line numbers
 set ruler                       " Show the current row and column
 set linespace=4                 " Set line widths
-set scrolloff=3                 " Keep lines visible
+set scrolloff=3                 " Scroll frame when close to top or bottom
 set visualbell                  " Flash instead of beeping
 set cursorcolumn                " Display vertical guide at selected character
 
 "" Wrapping
 set linebreak                   " Wrap only at word boundaries
 set showbreak=↪                 " Use character to indicate wrapped lines
-set colorcolumn=+1              " Highlight the column after `textwidth`
+" Highlight the column after `textwidth` and all after column 120 (max 256)
+let &colorcolumn="+1,".join(range(120,375),",")
 set formatoptions-=t            " Prevent automatic text wrapping
 " Set column highlight colour to black
 highlight ColorColumn ctermbg=black guibg=black
