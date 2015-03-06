@@ -95,6 +95,7 @@ set cursorcolumn                " Display vertical guide at selected character
 set linebreak                   " Wrap only at word boundaries
 set showbreak=↪                 " Use character to indicate wrapped lines
 set colorcolumn=+1              " Highlight the column after `textwidth`
+set formatoptions-=t            " Prevent automatic text wrapping
 " Set column highlight colour to black
 highlight ColorColumn ctermbg=black guibg=black
 
