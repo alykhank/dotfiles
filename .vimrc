@@ -15,66 +15,47 @@ nmap <silent> <leader>ev :e $MYVIMRC<CR>
 " Map <leader>eg to edit .gvimrc
 nmap <silent> <leader>eg :e $MYGVIMRC<CR>
 
-"" NeoBundle
-if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
-
-call neobundle#rc(expand('~/.vim/bundle/'))
-" Let NeoBundle manage NeoBundle
-NeoBundleFetch 'Shougo/neobundle.vim'
-
 "" Plugins {{{
+"" Vundle
+filetype off                    " required
+" set the runtime path to include Vundle and initialize
+set runtimepath+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
 "" Core Improvements
-" Recommended to install
-" After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
-NeoBundle 'Shougo/vimproc'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'tpope/vim-repeat'
-NeoBundle 'tpope/vim-commentary'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'matchit.zip'
-NeoBundle 'IndexedSearch'
-NeoBundle 'Raimondi/delimitMate'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'
+Plugin 'vim-scripts/IndexedSearch'
+Plugin 'vim-scripts/matchit.zip'
 
 "" VCS
-NeoBundle 'mhinz/vim-signify'
+Plugin 'airblade/vim-gitgutter'
 
 "" Status Line
-set noshowmode                  " Hide default mode indicator
-set laststatus=2                " Always display status line
-NeoBundle 'bling/vim-airline'
-let g:airline_powerline_fonts=0
+" set noshowmode                  " Hide default mode indicator
+" set laststatus=2                " Always display status line
+" Plugin 'bling/vim-airline'
+" let g:airline_powerline_fonts=0
 
 "" Colours
-NeoBundle 'altercation/vim-colors-solarized'
+Plugin 'altercation/vim-colors-solarized'
 set background=dark
 
 "" Language Support
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'Glench/Vim-Jinja2-Syntax'
+Plugin 'scrooloose/syntastic'
+Plugin 'Glench/Vim-Jinja2-Syntax'
 autocmd FileType jinja set commentstring={#\ %s\ #}
 
 "" Autocomplete
-NeoBundle 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 
-"" Project Search
-NeoBundle 'mileszs/ack.vim'
-
-"" File Search
-NeoBundle 'kien/ctrlp.vim'
-set runtimepath^=~/.vim/bundle/ctrlp.vim
-
-"" Unite
-NeoBundle 'Shougo/unite.vim'
-let g:unite_enable_start_insert=1
-let g:unite_prompt='»'
-nnoremap <leader>f :Unite file<CR>
-nnoremap <leader>r :Unite file_rec<CR>
-
-"" Installation check and clean
-NeoBundleCheck
-silent NeoBundleClean!
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
 " }}}
 
 "" Syntax
