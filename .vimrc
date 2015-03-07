@@ -44,6 +44,8 @@ Plugin 'airblade/vim-gitgutter'
 set noshowmode                  " Hide default mode indicator
 set laststatus=2                " Always display status line
 Plugin 'bling/vim-airline'
+let g:airline_theme = 'solarized'
+let g:airline_powerline_fonts = 1
 " }}}
 
 " Language Support {{{

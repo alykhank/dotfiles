@@ -27,3 +27,10 @@ vim +PluginInstall +qall
 cd ~/.vim/bundle/YouCompleteMe/
 ./install.sh --clang-completer
 ```
+
+### Install Patched Fonts for Statusline
+
+```bash
+curl https://raw.githubusercontent.com/powerline/fonts/master/Meslo/Meslo%20LG%20S%20Regular%20for%20Powerline.otf -o ~/Library/Fonts/Meslo\ LG\ S\ Regular\ for\ Powerline.otf
+fc-cache -f ~/Library/Fonts/
+```
