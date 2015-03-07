@@ -1,6 +1,6 @@
 SHELL := /bin/bash
 
-.PHONY: all submodules shells vim vimdotfiles vimplugins vimcompletion vimfonts vcs vcsdotfiles gitconfiguration
+.PHONY: all submodules shells vim vimdotfiles vimplugins vimcompletion vimfonts vcs vcsdotfiles gitconfiguration uninstall
 
 all: submodules shells vim vcs
 
@@ -67,4 +67,13 @@ gitconfiguration:
 		git config --global github.user "$$github_user"; \
 	else \
 		echo "github.user=`git config --global github.user`"; \
+	fi
+
+uninstall: .bash_profile .inputrc .ackrc .vim .vimrc .gvimrc .gitconfig .gitignore_global .git-completion.bash .svn-completion.bash
+	@echo Removing $^; \
+	$(foreach df, $^, rm -rf ~/$(df))
+	@if [[ -e ~/Library/Fonts/Meslo\ LG\ S\ Regular\ for\ Powerline.otf ]]; then \
+		echo "Uninstalling Vim Fonts..."; \
+		rm ~/Library/Fonts/Meslo\ LG\ S\ Regular\ for\ Powerline.otf; \
+		fc-cache -f ~/Library/Fonts/; \
 	fi
