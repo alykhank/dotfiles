@@ -297,10 +297,8 @@
 	<false/>
 	<key>NSFontPanelAttributes</key>
 	<string>1, 4</string>
-	<key>NSNavLastCurrentDirectory</key>
-	<string>~/Documents</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Downloads/solarized/iterm2-colors-solarized</string>
+	<string>~/src/dotfiles</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -327,7 +325,7 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>250 256 924 485 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>162 91 570 362 0 0 1440 877 </string>
+	<string>435 235 570 410 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1843,7 +1841,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/Alykhan/src/dotfiles/</string>
+	<string>/Users/Alykhan/src/dotfiles</string>
 	<key>PromptOnClose</key>
 	<true/>
 	<key>PromptOnQuit</key>
