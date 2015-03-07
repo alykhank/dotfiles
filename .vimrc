@@ -63,7 +63,6 @@ highlight clear SignColumn
 
 "" Syntax
 syntax enable                   " Enable syntax highlighting
-filetype plugin indent on       " Detect filetype and load indent file for specific filetype
 set showmatch                   " Highlight matching braces
 
 "" View
@@ -110,8 +109,8 @@ nnoremap <silent> <CR> :nohlsearch<CR>
 
 "" Folding
 set foldmethod=indent           " Enable code folding based on indentation
-set foldminlines=5              " Set minimum height to fold in lines
-set foldcolumn=4                " Set width of column containing fold info
+set foldcolumn=3                " Set width of column containing fold info
+set foldlevelstart=20           " Load files with open folds
 " Remap <Space> to toggle folds in normal mode only when they are present
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 
