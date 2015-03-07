@@ -48,6 +48,7 @@ Plugin 'bling/vim-airline'
 
 " Language Support {{{
 Plugin 'scrooloose/syntastic'
+Plugin 'jmcantrell/vim-virtualenv'
 Plugin 'Glench/Vim-Jinja2-Syntax'
 autocmd FileType jinja set commentstring={#\ %s\ #}
 Plugin 'majutsushi/tagbar'
