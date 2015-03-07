@@ -45,5 +45,6 @@ alias ls='ls -Fah'
 
 ### Create shorthand for git
 alias g='git'
+__git_complete g __git_main
 
 [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
