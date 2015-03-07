@@ -3,9 +3,12 @@
 [color]
 	ui = auto
 [alias]
-	st = status
+	amend = commit --amend
 	ci = commit
 	co = checkout
+	d = diff
+	dc = diff --cached
+	st = status
 [core]
 	excludesfile = ~/.gitignore_global
 [push]
