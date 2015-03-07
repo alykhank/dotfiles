@@ -10,4 +10,4 @@ set cursorline              " Highlight the current row
 set cursorcolumn            " Highlight the current column
 set background=dark         " Set background color
 set transparency=4          " Make window slightly transparent
-set guifont=Menlo:h12       " Set font and size
+set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h12
