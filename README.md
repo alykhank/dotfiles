@@ -2,6 +2,10 @@
 
 Bash, vim, and git dotfiles.
 
-    git clone https://github.com/alykhank/dotfiles.git
-    cd dotfiles/
-    make all
+## Usage
+
+```bash
+make all
+```
+
+Launch iTerm, check and set "Preferences > General > Load preferences from a custom folder or URL" to this repository.
