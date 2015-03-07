@@ -46,6 +46,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'Glench/Vim-Jinja2-Syntax'
 autocmd FileType jinja set commentstring={#\ %s\ #}
 Plugin 'majutsushi/tagbar'
+nnoremap <leader>t :TagbarToggle<CR>
 
 "" Autocomplete
 Plugin 'Valloric/YouCompleteMe'
