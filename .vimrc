@@ -46,7 +46,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'Glench/Vim-Jinja2-Syntax'
 autocmd FileType jinja set commentstring={#\ %s\ #}
 Plugin 'majutsushi/tagbar'
-nnoremap <leader>t :TagbarToggle<CR>
+nnoremap <silent> <leader>t :TagbarToggle<CR>
 
 "" Autocomplete
 Plugin 'Valloric/YouCompleteMe'
@@ -75,7 +75,7 @@ set scrolloff=3                 " Scroll frame when close to top or bottom
 set visualbell                  " Flash instead of beeping
 set cursorcolumn                " Display vertical guide at selected character
 " Set cursor column highlight colour to black
-highlight CursorColumn ctermbg=black guibg=black
+highlight CursorColumn ctermbg=black
 
 "" Wrapping
 set linebreak                   " Wrap only at word boundaries
@@ -84,7 +84,7 @@ set showbreak=↪                 " Use character to indicate wrapped lines
 let &colorcolumn="+1,".join(range(120,375),",")
 set formatoptions-=t            " Prevent automatic text wrapping
 " Set colorcolumn highlight colour to black
-highlight ColorColumn ctermbg=black guibg=black
+highlight ColorColumn ctermbg=black
 
 "" Whitespace
 set list                        " Show invisibles, display tabs as '▸   ', trailing spaces as '•', and eol as '¬'
