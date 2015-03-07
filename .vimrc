@@ -52,7 +52,6 @@ let g:airline_powerline_fonts = 1
 Plugin 'scrooloose/syntastic'
 Plugin 'jmcantrell/vim-virtualenv'
 Plugin 'Glench/Vim-Jinja2-Syntax'
-autocmd FileType jinja set commentstring={#\ %s\ #}
 Plugin 'majutsushi/tagbar'
 nnoremap <silent> <leader>t :TagbarToggle<CR>
 " }}}
