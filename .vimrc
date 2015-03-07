@@ -5,67 +5,76 @@
 " ~/.vimrc
 " ==============================
 
-"" Basics
+" Basics {{{
 set nocompatible                " Be iMproved
+" }}}
 
-"" Map Leaders
+" Map Leaders {{{
 let mapleader = ","             " Map comma as leader key
 " Map <leader>ev to edit .vimrc
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 " Map <leader>eg to edit .gvimrc
 nmap <silent> <leader>eg :e $MYGVIMRC<CR>
+" }}}
 
-"" Plugins {{{
-"" Vundle
+" Plugins {{{
+" Vundle {{{
 filetype off                    " required
 " set the runtime path to include Vundle and initialize
 set runtimepath+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
+" }}}
 
-"" Core Improvements
+" Core Improvements {{{
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/IndexedSearch'
 Plugin 'vim-scripts/matchit.zip'
+" }}}
 
-"" VCS
+" VCS {{{
 Plugin 'airblade/vim-gitgutter'
+" }}}
 
-"" Status Line
+" Status Line {{{
 set noshowmode                  " Hide default mode indicator
 set laststatus=2                " Always display status line
 Plugin 'bling/vim-airline'
-" let g:airline_powerline_fonts=0
+" }}}
 
-"" Language Support
+" Language Support {{{
 Plugin 'scrooloose/syntastic'
 Plugin 'Glench/Vim-Jinja2-Syntax'
 autocmd FileType jinja set commentstring={#\ %s\ #}
 Plugin 'majutsushi/tagbar'
 nnoremap <silent> <leader>t :TagbarToggle<CR>
+" }}}
 
-"" Autocomplete
+" Autocomplete {{{
 Plugin 'Valloric/YouCompleteMe'
+" }}}
 
 " All of your Plugins must be added before the following line
 call vundle#end()               " required
 filetype plugin indent on       " required
 " }}}
 
-"" Colorscheme
+" Colorscheme {{{
 set background=dark
 highlight clear FoldColumn
 highlight clear SignColumn
+" }}}
 
-"" Syntax
+" Syntax {{{
 syntax enable                   " Enable syntax highlighting
 set showmatch                   " Highlight matching braces
+" }}}
 
-"" View
+" View {{{
 set encoding=utf-8              " Set encoding to UTF-8
 set showcmd                     " Display incomplete commands
 set number                      " Show line numbers
@@ -76,8 +85,9 @@ set visualbell                  " Flash instead of beeping
 set cursorcolumn                " Display vertical guide at selected character
 " Set cursor column highlight colour to black
 highlight CursorColumn ctermbg=black
+" }}}
 
-"" Wrapping
+" Wrapping {{{
 set linebreak                   " Wrap only at word boundaries
 set showbreak=↪                 " Use character to indicate wrapped lines
 " Highlight the column after `textwidth` and all after column 120 (max 256)
@@ -85,8 +95,9 @@ let &colorcolumn="+1,".join(range(120,375),",")
 set formatoptions-=t            " Prevent automatic text wrapping
 " Set colorcolumn highlight colour to black
 highlight ColorColumn ctermbg=black
+" }}}
 
-"" Whitespace
+" Whitespace {{{
 set list                        " Show invisibles, display tabs as '▸   ', trailing spaces as '•', and eol as '¬'
 set listchars=tab:▸\ ,trail:•,eol:¬
 set tabstop=2                   " Set literal tab width and display
@@ -98,26 +109,30 @@ set autoindent                  " Enable autoindentation for new lines to match 
 set smartindent                 " Automatically indent lines after opening braces
 set cindent                     " Enable indenting for C-style source code (including C++ and Java)
 set backspace=indent,eol,start  " Backspace through everything in insert mode
+" }}}
 
-"" Searching
+" Searching {{{
 set hlsearch                    " Highlight search terms...
 set incsearch                   " ...dynamically as they are typed
 set ignorecase                  " Ignore case when searching...
 set smartcase                   " ...except when at least one uppercase letter is included
 " Clear search highlights by pressing return
 nnoremap <silent> <CR> :nohlsearch<CR>
+" }}}
 
-"" Folding
+" Folding {{{
 set foldmethod=indent           " Enable code folding based on indentation
 set foldcolumn=3                " Set width of column containing fold info
 set foldlevelstart=20           " Load files with open folds
 " Remap <Space> to toggle folds in normal mode only when they are present
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
+" }}}
 
-"" Clipboard
+" Clipboard {{{
 set clipboard=unnamed           " Use system clipboard for yank and put
+" }}}
 
-"" Mappings
+" Mappings {{{
 " By default `j` and `k` both move in a file by lines delimited by `\n` which
 " is not helpful when linewrapping is enabled. These mappings ensure that I
 " move up and down by display lines and not just lines delimited by `\n`.
@@ -127,3 +142,9 @@ noremap k gk
 " map their functionality to `gj` and `gk` respectively.
 noremap gj j
 noremap gk k
+" Reselect visual block after indent/outdent
+vnoremap < <gv
+vnoremap > >gv
+" }}}
+
+" vim:fdm=marker
