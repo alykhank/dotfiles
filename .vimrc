@@ -41,14 +41,11 @@ set laststatus=2                " Always display status line
 Plugin 'bling/vim-airline'
 " let g:airline_powerline_fonts=0
 
-"" Colours
-Plugin 'altercation/vim-colors-solarized'
-set background=dark
-
 "" Language Support
 Plugin 'scrooloose/syntastic'
 Plugin 'Glench/Vim-Jinja2-Syntax'
 autocmd FileType jinja set commentstring={#\ %s\ #}
+Plugin 'majutsushi/tagbar'
 
 "" Autocomplete
 Plugin 'Valloric/YouCompleteMe'
@@ -57,6 +54,11 @@ Plugin 'Valloric/YouCompleteMe'
 call vundle#end()               " required
 filetype plugin indent on       " required
 " }}}
+
+"" Colorscheme
+set background=dark
+highlight clear FoldColumn
+highlight clear SignColumn
 
 "" Syntax
 syntax enable                   " Enable syntax highlighting
