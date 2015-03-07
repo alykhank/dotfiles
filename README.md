@@ -8,7 +8,7 @@ Bash, vim, and git dotfiles.
 make
 ```
 
-1. The following files/folders will be symlinked into your home directory **(replacing any existing versions)**:
+- **WARNING**: The following files/folders will be symlinked into your home directory **(replacing any existing versions)**:
 ```
 .bash_profile
 .inputrc
@@ -22,13 +22,13 @@ make
 .svn-completion.bash
 ```
 
-2. Git submodules will be initialized and updated (currently only Vim plugin manager, Vundle)
+- Git submodules will be initialized and updated (currently only Vim plugin manager, Vundle)
 
-3. All Vim plugins in `.vimrc` will be installed
+- All Vim plugins in `.vimrc` will be installed
 
-4. `Meslo LG S Regular for Powerline.otf` (a patched font for symbols on the Vim statusline) will be installed
+- `Meslo LG S Regular for Powerline.otf` (a patched font for symbols on the Vim statusline) will be installed
 
-5. You will be prompted to complete the `.gitconfig`
+- You will be prompted to complete the `.gitconfig`
 
 ## Load Custom [iTerm](http://iterm2.com) Preferences
 
