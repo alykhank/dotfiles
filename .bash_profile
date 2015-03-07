@@ -1,31 +1,31 @@
 ### Retrieve git branch name
-function get_git_branch {
-	git branch | awk '/^\*/ { print $2 }'
+function get_git_branch() {
+  git branch | awk '/^\*/ { print $2 }'
 }
 ### Retrieve git dirty state marker
-function get_git_dirty {
-	git diff --quiet || echo '☢'
+function get_git_dirty() {
+  git diff --quiet || echo '☢'
 }
 
 ### Retrieve git metadata
-function get_git_prompt {
-	git branch &> /dev/null || return 1
-	echo " ($(get_git_branch))$(get_git_dirty)"
+function get_git_prompt() {
+  git branch &> /dev/null || return 1
+  echo " ($(get_git_branch))$(get_git_dirty)"
 }
 
 ### Pretty print JSON files
-function pprintjson {
-	cat $1 | python -m json.tool
+function pprintjson() {
+  cat "$1" | python -m json.tool
 }
 
 ### Generate ctags for current Git repo
-function generate_ctags {
+function generate_ctags() {
   dir="`git rev-parse --git-dir`"
   git ls-files | ctags --tag-relative -L - -f "$dir/tags"
 }
 
 ### Set flags for converting GitHub Markdown to HTML5 with Pandoc
-function pandocmark {
+function pandocmark() {
   infile=$1
   outfile=$(basename "$infile")
   outfile=${outfile%.*}.html
@@ -42,11 +42,11 @@ export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin
 
 ### If git completion script exists, enable it
 if [ -f ~/.git-completion.bash ]; then
-	. ~/.git-completion.bash
+  . ~/.git-completion.bash
 fi
 ### If svn completion script exists, enable it
 if [ -f ~/.svn-completion.bash ]; then
-	. ~/.svn-completion.bash
+  . ~/.svn-completion.bash
 fi
 
 ### Enable colourized output for listing directory contents, append '/' to directories, and extra symbols after various filetypes for differentiation
