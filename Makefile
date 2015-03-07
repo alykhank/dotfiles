@@ -1,8 +1,12 @@
 SHELL := /bin/bash
 
-.PHONY: all shells vim vimdotfiles vimplugins vimcompletion vimfonts vcs vcsdotfiles gitconfiguration submodules
+.PHONY: all submodules shells vim vimdotfiles vimplugins vimcompletion vimfonts vcs vcsdotfiles gitconfiguration
 
-all: shells vim vcs submodules
+all: submodules shells vim vcs
+
+submodules:
+	git submodule init
+	git submodule update --recursive
 
 shells: .bash_profile .inputrc .ackrc
 	@echo Removing $^; \
@@ -64,7 +68,3 @@ gitconfiguration:
 	else \
 		echo "github.user=`git config --global github.user`"; \
 	fi
-
-submodules:
-	git submodule init
-	git submodule update --recursive
