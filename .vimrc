@@ -134,6 +134,12 @@ nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 set clipboard=unnamed           " Use system clipboard for yank and put
 " }}}
 
+" Splits {{{
+" Sets the default splitting to be to the bottom and to the right.
+set splitbelow
+set splitright
+" }}}
+
 " Mappings {{{
 " By default `j` and `k` both move in a file by lines delimited by `\n` which
 " is not helpful when linewrapping is enabled. These mappings ensure that I
