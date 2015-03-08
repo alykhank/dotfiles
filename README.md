@@ -31,6 +31,7 @@ make
     - Font installs may require you to log out and log back in to take effect
 
 - You will be prompted to complete the `.gitconfig`
+    - You can temporarily prevent these changes from marking this repo as dirty with `git update-index --assume-unchanged .gitconfig`
 
 Once `make` has completed, please close your shell and open a new instance.
 
