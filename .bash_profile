@@ -15,6 +15,7 @@ function get_git_prompt() {
 
 ### Pretty print JSON files
 function pprintjson() {
+  [[ "$#" -eq 1 ]] || { echo "Usage: pprintjson infile.json"; return; }
   cat "$1" | python -m json.tool
 }
 
@@ -26,6 +27,7 @@ function generate_ctags() {
 
 ### Set flags for converting GitHub Markdown to HTML5 with Pandoc
 function pandocmark() {
+  [[ "$#" -eq 1 ]] || { echo "Usage: pandocmark infile.md"; return; }
   infile=$1
   outfile=$(basename "$infile")
   outfile=${outfile%.*}.html
