@@ -66,6 +66,11 @@ Plugin 'xolox/vim-misc'
 Plugin 'Valloric/YouCompleteMe'
 " }}}
 
+" Search {{{
+Plugin 'ctrlpvim/ctrlp.vim'
+let g:ctrlp_extensions = ['tag', 'buffertag']
+" }}}
+
 " All of your Plugins must be added before the following line
 call vundle#end()               " required
 filetype plugin indent on       " required
