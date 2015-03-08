@@ -5,8 +5,7 @@ SHELL := /bin/bash
 all: submodules shells vim vcs
 
 submodules:
-	git submodule init
-	git submodule update --recursive
+	git submodule update --init --recursive
 
 shells: .bash_profile .inputrc .ackrc
 	@echo Removing $^; \

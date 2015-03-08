@@ -23,7 +23,7 @@ make
 .svn-completion.bash
 ```
 
-- Git submodules will be initialized and updated (currently only Vim plugin manager, Vundle)
+- Git submodules will be initialized and updated recursively (currently only Vim plugin manager, Vundle)
 
 - All Vim plugins in `.vimrc` will be installed
 
