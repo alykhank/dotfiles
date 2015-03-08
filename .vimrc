@@ -84,9 +84,6 @@ set ruler                       " Show the current row and column
 set linespace=4                 " Set line widths
 set scrolloff=3                 " Scroll frame when close to top or bottom
 set visualbell                  " Flash instead of beeping
-set cursorcolumn                " Display vertical guide at selected character
-" Set cursor column highlight colour to black
-highlight CursorColumn ctermbg=black
 " }}}
 
 " Wrapping {{{

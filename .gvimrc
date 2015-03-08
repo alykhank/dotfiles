@@ -6,8 +6,10 @@
 " ==============================
 
 set lines=40 columns=160    " Set gvim window size
-set cursorline              " Highlight the current row
-set cursorcolumn            " Highlight the current column
-set background=dark         " Set background color
+" Colorscheme {{{
+set background=dark
+highlight clear FoldColumn
+highlight clear SignColumn
+" }}}
 set transparency=4          " Make window slightly transparent
 set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h12
