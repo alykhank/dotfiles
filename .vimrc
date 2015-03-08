@@ -29,7 +29,6 @@ Plugin 'gmarik/Vundle.vim'
 
 " Core Improvements {{{
 Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/IndexedSearch'
@@ -37,6 +36,7 @@ Plugin 'vim-scripts/matchit.zip'
 " }}}
 
 " VCS {{{
+Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 " }}}
 
@@ -53,8 +53,13 @@ Plugin 'scrooloose/syntastic'
 Plugin 'jmcantrell/vim-virtualenv'
 Plugin 'Glench/Vim-Jinja2-Syntax'
 Plugin 'tpope/vim-liquid'
+" }}}
+
+" Ctags {{{
 Plugin 'majutsushi/tagbar'
 nnoremap <silent> <leader>t :TagbarToggle<CR>
+Plugin 'xolox/vim-easytags'
+Plugin 'xolox/vim-misc'
 " }}}
 
 " Autocomplete {{{
