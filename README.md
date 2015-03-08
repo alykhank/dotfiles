@@ -19,6 +19,7 @@ make
 .gitconfig
 .gitignore_global
 .git-completion.bash
+.git-prompt.sh
 .svn-completion.bash
 ```
 
