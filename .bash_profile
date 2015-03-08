@@ -97,7 +97,7 @@ GIT_PS1_SHOWUPSTREAM="auto git"
 # }}}
 
 # Display path, git info, and prompt character
-PROMPT_COMMAND='__git_ps1 "\[$Blue\]\w\[$Color_Off\]" "\[$White\]\\\$\[$Color_Off\] "'
+PROMPT_COMMAND='__git_ps1 "\[$Blue\]\w\[$Color_Off\]" " \[$White\]\\\$\[$Color_Off\] "'
 # }}}
 
 # Aliases {{{
