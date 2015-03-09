@@ -2,6 +2,7 @@
 .DS_Store
 
 # Vim
+*~
 *.swp
 .netrwhist
 

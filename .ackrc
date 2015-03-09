@@ -22,5 +22,9 @@
 # Ignore Jekyll generated directories
 --ignore-dir=_site
 
+# Ignore (.)Bundle directories
+--ignore-dir=bundle
+--ignore-dir=.bundle
+
 # Ignore SQLite db files
 --ignore-file=ext:db
