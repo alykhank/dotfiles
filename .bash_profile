@@ -1,17 +1,9 @@
 # Functions {{{
-### Retrieve git branch name
-function get_git_branch() {
-  git branch | awk '/^\*/ { print $2 }'
-}
-### Retrieve git dirty state marker
-function get_git_dirty() {
-  git diff --quiet || echo '☢'
-}
-
-### Retrieve git metadata
-function get_git_prompt() {
-  git branch &> /dev/null || return 1
-  echo " ($(get_git_branch))$(get_git_dirty)"
+### Retrieve current virtualenv info
+function get_virtualenv() {
+  if [[ -n "$VIRTUAL_ENV" ]]; then
+    echo "($(basename "$VIRTUAL_ENV"))"
+  fi
 }
 
 ### Pretty print JSON files
@@ -101,7 +93,7 @@ GIT_PS1_SHOWUPSTREAM="auto git"
 # }}}
 
 # Display path, git info, and prompt character
-PROMPT_COMMAND='__git_ps1 "\[$Blue\]\w\[$Color_Off\]" " \[$White\]\\\$\[$Color_Off\] "'
+PROMPT_COMMAND='__git_ps1 "$(get_virtualenv)\[$Blue\]\w\[$Color_Off\]" " \[$White\]\\\$\[$Color_Off\] "'
 # }}}
 
 # Aliases {{{
