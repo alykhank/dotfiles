@@ -13,3 +13,5 @@
 	excludesfile = ~/.gitignore_global
 [push]
 	default = simple
+[hub]
+	protocol = https
