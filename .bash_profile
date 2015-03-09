@@ -52,6 +52,10 @@ fi
 if [ -f ~/.git-prompt.sh ]; then
   source ~/.git-prompt.sh
 fi
+### If hub bash completion script exists, enable it
+if [ -f ~/.hub.bash_completion.sh ]; then
+  source ~/.hub.bash_completion.sh
+fi
 ### If svn completion script exists, enable it
 if [ -f ~/.svn-completion.bash ]; then
   source ~/.svn-completion.bash
@@ -109,6 +113,10 @@ alias g='git'
 __git_complete g __git_main
 # }}}
 
+# Boxen {{{
 [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
+### Alias [hub](https://hub.github.com) to git (must define after sourcing boxen env)
+eval "$(hub alias -s)"
+# }}}
 
 # vim:fdm=marker

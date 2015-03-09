@@ -38,7 +38,7 @@ vimfonts:
 
 vcs: vcsdotfiles gitconfiguration
 
-vcsdotfiles: .gitconfig .gitignore_global .git-completion.bash .git-prompt.sh .svn-completion.bash
+vcsdotfiles: .gitconfig .gitignore_global .git-completion.bash .git-prompt.sh .hub.bash_completion.sh .svn-completion.bash
 	@echo Removing $^; \
 	$(foreach df, $^, rm -rf ~/$(df))
 	@echo Installing $^; \
@@ -68,7 +68,7 @@ gitconfiguration:
 		echo "github.user=`git config --global github.user`"; \
 	fi
 
-uninstall: .bash_profile .inputrc .ackrc .vim .vimrc .gvimrc .gitconfig .gitignore_global .git-completion.bash .git-prompt.sh .svn-completion.bash
+uninstall: .bash_profile .inputrc .ackrc .vim .vimrc .gvimrc .gitconfig .gitignore_global .git-completion.bash .git-prompt.sh .hub.bash_completion.sh .svn-completion.bash
 	@echo Removing $^; \
 	$(foreach df, $^, rm -rf ~/$(df))
 	@if [[ -e ~/Library/Fonts/Meslo\ LG\ S\ Regular\ for\ Powerline.otf ]]; then \

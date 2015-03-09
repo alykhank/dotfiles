@@ -20,6 +20,7 @@ make
 .gitignore_global
 .git-completion.bash
 .git-prompt.sh
+.hub.bash_completion.sh
 .svn-completion.bash
 ```
 
