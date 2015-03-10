@@ -161,6 +161,8 @@ noremap gk k
 " Reselect visual block after indent/outdent
 vnoremap < <gv
 vnoremap > >gv
+" Reformat JSON to pretty print format
+nnoremap <leader>j :%!python -m json.tool<CR>
 " }}}
 
 " vim:fdm=marker
