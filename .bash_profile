@@ -108,7 +108,9 @@ __git_complete g __git_main
 # Boxen {{{
 [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
 ### Alias [hub](https://hub.github.com) to git (must define after sourcing boxen env)
-eval "$(hub alias -s)"
+if hash hub 2>/dev/null; then
+  eval "$(hub alias -s)"
+fi
 # }}}
 
 # vim:fdm=marker
