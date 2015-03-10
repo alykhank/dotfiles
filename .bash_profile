@@ -98,7 +98,7 @@ PROMPT_COMMAND='__git_ps1 "$(get_virtualenv)\[$Blue\]\w\[$Color_Off\]" " \[$Whit
 
 # Aliases {{{
 ### Enable colourized output for listing directory contents, append '/' to directories, and extra symbols after various filetypes for differentiation
-alias ls='ls -Fah'
+alias ls='ls -FAh'
 
 ### Create shorthand for git
 alias g='git'
