@@ -24,59 +24,59 @@ filetype off                    " required
 set runtimepath+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+Plugin 'gmarik/Vundle.vim'      " Plugin manager
 " }}}
 
 " Core Improvements {{{
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-surround'
-Plugin 'vim-scripts/IndexedSearch'
-Plugin 'vim-scripts/matchit.zip'
+Plugin 'tpope/vim-commentary'   " Comment lines with 'gcc'
+Plugin 'tpope/vim-repeat'       " Repeat actions with '.'
+Plugin 'tpope/vim-surround'     " Surround text with tags using 'ys{motion}'
+Plugin 'vim-scripts/IndexedSearch' " Number search results
+Plugin 'vim-scripts/matchit.zip' " Navigate between matching tags with '%'
 " }}}
 
 " VCS {{{
-Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-fugitive'     " Git integration
+Plugin 'airblade/vim-gitgutter' " Show diff symbols in gutter
 " }}}
 
 " Status Line {{{
 set noshowmode                  " Hide default mode indicator
 set laststatus=2                " Always display status line
-Plugin 'bling/vim-airline'
+Plugin 'bling/vim-airline'      " Supercharged statusline
 let g:airline_theme = 'solarized'
 let g:airline_powerline_fonts = 1
 " }}}
 
 " Language Support {{{
-Plugin 'scrooloose/syntastic'
-Plugin 'jmcantrell/vim-virtualenv'
-Plugin 'Glench/Vim-Jinja2-Syntax'
-Plugin 'tpope/vim-liquid'
-Plugin 'Keithbsmiley/swift.vim'
+Plugin 'scrooloose/syntastic'   " Check syntax on save
+Plugin 'jmcantrell/vim-virtualenv' " Provide virtualenv info and commands
+Plugin 'Glench/Vim-Jinja2-Syntax' " Jinja2 runtime files
+Plugin 'tpope/vim-liquid'       " Liquid runtime files
+Plugin 'Keithbsmiley/swift.vim' " Swift runtime files
 " }}}
 
 " Ctags {{{
-Plugin 'majutsushi/tagbar'
+Plugin 'majutsushi/tagbar'      " Interface for browsing and navigating tags
 nnoremap <silent> <leader>t :TagbarToggle<CR>
-Plugin 'xolox/vim-easytags'
-Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-easytags'     " Update ctags on save
+Plugin 'xolox/vim-misc'         " Required for vim-easytags
 " }}}
 
 " Autocomplete {{{
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe' " Autocomplete for most programming languages
 " }}}
 
 " Snippets {{{
-Plugin 'SirVer/ultisnips'
+Plugin 'SirVer/ultisnips'       " Provide user-editable snippets via triggers
 let g:UltiSnipsExpandTrigger="<C-@>"
 let g:UltiSnipsJumpForwardTrigger="<C-j>"
 let g:UltiSnipsJumpBackwardTrigger="<C-k>"
 " }}}
 
 " Search {{{
-Plugin 'ctrlpvim/ctrlp.vim'
-let g:ctrlp_extensions = ['tag', 'buffertag']
+Plugin 'ctrlpvim/ctrlp.vim'     " Search through files, recently used, buffers
+let g:ctrlp_extensions = ['tag', 'buffertag'] " Also search through tags
 " }}}
 
 " All of your Plugins must be added before the following line
@@ -142,8 +142,6 @@ nnoremap <silent> <CR> :nohlsearch<CR>
 set foldmethod=indent           " Enable code folding based on indentation
 set foldcolumn=3                " Set width of column containing fold info
 set foldlevelstart=20           " Load files with open folds
-" Remap <Space> to toggle folds in normal mode only when they are present
-nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 " }}}
 
 " Clipboard {{{
