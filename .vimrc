@@ -63,8 +63,22 @@ Plugin 'xolox/vim-easytags'
 Plugin 'xolox/vim-misc'
 " }}}
 
+" Tab Completion {{{
+Plugin 'ervandew/supertab'
+let g:SuperTabDefaultCompletionType = '<C-n>'
+
 " Autocomplete {{{
 Plugin 'Valloric/YouCompleteMe'
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+" }}}
+
+" Snippets {{{
+Plugin 'SirVer/ultisnips'
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+" }}}
 " }}}
 
 " Search {{{

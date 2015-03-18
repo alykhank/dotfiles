@@ -1,0 +1,25 @@
+snippet #! "shebang" b
+#!/usr/bin/env python
+
+$0
+endsnippet
+
+snippet ifmain "if __main__" b
+if __name__ == "__main__":
+	${1:main()}$0
+endsnippet
+
+snippet if "if statement" b
+if ${1:condition}:
+	${3:pass}
+endsnippet
+
+snippet for "for loop" b
+for ${1:item} in ${2:iterable}:
+	${3:pass}
+endsnippet
+
+snippet def "function definition" b
+def ${1:function}():
+	{$2:pass}
+endsnippet
