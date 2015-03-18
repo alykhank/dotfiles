@@ -4,11 +4,11 @@ Bash, vim, and git dotfiles.
 
 ## Requirements
 
-[Homebrew](http://brew.sh)
-[Exuberant Ctags](http://ctags.sourceforge.net) - `brew install ctags` (Optional, otherwise disable plugins in Ctags section of `.vimrc`)
-Latest [Vim](http://www.vim.org) - `brew install vim` (Optional, for Vim Autocomplete, otherwise disable plugins in Autocomplete section of `.vimrc`)
-[Cmake](http://cmake.org) - `brew install cmake` (Optional, for Vim Autocomplete, otherwise disable plugins in Autocomplete section of `.vimrc`)
-[Hub](https://hub.github.com) - `brew install hub` (Optional, helper for GitHub interaction)
+* [Homebrew](http://brew.sh)
+* [Exuberant Ctags](http://ctags.sourceforge.net) - `brew install ctags` (Optional, otherwise disable plugins in Ctags section of `.vimrc`)
+* Latest [Vim](http://www.vim.org) - `brew install vim` (Optional, for Vim Autocomplete, otherwise disable plugins in Autocomplete section of `.vimrc`)
+* [Cmake](http://cmake.org) - `brew install cmake` (Optional, for Vim Autocomplete, otherwise disable plugins in Autocomplete section of `.vimrc`)
+* [Hub](https://hub.github.com) - `brew install hub` (Optional, helper for GitHub interaction)
 
 ## Install
 
