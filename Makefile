@@ -33,7 +33,11 @@ vimfonts:
 	@if [[ ! -e ~/Library/Fonts/Meslo\ LG\ S\ Regular\ for\ Powerline.otf ]]; then \
 		echo "Installing Vim Fonts..."; \
 		curl https://raw.githubusercontent.com/powerline/fonts/master/Meslo/Meslo%20LG%20S%20Regular%20for%20Powerline.otf -o ~/Library/Fonts/Meslo\ LG\ S\ Regular\ for\ Powerline.otf; \
-		fc-cache -f ~/Library/Fonts/; \
+		if hash fc-cache 2>/dev/null; then \
+			fc-cache -f ~/Library/Fonts/; \
+		else \
+			echo "Font installs may require you to log out and log back in to take effect."; \
+		fi \
 	fi
 
 vcs: vcsdotfiles gitconfiguration
@@ -74,5 +78,9 @@ uninstall: .bash_profile .inputrc .ackrc .vim .vimrc .gvimrc .gitconfig .gitigno
 	@if [[ -e ~/Library/Fonts/Meslo\ LG\ S\ Regular\ for\ Powerline.otf ]]; then \
 		echo "Uninstalling Vim Fonts..."; \
 		rm ~/Library/Fonts/Meslo\ LG\ S\ Regular\ for\ Powerline.otf; \
-		fc-cache -f ~/Library/Fonts/; \
+		if hash fc-cache 2>/dev/null; then \
+			fc-cache -f ~/Library/Fonts/; \
+		else \
+			echo "Font uninstalls may require you to log out and log back in to take effect."; \
+		fi \
 	fi
