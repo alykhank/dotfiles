@@ -103,6 +103,7 @@ set ruler                       " Show the current row and column
 set linespace=4                 " Set line widths
 set scrolloff=3                 " Scroll frame when close to top or bottom
 set visualbell                  " Flash instead of beeping
+set wildmenu                    " Show command-line completions in statusline
 " }}}
 
 " Wrapping {{{
@@ -149,7 +150,7 @@ set clipboard=unnamed           " Use system clipboard for yank and put
 " }}}
 
 " Splits {{{
-" Sets the default splitting to be to the bottom and to the right.
+" Sets the default splitting to be to the bottom and to the right
 set splitbelow
 set splitright
 " }}}
