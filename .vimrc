@@ -69,9 +69,7 @@ Plugin 'Valloric/YouCompleteMe' " Autocomplete for most programming languages
 
 " Snippets {{{
 Plugin 'SirVer/ultisnips'       " Provide user-editable snippets via triggers
-let g:UltiSnipsExpandTrigger="<C-@>"
-let g:UltiSnipsJumpForwardTrigger="<C-j>"
-let g:UltiSnipsJumpBackwardTrigger="<C-k>"
+let g:UltiSnipsExpandTrigger="<C-j>"
 " }}}
 
 " Search {{{
