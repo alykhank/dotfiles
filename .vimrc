@@ -99,9 +99,13 @@ set showcmd                     " Display incomplete commands
 set number                      " Show line numbers
 set ruler                       " Show the current row and column
 set linespace=4                 " Set line widths
-set scrolloff=3                 " Scroll frame when close to top or bottom
+set display+=lastline           " Display as much as possible of long lines
+set scrolloff=10                " Scroll frame when close to top or bottom
+set sidescrolloff=20            " Scroll frame when close to left or right
+set sidescroll=1                " Set number of columns to scroll sideways at a time
 set visualbell                  " Flash instead of beeping
 set wildmenu                    " Show command-line completions in statusline
+set autoread                    " Automatically reread externally changed files
 " }}}
 
 " Wrapping {{{
@@ -110,13 +114,14 @@ set showbreak=↪                 " Use character to indicate wrapped lines
 " Highlight the column after `textwidth` and all after column 120 (max 256)
 let &colorcolumn="+1,".join(range(120,375),",")
 set formatoptions-=t            " Prevent automatic text wrapping
+set formatoptions+=j            " Delete extra comment characters when joining lines
 " Set colorcolumn highlight colour to black
 highlight ColorColumn ctermbg=black
 " }}}
 
 " Whitespace {{{
 set list                        " Show invisibles, display tabs as '▸   ', trailing spaces as '•', and eol as '¬'
-set listchars=tab:▸\ ,trail:•,eol:¬
+set listchars=tab:▸\ ,trail:•,eol:¬,extends:❯,precedes:❮
 set tabstop=2                   " Set literal tab width and display
 set softtabstop=2               " Set tab width for insertion and <BS>
 set shiftwidth=2                " Set CTRL-T, > (add indent) & CTRL-D, < (remove indent) widths
