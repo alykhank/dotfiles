@@ -25,7 +25,7 @@ vimplugins:
 
 vimcompletion:
 	@echo "Installing YouCompleteMe with --clang-completer option..."; \
-	./.vim/bundle/YouCompleteMe/install.sh --clang-completer
+	~/.vim/bundle/YouCompleteMe/install.sh --clang-completer
 
 vimfonts:
 	@if [[ ! -e ~/Library/Fonts/Meslo\ LG\ S\ Regular\ for\ Powerline.otf ]]; then \
