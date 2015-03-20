@@ -8,14 +8,18 @@ submodules:
 	git submodule update --init --recursive
 
 shells: $(wildcard shells/*)
+	@echo Removing $(^F); \
+	$(foreach df, $(^F), rm -rf ~/.$(df))
 	@echo Installing $(^F); \
-	$(foreach df, $(^F), ln -si $(CURDIR)/shells/$(df) ~/.$(df);)
+	$(foreach df, $(^F), ln -s $(CURDIR)/shells/$(df) ~/.$(df);)
 
 vim: vimdotfiles vimplugins vimfonts
 
 vimdotfiles: $(wildcard vim/*)
+	@echo Removing $(^F); \
+	$(foreach df, $(^F), rm -rf ~/.$(df))
 	@echo Installing $(^F); \
-	$(foreach df, $(^F), ln -si $(CURDIR)/vim/$(df) ~/.$(df);)
+	$(foreach df, $(^F), ln -s $(CURDIR)/vim/$(df) ~/.$(df);)
 
 vimplugins:
 	@echo "Installing Vim Plugins..."; \
@@ -39,8 +43,10 @@ vimfonts:
 git: gitdotfiles gitconfiguration
 
 gitdotfiles: $(wildcard git/*)
+	@echo Removing $(^F); \
+	$(foreach df, $(^F), rm -rf ~/.$(df))
 	@echo Installing $(^F); \
-	$(foreach df, $(^F), ln -si $(CURDIR)/git/$(df) ~/.$(df);)
+	$(foreach df, $(^F), ln -s $(CURDIR)/git/$(df) ~/.$(df);)
 
 gitconfiguration:
 	@echo "Setting up global Git configuration...";
