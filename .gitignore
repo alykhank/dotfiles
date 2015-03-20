@@ -1,5 +1,5 @@
-# vim plugins
-.vim/bundle/
+# Vim plugins
+vim/vim/bundle/
 
 # netrw history file
 .netrwhist

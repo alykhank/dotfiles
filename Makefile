@@ -15,11 +15,9 @@ shells: .bash_profile .inputrc .ackrc
 
 vim: vimdotfiles vimplugins vimfonts
 
-vimdotfiles: .vim .vimrc .gvimrc
-	@echo Removing $^; \
-	$(foreach df, $^, rm -rf ~/$(df))
-	@echo Installing $^; \
-	$(foreach df, $^, ln -s $(CURDIR)/$(df) ~;)
+vimdotfiles: $(wildcard vim/*)
+	@echo Installing $(^F); \
+	$(foreach df, $(^F), ln -si $(CURDIR)/vim/$(df) ~/.$(df);)
 
 vimplugins:
 	@echo "Installing Vim Plugins..."; \
