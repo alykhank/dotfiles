@@ -1,8 +1,8 @@
 SHELL := /bin/bash
 
-.PHONY: all submodules shells vim vimdotfiles vimplugins vimcompletion vimfonts vcs vcsdotfiles gitconfiguration uninstall
+.PHONY: all submodules shells vim vimdotfiles vimplugins vimcompletion vimfonts git gitdotfiles gitconfiguration uninstall
 
-all: submodules shells vim vcs
+all: submodules shells vim git
 
 submodules:
 	git submodule update --init --recursive
@@ -40,13 +40,11 @@ vimfonts:
 		fi \
 	fi
 
-vcs: vcsdotfiles gitconfiguration
+git: gitdotfiles gitconfiguration
 
-vcsdotfiles: .gitconfig .gitignore_global .git-completion.bash .git-prompt.sh .hub.bash_completion.sh
-	@echo Removing $^; \
-	$(foreach df, $^, rm -rf ~/$(df))
-	@echo Installing $^; \
-	$(foreach df, $^, ln -s $(CURDIR)/$(df) ~;)
+gitdotfiles: $(wildcard git/*)
+	@echo Installing $(^F); \
+	$(foreach df, $(^F), ln -si $(CURDIR)/git/$(df) ~/.$(df);)
 
 gitconfiguration:
 	@echo "Setting up global Git configuration...";
