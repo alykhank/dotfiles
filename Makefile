@@ -7,11 +7,9 @@ all: submodules shells vim git
 submodules:
 	git submodule update --init --recursive
 
-shells: .bash_profile .inputrc .ackrc
-	@echo Removing $^; \
-	$(foreach df, $^, rm -rf ~/$(df))
-	@echo Installing $^; \
-	$(foreach df, $^, ln -s $(CURDIR)/$(df) ~;)
+shells: $(wildcard shells/*)
+	@echo Installing $(^F); \
+	$(foreach df, $(^F), ln -si $(CURDIR)/shells/$(df) ~/.$(df);)
 
 vim: vimdotfiles vimplugins vimfonts
 
@@ -68,9 +66,9 @@ gitconfiguration:
 		echo "github.user=`git config --global github.user`"; \
 	fi
 
-uninstall: .bash_profile .inputrc .ackrc .vim .vimrc .gvimrc .gitconfig .gitignore_global .git-completion.bash .git-prompt.sh .hub.bash_completion.sh
-	@echo Removing $^; \
-	$(foreach df, $^, rm -rf ~/$(df))
+uninstall: $(wildcard shells/*) $(wildcard vim/*) $(wildcard git/*)
+	@echo Removing $(^F); \
+	$(foreach df, $(^F), rm -rf ~/.$(df))
 	@if [[ -e ~/Library/Fonts/Meslo\ LG\ S\ Regular\ for\ Powerline.otf ]]; then \
 		echo "Uninstalling Vim Fonts..."; \
 		rm ~/Library/Fonts/Meslo\ LG\ S\ Regular\ for\ Powerline.otf; \
