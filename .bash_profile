@@ -48,10 +48,6 @@ fi
 if [ -f ~/.hub.bash_completion.sh ]; then
   source ~/.hub.bash_completion.sh
 fi
-### If svn completion script exists, enable it
-if [ -f ~/.svn-completion.bash ]; then
-  source ~/.svn-completion.bash
-fi
 # }}}
 
 # Prompt {{{

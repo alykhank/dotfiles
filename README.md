@@ -29,7 +29,6 @@ make
 .git-completion.bash
 .git-prompt.sh
 .hub.bash_completion.sh
-.svn-completion.bash
 ```
 
 - Git submodules will be initialized and updated recursively (currently only Vim plugin manager, Vundle)
