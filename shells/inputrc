@@ -1,7 +1,18 @@
-# NOTE: The `~/.inputrc` file sets the options for GNU Readline. GNU Readline
-# is used in bash but also in a variety of other prompts.
+# Readline Init File: `~/.inputrc`
 
-# Show all completions as soon as I press tab, even if there's more than one
-set show-all-if-ambiguous on
-# Ignore case
+# If set to 'on', Readline performs filename matching and completion in a case-insensitive fashion.
+# The default value is 'off'.
 set completion-ignore-case on
+
+# If set to ‘on’, and completion-ignore-case is enabled,
+# Readline treats hyphens (‘-’) and underscores (‘_’) as equivalent when performing case-insensitive filename matching and completion.
+set completion-map-case on
+
+# This alters the default behavior of the completion functions.
+# If set to ‘on’, words which have more than one possible completion cause the matches to be listed immediately instead of ringing the bell.
+# The default value is ‘off’.
+set show-all-if-ambiguous on
+
+# If set to ‘on’, a character denoting a file’s type is appended to the filename when listing possible completions.
+# The default is ‘off’.
+set visible-stats on
