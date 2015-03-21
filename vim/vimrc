@@ -119,8 +119,16 @@ set linebreak                   " Wrap only at word boundaries
 set showbreak=↪                 " Use character to indicate wrapped lines
 " Highlight the column after `textwidth` and all after column 120 (max 256)
 let &colorcolumn="+1,".join(range(120,375),",")
-set formatoptions-=t            " Prevent automatic text wrapping
-set formatoptions+=j            " Delete extra comment characters when joining lines
+" Disabled Format Options {{{
+" t: Auto-wrap text using textwidth
+" r: Automatically insert the current comment leader after hitting <Enter> in Insert mode
+" o: Automatically insert the current comment leader after hitting 'o' or 'O' in Normal mode
+set formatoptions-=t,r,o
+" }}}
+" Enabled Format Options {{{
+" j: Where it makes sense, remove a comment leader when joining lines
+set formatoptions+=j
+" }}}
 " Set colorcolumn highlight colour to black
 
 highlight ColorColumn ctermbg=black
