@@ -17,6 +17,12 @@ nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>eg :e $MYGVIMRC<CR>
 " }}}
 
+" Temporary Files {{{
+" Store temporarily files globally instead of working directory
+set backupdir=~/.vim/backup
+set directory=~/.vim/swap
+" }}}
+
 " Plugins {{{
 " Vundle {{{
 filetype off                    " required
