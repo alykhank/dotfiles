@@ -39,6 +39,8 @@ Plugin 'tpope/vim-repeat'       " Repeat actions with '.'
 Plugin 'tpope/vim-surround'     " Surround text with tags using 'ys{motion}'
 Plugin 'vim-scripts/IndexedSearch' " Number search results
 Plugin 'vim-scripts/matchit.zip' " Navigate between matching tags with '%'
+Plugin 'bkad/CamelCaseMotion'   " Provide CamelCase and underscore motion through words
+Plugin 'tpope/vim-endwise'      " Automatically close blocks
 " }}}
 
 " VCS {{{
