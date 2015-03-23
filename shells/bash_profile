@@ -32,7 +32,7 @@ function pandocmark() {
 # Exports {{{
 export CLICOLOR=1
 export EDITOR='vim'
-export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
 # }}}
 
 # VCS Scripts {{{
