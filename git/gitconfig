@@ -8,6 +8,7 @@
 	co = checkout
 	d = diff
 	dc = diff --cached
+	remote = remote -v
 	sl = stash list
 	st = status
 [core]
