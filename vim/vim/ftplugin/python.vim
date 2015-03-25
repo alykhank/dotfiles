@@ -1,5 +1,5 @@
 "" Wrapping
-set textwidth=99                " Set wrap width to 99 characters
+set textwidth=99                " Set wrap width
 
 "" Whitespace
 set tabstop=4                   " Set literal tab width and display

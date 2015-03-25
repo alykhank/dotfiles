@@ -1,2 +1,2 @@
 "" Wrapping
-set textwidth=50               " Set wrap width to 50 characters
+set textwidth=72                " Set wrap width
