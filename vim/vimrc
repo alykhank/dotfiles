@@ -59,6 +59,7 @@ let g:airline_powerline_fonts = 1
 " Language Support {{{
 Plugin 'scrooloose/syntastic'   " Check syntax on save
 Plugin 'jmcantrell/vim-virtualenv' " Provide virtualenv info and commands
+Plugin 'tpope/vim-git'          " Git runtime files
 Plugin 'Glench/Vim-Jinja2-Syntax' " Jinja2 runtime files
 Plugin 'tpope/vim-liquid'       " Liquid runtime files
 Plugin 'Keithbsmiley/swift.vim' " Swift runtime files
