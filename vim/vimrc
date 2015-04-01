@@ -115,6 +115,7 @@ set sidescroll=1                " Set number of columns to scroll sideways at a 
 set visualbell                  " Flash instead of beeping
 set wildmenu                    " Show command-line completions in statusline
 set autoread                    " Automatically reread externally changed files
+set mouse=a                     " Allow mouse interaction, prevent scrolling console UI
 " }}}
 
 " Wrapping {{{
