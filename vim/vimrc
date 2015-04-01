@@ -120,6 +120,7 @@ set mouse=a                     " Allow mouse interaction, prevent scrolling con
 
 " Wrapping {{{
 set linebreak                   " Wrap only at word boundaries
+set breakindent                 " Indent wrapped portion of lines to matching level
 set showbreak=↪                 " Use character to indicate wrapped lines
 " Highlight the column after `textwidth` and all after column 120 (max 256)
 let &colorcolumn="+1,".join(range(120,375),",")
@@ -145,6 +146,7 @@ set tabstop=2                   " Set literal tab width and display
 set softtabstop=2               " Set tab width for insertion and <BS>
 set shiftwidth=2                " Set CTRL-T, > (add indent) & CTRL-D, < (remove indent) widths
 set expandtab                   " Ensure tabs are expanded to spaces
+set smarttab                    " Insert shiftwidth tabs at start of line, softtabstop tabs elsewhere
 set shiftround                  " Round indents to multiples of shiftwidth
 set autoindent                  " Enable autoindentation for new lines to match indent level of previous line
 set smartindent                 " Automatically indent lines after opening braces
