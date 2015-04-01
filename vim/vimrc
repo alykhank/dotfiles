@@ -99,6 +99,7 @@ highlight clear SignColumn
 " Syntax {{{
 syntax enable                   " Enable syntax highlighting
 set showmatch                   " Highlight matching braces
+set synmaxcol=200               " Limit syntax highlighting by column number
 " }}}
 
 " View {{{
