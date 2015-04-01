@@ -63,6 +63,7 @@ Plugin 'tpope/vim-git'          " Git runtime files
 Plugin 'Glench/Vim-Jinja2-Syntax' " Jinja2 runtime files
 Plugin 'tpope/vim-liquid'       " Liquid runtime files
 Plugin 'Keithbsmiley/swift.vim' " Swift runtime files
+Plugin 'kchmck/vim-coffee-script' " CoffeeScript runtime files
 " }}}
 
 " Ctags {{{
