@@ -12,12 +12,6 @@ function pprintjson() {
   cat "$1" | python -m json.tool
 }
 
-### Generate ctags for current Git repo
-function generate_ctags() {
-  dir="`git rev-parse --git-dir`"
-  git ls-files | ctags --tag-relative -L - -f "$dir/tags"
-}
-
 ### Set flags for converting GitHub Markdown to HTML5 with Pandoc
 function pandocmark() {
   [[ "$#" -eq 1 ]] || { echo "Usage: pandocmark infile.md"; return; }
@@ -35,7 +29,7 @@ export EDITOR='vim'
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
 # }}}
 
-# VCS Scripts {{{
+# Tab Completion {{{
 ### If git completion script exists, enable it
 if [ -f ~/.git-completion.bash ]; then
   source ~/.git-completion.bash
@@ -106,6 +100,12 @@ __git_complete g __git_main
 ### Alias [hub](https://hub.github.com) to git (must define after sourcing boxen env)
 if hash hub 2>/dev/null; then
   eval "$(hub alias -s)"
+fi
+### If homebrew completion script exists, enable it
+if hash brew 2>/dev/null; then
+  if [ -f `brew --repository`/Library/Contributions/brew_bash_completion.sh ]; then
+    source `brew --repository`/Library/Contributions/brew_bash_completion.sh
+  fi
 fi
 # }}}
 
