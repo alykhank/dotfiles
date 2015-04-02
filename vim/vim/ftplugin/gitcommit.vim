@@ -1,2 +1,5 @@
+"" Spell Check
+setlocal spell                  " Enable spell checking
+
 "" Wrapping
-set textwidth=72                " Set wrap width
+setlocal textwidth=72           " Set wrap width
