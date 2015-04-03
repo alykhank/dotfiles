@@ -34,8 +34,6 @@ Plugin 'airblade/vim-gitgutter' " Show diff symbols in gutter
 " }}}
 
 " Status Line {{{
-set noshowmode                  " Hide default mode indicator
-set laststatus=2                " Always display status line
 Plugin 'bling/vim-airline'      " Supercharged statusline
 let g:airline_theme = 'solarized'
 let g:airline_powerline_fonts = 1
@@ -53,7 +51,6 @@ Plugin 'kchmck/vim-coffee-script' " CoffeeScript runtime files
 
 " Ctags {{{
 Plugin 'majutsushi/tagbar'      " Interface for browsing and navigating tags
-nnoremap <silent> <leader>t :TagbarToggle<CR>
 Plugin 'xolox/vim-easytags'     " Update ctags on save
 Plugin 'xolox/vim-misc'         " Required for vim-easytags
 " }}}
@@ -80,6 +77,8 @@ filetype plugin indent on       " required
 " Basics {{{
 set encoding=utf-8              " Set encoding to UTF-8
 set showcmd                     " Display incomplete commands
+set noshowmode                  " Hide default mode indicator
+set laststatus=2                " Always display status line
 set number                      " Show line numbers
 set ruler                       " Show the current row and column
 set cursorline                  " Highlight current line
@@ -205,7 +204,8 @@ noremap k gk
 " Make gj and gk move up and down one logical line, even when wrapped
 noremap gj j
 noremap gk k
-set pastetoggle=<leader>p       " Shortcut to toggle paste mode
+set pastetoggle=<leader>p       " Toggle paste mode
+nnoremap <silent> <leader>t :TagbarToggle<CR> " Display Tagbar
 " Reformat JSON to pretty print format
 nnoremap <leader>j :%!python -m json.tool<CR>
 " }}}
