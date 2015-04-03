@@ -124,8 +124,7 @@ set mouse=a                     " Allow mouse interaction, prevent scrolling con
 set linebreak                   " Wrap only at word boundaries
 set breakindent                 " Indent wrapped portion of lines to matching level
 set showbreak=↪                 " Use character to indicate wrapped lines
-" Highlight the column after `textwidth` and all after column 120 (max 256)
-let &colorcolumn="+1,".join(range(120,375),",")
+set colorcolumn=+1              " Highlight the column after `textwidth`
 " Disabled Format Options {{{
 " t: Auto-wrap text using textwidth
 " r: Automatically insert the current comment leader after hitting <Enter> in Insert mode
