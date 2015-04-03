@@ -18,9 +18,21 @@ nmap <silent> <leader>eg :e $MYGVIMRC<CR>
 " }}}
 
 " Temporary Files {{{
-" Store temporarily files globally instead of working directory
-set backupdir=~/.vim/backup
-set directory=~/.vim/swap
+set undofile                    " Persist undo tree across launches
+" Store temporarily files globally instead of in working directory
+set backupdir=~/.vim/tmp/backup
+set directory=~/.vim/tmp/swap
+set undodir=~/.vim/tmp/undo
+" Make directories automatically if nonexistent
+if !isdirectory(expand(&backupdir))
+    call mkdir(expand(&backupdir), "p")
+endif
+if !isdirectory(expand(&directory))
+    call mkdir(expand(&directory), "p")
+endif
+if !isdirectory(expand(&undodir))
+    call mkdir(expand(&undodir), "p")
+endif
 " }}}
 
 " Plugins {{{

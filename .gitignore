@@ -1,5 +1,8 @@
 # Vim plugins
 vim/vim/bundle/
 
+# Vim temporary files
+vim/vim/tmp/
+
 # netrw history file
 .netrwhist
