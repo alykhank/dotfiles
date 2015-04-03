@@ -196,9 +196,11 @@ endif
 let mapleader = ","             " Map leader key
 let maplocalleader = "\\"       " Map local leader key
 " Quickly edit configuration files
-nnoremap <leader>ev :e $MYVIMRC<CR>
-nnoremap <leader>eb :e ~/.bash_profile<CR>
-nnoremap <leader>eg :e ~/.gitconfig<CR>
+nnoremap <leader>ev :vsplit $MYVIMRC<CR>
+nnoremap <leader>eb :vsplit ~/.bash_profile<CR>
+nnoremap <leader>eg :vsplit ~/.gitconfig<CR>
+" Quickly source .vimrc
+nnoremap <leader>sv :source $MYVIMRC<CR>
 " Make j and k move up and down one visible line, even when wrapped
 noremap j gj
 noremap k gk
