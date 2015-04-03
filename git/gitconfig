@@ -1,10 +1,14 @@
+[advice]
+	statusHints = false
 [alias]
 	amend = commit --amend
 	ci = commit
+	civ = commit --verbose
 	co = checkout
 	d = diff
 	dc = diff --cached
-	remote = remote -v
+	remote = remote --verbose
+	s = status
 	sl = stash list
 	st = status
 	unstage = reset HEAD
