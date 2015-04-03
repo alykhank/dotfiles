@@ -1,9 +1,8 @@
-" ==============================
-" Vim configuration file
-" Alykhan Kanji
-" Homepage: http://alykhan.com
-" ~/.vimrc
-" ==============================
+"/============================\"
+"|.vimrc                      |"
+"|Author: Alykhan Kanji       |"
+"|Homepage: http://alykhan.com|"
+"\============================/"
 
 " Basics {{{
 set nocompatible                " Be iMproved
