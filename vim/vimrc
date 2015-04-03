@@ -156,8 +156,14 @@ highlight ColorColumn ctermbg=black
 " }}}
 
 " Whitespace {{{
-set list                        " Show invisibles, display tabs as '▸   ', trailing spaces as '•'
-set listchars=tab:▸\ ,trail:•,extends:❯,precedes:❮
+set list                        " Show invisibles
+set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮ " Choose characters to represent invisibles
+" Only display trailing whitespace in modes other than Insert
+augroup trailing
+  au!
+  au InsertEnter * :setlocal listchars-=trail:•
+  au InsertLeave * :setlocal listchars+=trail:•
+augroup END
 set tabstop=2                   " Set literal tab width and display
 set softtabstop=2               " Set tab width for insertion and <BS>
 set shiftwidth=2                " Set CTRL-T, > (add indent) & CTRL-D, < (remove indent) widths
