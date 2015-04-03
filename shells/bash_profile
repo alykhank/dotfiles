@@ -6,12 +6,6 @@ function get_virtualenv() {
   fi
 }
 
-### Pretty print JSON files
-function pprintjson() {
-  [[ "$#" -eq 1 ]] || { echo "Usage: pprintjson infile.json"; return; }
-  cat "$1" | python -m json.tool
-}
-
 ### Set flags for converting GitHub Markdown to HTML5 with Pandoc
 function pandocmark() {
   [[ "$#" -eq 1 ]] || { echo "Usage: pandocmark infile.md"; return; }
@@ -93,6 +87,9 @@ alias ls='ls -FAh'
 ### Create shorthand for git
 alias g='git'
 __git_complete g __git_main
+
+### Pretty print JSON
+alias pj='python -m json.tool'
 # }}}
 
 # Boxen {{{
