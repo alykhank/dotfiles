@@ -142,9 +142,11 @@ set showbreak=↪                 " Use character to indicate wrapped lines
 set colorcolumn=+1              " Highlight the column after `textwidth`
 " Disabled Format Options {{{
 " t: Auto-wrap text using textwidth
+set formatoptions-=t
 " r: Automatically insert the current comment leader after hitting <Enter> in Insert mode
+set formatoptions-=r
 " o: Automatically insert the current comment leader after hitting 'o' or 'O' in Normal mode
-set formatoptions-=t,r,o
+set formatoptions-=o
 " }}}
 " Enabled Format Options {{{
 " j: Where it makes sense, remove a comment leader when joining lines
