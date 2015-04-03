@@ -189,6 +189,9 @@ nnoremap <silent> <CR> :nohlsearch<CR>
 set foldmethod=indent           " Enable code folding based on indentation
 set foldcolumn=3                " Set width of column containing fold info
 set foldlevelstart=20           " Load files with open folds
+" Use <Space> to toggle folds
+nnoremap <Space> za
+vnoremap <Space> za
 " }}}
 
 " Clipboard {{{
