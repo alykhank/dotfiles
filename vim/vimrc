@@ -193,7 +193,8 @@ endif
 " }}}
 
 " Mappings {{{
-let mapleader = ","             " Map comma as leader key
+let mapleader = ","             " Map leader key
+let maplocalleader = "\\"       " Map local leader key
 " Quickly edit configuration files
 nnoremap <leader>ev :e $MYVIMRC<CR>
 nnoremap <leader>eb :e ~/.bash_profile<CR>
