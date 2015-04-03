@@ -195,7 +195,7 @@ endif
 " Mappings {{{
 let mapleader = ","             " Map comma as leader key
 " Quickly edit configuration files
-nnoremap <leader>ev :e $MYVIMRC<CR> " `~/.vimrc`
+nnoremap <leader>ev :e $MYVIMRC<CR>
 nnoremap <leader>eb :e ~/.bash_profile<CR>
 nnoremap <leader>eg :e ~/.gitconfig<CR>
 " Make j and k move up and down one visible line, even when wrapped
@@ -205,7 +205,8 @@ noremap k gk
 noremap gj j
 noremap gk k
 set pastetoggle=<leader>p       " Toggle paste mode
-nnoremap <silent> <leader>t :TagbarToggle<CR> " Display Tagbar
+" Display Tagbar
+nnoremap <silent> <leader>t :TagbarToggle<CR>
 " Reformat JSON to pretty print format
 nnoremap <leader>j :%!python -m json.tool<CR>
 " }}}
