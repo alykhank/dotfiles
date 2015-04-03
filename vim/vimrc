@@ -122,6 +122,9 @@ set encoding=utf-8              " Set encoding to UTF-8
 set showcmd                     " Display incomplete commands
 set number                      " Show line numbers
 set ruler                       " Show the current row and column
+set cursorline                  " Highlight current line
+" Remove underline and set cursorline color
+highlight CursorLine cterm=NONE ctermbg=black
 set linespace=4                 " Set line widths
 set display+=lastline           " Display as much as possible of long lines
 set scrolloff=10                " Scroll frame when close to top or bottom
@@ -148,8 +151,7 @@ set formatoptions-=t,r,o
 " j: Where it makes sense, remove a comment leader when joining lines
 set formatoptions+=j
 " }}}
-" Set colorcolumn highlight colour to black
-
+" Set colorcolumn highlight color to black
 highlight ColorColumn ctermbg=black
 " }}}
 
