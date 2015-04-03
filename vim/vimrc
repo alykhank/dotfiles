@@ -199,13 +199,10 @@ let mapleader = ","             " Map comma as leader key
 nnoremap <leader>ev :e $MYVIMRC<CR> " `~/.vimrc`
 nnoremap <leader>eb :e ~/.bash_profile<CR>
 nnoremap <leader>eg :e ~/.gitconfig<CR>
-" By default `j` and `k` both move in a file by lines delimited by `\n` which
-" is not helpful when linewrapping is enabled. These mappings ensure that I
-" move up and down by display lines and not just lines delimited by `\n`.
+" Make j and k move up and down one visible line, even when wrapped
 noremap j gj
 noremap k gk
-" In order to not lose the original functionality of the `j` and `k` keys I
-" map their functionality to `gj` and `gk` respectively.
+" Make gj and gk move up and down one logical line, even when wrapped
 noremap gj j
 noremap gk k
 " Reformat JSON to pretty print format
