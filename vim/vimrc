@@ -165,17 +165,17 @@ set splitbelow
 set splitright
 " }}}
 
+" Syntax {{{
+syntax enable                   " Enable syntax highlighting
+set showmatch                   " Highlight matching braces
+set synmaxcol=200               " Limit syntax highlighting by column number
+" }}}
+
 " Colorscheme {{{
 set background=dark
 highlight clear FoldColumn
 highlight clear SignColumn
 highlight clear Folded
-" }}}
-
-" Syntax {{{
-syntax enable                   " Enable syntax highlighting
-set showmatch                   " Highlight matching braces
-set synmaxcol=200               " Limit syntax highlighting by column number
 " }}}
 
 " Temporary Files {{{
