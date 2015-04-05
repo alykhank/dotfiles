@@ -94,6 +94,8 @@ set wildmenu                    " Show command-line completions in statusline
 set autoread                    " Automatically reread externally changed files
 set mouse=a                     " Allow mouse interaction, prevent scrolling console UI
 set clipboard=unnamed           " Use system clipboard for yank and put
+let mapleader = ","             " Map leader key
+let maplocalleader = "\\"       " Map local leader key
 " }}}
 
 " Whitespace {{{
@@ -193,8 +195,6 @@ endif
 " }}}
 
 " Mappings {{{
-let mapleader = ","             " Map leader key
-let maplocalleader = "\\"       " Map local leader key
 " Quickly edit configuration files
 nnoremap <leader>ev :vsplit $MYVIMRC<CR>
 nnoremap <leader>eb :vsplit ~/.bash_profile<CR>
