@@ -198,9 +198,10 @@ endif
 
 " Mappings {{{
 " Quickly edit configuration files
-nnoremap <leader>ev :vsplit $MYVIMRC<CR>
-nnoremap <leader>eb :vsplit ~/.bash_profile<CR>
-nnoremap <leader>eg :vsplit ~/.gitconfig<CR>
+nnoremap <leader>ev :e $MYVIMRC<CR>
+nnoremap <leader>vv :vsplit $MYVIMRC<CR>
+nnoremap <leader>vb :vsplit ~/.bash_profile<CR>
+nnoremap <leader>vg :vsplit ~/.gitconfig<CR>
 " Quickly source .vimrc
 nnoremap <leader>sv :source $MYVIMRC<CR>
 " Make j and k move up and down one visible line, even when wrapped
