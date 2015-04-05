@@ -37,6 +37,7 @@ Plugin 'airblade/vim-gitgutter' " Show diff symbols in gutter
 Plugin 'bling/vim-airline'      " Supercharged statusline
 let g:airline_theme = 'solarized'
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 " }}}
 
 " Language Support {{{
