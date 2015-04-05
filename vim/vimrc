@@ -168,6 +168,7 @@ set splitright
 set background=dark
 highlight clear FoldColumn
 highlight clear SignColumn
+highlight clear Folded
 " }}}
 
 " Syntax {{{
