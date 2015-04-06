@@ -5,6 +5,7 @@ after-scripts:
 - !!python/unicode 'flux'
 - !!python/unicode 'heroku-toolbelt'
 - !!python/unicode 'iterm2'
+- !!python/unicode 'spectacle'
 !!python/unicode 'formulas':
 - !!python/unicode 'ack'
 - !!python/unicode 'brew-cask'
