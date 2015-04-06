@@ -7,6 +7,7 @@ Bash, vim, and git dotfiles.
 Install [Xcode](https://macappsto.re/ca/Bk9QD.m)
 
 ```bash
+git clone https://github.com/alykhank/dotfiles ~/src/dotfiles; ln -s ~/src/dotfiles ~/.cider
 make
 ```
 
