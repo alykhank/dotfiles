@@ -1,6 +1,8 @@
 # dotfiles
 
-Bash, vim, and git dotfiles.
+Bash, Vim, and Git dotfiles.
+
+![Vim screenshot](img/vim.png)
 
 ## Install
 
