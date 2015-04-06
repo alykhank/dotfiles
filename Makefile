@@ -1,8 +1,16 @@
 SHELL := /bin/bash
 
-.PHONY: all submodules shells vim vimdotfiles vimplugins vimcompletion vimfonts git gitdotfiles gitconfiguration uninstall
+.PHONY: all cider submodules shells vim vimdotfiles vimplugins vimcompletion vimfonts git gitdotfiles gitconfiguration uninstall
 
-all: submodules shells vim git
+all: cider submodules shells vim git
+
+cider:
+	@if !hash brew 2>/dev/null; then \
+		ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"; \
+	fi; \
+	brew install python; \
+	pip install -U cider; \
+	cider restore
 
 submodules:
 	git submodule update --init --recursive
