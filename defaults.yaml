@@ -1,0 +1,28 @@
+!!python/unicode 'NSGlobalDomain':
+    # General > Use dark menu bar and Dock
+    !!python/unicode 'AppleInterfaceStyle': !!python/unicode 'Dark'
+    # Keyboard > Shortcuts > Full Keyboard Access: All controls
+    !!python/unicode 'AppleKeyboardUIMode': 3
+    # Keyboard > Keyboard > Key Repeat: Fast
+    !!python/unicode 'KeyRepeat': 0
+    # General > Ask to keep changes when closing documents
+    !!python/unicode 'NSCloseAlwaysConfirmsChanges': true
+!!python/unicode 'com.apple.Safari':
+    # Safari > General > Open "safe" files after downloading
+    !!python/unicode 'AutoOpenSafeDownloads': false
+    # Safari > Advanced > Smart Search Field: Show full website address
+    !!python/unicode 'ShowFullURLInSmartSearchField': true
+    # Safari > View > Show Status Bar
+    !!python/unicode 'ShowStatusBar': true
+!!python/unicode 'com.apple.dock':
+    # Dock > Automatically hide and show the Dock
+    !!python/unicode 'autohide': true
+!!python/unicode 'com.apple.finder':
+    # Finder > View > Show Path Bar
+    !!python/unicode 'ShowPathbar': true
+    # Finder > View > Show Status Bar
+    !!python/unicode 'ShowStatusBar': true
+!!python/unicode 'com.apple.screensaver':
+    # Security & Privacy > General > Require password `askForPasswordDelay` seconds after sleep or screen saver begins
+    !!python/unicode 'askForPassword': 1
+    !!python/unicode 'askForPasswordDelay': 5
