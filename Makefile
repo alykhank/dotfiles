@@ -41,11 +41,7 @@ vimfonts:
 	@if [[ ! -e ~/Library/Fonts/Meslo\ LG\ S\ Regular\ for\ Powerline.otf ]]; then \
 		echo "Installing Vim Fonts..."; \
 		curl https://raw.githubusercontent.com/powerline/fonts/master/Meslo/Meslo%20LG%20S%20Regular%20for%20Powerline.otf -o ~/Library/Fonts/Meslo\ LG\ S\ Regular\ for\ Powerline.otf; \
-		if hash fc-cache 2>/dev/null; then \
-			fc-cache -f ~/Library/Fonts/; \
-		else \
-			echo "Font installs may require you to log out and log back in to take effect."; \
-		fi \
+		echo "Font installs may require you to log out and log back in to take effect."; \
 	fi
 
 git: gitdotfiles gitconfiguration
@@ -86,9 +82,5 @@ uninstall: $(wildcard shells/*) $(wildcard vim/*) $(wildcard git/*)
 	@if [[ -e ~/Library/Fonts/Meslo\ LG\ S\ Regular\ for\ Powerline.otf ]]; then \
 		echo "Uninstalling Vim Fonts..."; \
 		rm ~/Library/Fonts/Meslo\ LG\ S\ Regular\ for\ Powerline.otf; \
-		if hash fc-cache 2>/dev/null; then \
-			fc-cache -f ~/Library/Fonts/; \
-		else \
-			echo "Font uninstalls may require you to log out and log back in to take effect."; \
-		fi \
+		echo "Font uninstalls may require you to log out and log back in to take effect."; \
 	fi
