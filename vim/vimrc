@@ -26,7 +26,6 @@ Plugin 'vim-scripts/IndexedSearch' " Number search results
 Plugin 'vim-scripts/matchit.zip' " Navigate between matching tags with '%'
 Plugin 'jiangmiao/auto-pairs'   " Automatically close braces, parens, and quotes
 Plugin 'docunext/closetag.vim'  " HTML/XML tags will close automatically with '</'
-Plugin 'bkad/CamelCaseMotion'   " Provide CamelCase and underscore motion through words
 Plugin 'tpope/vim-endwise'      " Automatically close blocks
 " }}}
 
