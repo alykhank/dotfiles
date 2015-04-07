@@ -8,10 +8,10 @@ cider:
 	@if !hash brew 2>/dev/null; then \
 		ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"; \
 	fi; \
-	@if !hash pip 2>/dev/null; then \
+	if !hash pip 2>/dev/null; then \
 		brew install python; \
 	fi; \
-	@if !hash cider 2>/dev/null; then \
+	if !hash cider 2>/dev/null; then \
 		pip install -U cider; \
 	fi; \
 	cider restore
