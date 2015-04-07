@@ -8,9 +8,8 @@
 	d = diff
 	dc = diff --cached
 	remote = remote --verbose
-	s = status
+	s = status --short --branch
 	sl = stash list
-	st = status
 	unstage = reset HEAD
 [branch]
 	autosetupmerge = always
