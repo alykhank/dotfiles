@@ -123,7 +123,9 @@ set backspace=indent,eol,start  " Backspace through everything in insert mode
 
 " Wrapping {{{
 set linebreak                   " Wrap only at word boundaries
-set breakindent                 " Indent wrapped portion of lines to matching level
+if exists("+breakindent")
+  set breakindent               " Indent wrapped portion of lines to matching level
+endif
 set showbreak=↪                 " Use character to indicate wrapped lines
 set colorcolumn=+1              " Highlight the column after `textwidth`
 " Disabled Format Options {{{
@@ -136,7 +138,9 @@ set formatoptions-=o
 " }}}
 " Enabled Format Options {{{
 " j: Where it makes sense, remove a comment leader when joining lines
-set formatoptions+=j
+if v:version + has("patch541") >= 704
+  set formatoptions+=j
+endif
 " }}}
 " Set colorcolumn highlight color to black
 highlight ColorColumn ctermbg=black
