@@ -3,6 +3,8 @@
     !!python/unicode 'AppleInterfaceStyle': !!python/unicode 'Dark'
     # Keyboard > Shortcuts > Full Keyboard Access: All controls
     !!python/unicode 'AppleKeyboardUIMode': 3
+    # Keyboard > Keyboard > Delay Until Repeat: Short
+    !!python/unicode 'InitialKeyRepeat': 25
     # Keyboard > Keyboard > Key Repeat: Fast
     !!python/unicode 'KeyRepeat': 0
     # General > Ask to keep changes when closing documents
