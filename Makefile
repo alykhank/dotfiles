@@ -12,7 +12,7 @@ cider:
 		brew install python; \
 	fi; \
 	if !hash cider 2>/dev/null; then \
-		pip install -U cider; \
+		pip install cider; \
 	fi; \
 	ln -hfs $(CURDIR) ~/.cider; \
 	cider restore
