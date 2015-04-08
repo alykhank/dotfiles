@@ -110,7 +110,7 @@ set ttimeoutlen=50              " Set explicit timeout for mapped key sequences
 
 " Whitespace {{{
 set list                        " Show invisibles
-set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮ " Choose characters to represent invisibles
+set listchars=tab:▸\ ,extends:❯,precedes:❮ " Choose characters to represent invisibles
 " Only display trailing whitespace in modes other than Insert
 augroup trailing
   au!
