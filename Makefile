@@ -14,6 +14,7 @@ cider:
 	if !hash cider 2>/dev/null; then \
 		pip install -U cider; \
 	fi; \
+	ln -hfs $(CURDIR) ~/.cider; \
 	cider restore
 
 submodules:
