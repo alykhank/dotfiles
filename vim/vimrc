@@ -189,6 +189,15 @@ set background=dark
 highlight clear FoldColumn
 highlight clear SignColumn
 highlight clear Folded
+augroup highlights
+  autocmd!
+  " Hide the cursor line when the split is not in focus
+  autocmd WinLeave * setlocal nocursorline
+  autocmd WinEnter * setlocal cursorline
+  " Hide the column line when the split is not in focus
+  autocmd WinLeave * setlocal colorcolumn=""
+  autocmd WinEnter * setlocal colorcolumn=+1
+augroup END
 " }}}
 
 " Temporary Files {{{
