@@ -106,4 +106,4 @@ if hash brew 2>/dev/null; then
 fi
 # }}}
 
-# vim:fdm=marker
+# vim:ft=sh:fdm=marker
