@@ -1,5 +1,3 @@
-SHELL := /bin/bash
-
 .PHONY: all cider submodules shells vim vimdotfiles vimplugins vimcompletion vimfonts git gitdotfiles gitconfiguration uninstall
 
 all: cider submodules shells vim git
