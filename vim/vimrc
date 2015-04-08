@@ -116,6 +116,7 @@ set listchars=tab:▸\ ,extends:❯,precedes:❮ " Choose characters to represen
 " Only display trailing whitespace in modes other than Insert
 augroup trailing
   au!
+  au BufRead * :setlocal listchars+=trail:•
   au InsertEnter * :setlocal listchars-=trail:•
   au InsertLeave * :setlocal listchars+=trail:•
 augroup END
