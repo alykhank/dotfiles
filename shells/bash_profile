@@ -89,7 +89,7 @@ alias g='git'
 __git_complete g __git_main
 
 ### Pretty print JSON
-alias pj='python -m json.tool'
+alias json='python -m json.tool'
 # }}}
 
 # Boxen {{{
