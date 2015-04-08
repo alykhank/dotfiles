@@ -32,6 +32,7 @@ Plugin 'vim-scripts/matchit.zip' " Navigate between matching tags with '%'
 Plugin 'jiangmiao/auto-pairs'   " Automatically close braces, parens, and quotes
 Plugin 'docunext/closetag.vim'  " HTML/XML tags will close automatically with '</'
 Plugin 'tpope/vim-endwise'      " Automatically close blocks
+Plugin 'jszakmeister/vim-togglecursor' " Change cursor shape in insert and replace modes
 " }}}
 
 " VCS {{{
@@ -104,6 +105,7 @@ set wildmenu                    " Show command-line completions in statusline
 set autoread                    " Automatically reread externally changed files
 set mouse=a                     " Allow mouse interaction, prevent scrolling console UI
 set clipboard=unnamed           " Use system clipboard for yank and put
+set ttimeoutlen=50              " Set explicit timeout for mapped key sequences
 " }}}
 
 " Whitespace {{{
