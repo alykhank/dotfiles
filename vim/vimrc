@@ -104,6 +104,8 @@ set title                       " Display `titlestring` as the TERM title
 set wildmenu                    " Show command-line completions in statusline
 set autoread                    " Automatically reread externally changed files
 set mouse=a                     " Allow mouse interaction, prevent scrolling console UI
+" Toggle mouse interaction to allow iTerm ⌘-Click in Vim
+noremap <silent> <leader>m :let &mouse = ( &mouse == "a" ? "" : "a" )<CR>
 set clipboard=unnamed           " Use system clipboard for yank and put
 set ttimeoutlen=50              " Set explicit timeout for mapped key sequences
 " }}}
