@@ -92,6 +92,7 @@ set synmaxcol=200               " Limit syntax highlighting by column number
 
 " Colorscheme {{{
 set background=dark
+nnoremap <leader>b :let &background = ( &background ==? "dark" ? "light" : "dark" )<CR>
 highlight clear FoldColumn
 highlight clear SignColumn
 highlight clear Folded
