@@ -84,6 +84,28 @@ call vundle#end()               " required
 filetype plugin indent on       " required
 " }}}
 
+" Syntax {{{
+syntax enable                   " Enable syntax highlighting
+set showmatch                   " Highlight matching braces
+set synmaxcol=200               " Limit syntax highlighting by column number
+" }}}
+
+" Colorscheme {{{
+set background=dark
+highlight clear FoldColumn
+highlight clear SignColumn
+highlight clear Folded
+augroup highlights
+  autocmd!
+  " Hide the cursor line when the split is not in focus
+  autocmd WinLeave * setlocal nocursorline
+  autocmd WinEnter * setlocal cursorline
+  " Hide the column line when the split is not in focus
+  autocmd WinLeave * setlocal colorcolumn=""
+  autocmd WinEnter * setlocal colorcolumn=+1
+augroup END
+" }}}
+
 " Basics {{{
 set encoding=utf-8              " Set encoding to UTF-8
 set showcmd                     " Display incomplete commands
@@ -178,28 +200,6 @@ vnoremap <Space> za
 " Sets the default splitting to be to the bottom and to the right
 set splitbelow
 set splitright
-" }}}
-
-" Syntax {{{
-syntax enable                   " Enable syntax highlighting
-set showmatch                   " Highlight matching braces
-set synmaxcol=200               " Limit syntax highlighting by column number
-" }}}
-
-" Colorscheme {{{
-set background=dark
-highlight clear FoldColumn
-highlight clear SignColumn
-highlight clear Folded
-augroup highlights
-  autocmd!
-  " Hide the cursor line when the split is not in focus
-  autocmd WinLeave * setlocal nocursorline
-  autocmd WinEnter * setlocal cursorline
-  " Hide the column line when the split is not in focus
-  autocmd WinLeave * setlocal colorcolumn=""
-  autocmd WinEnter * setlocal colorcolumn=+1
-augroup END
 " }}}
 
 " Temporary Files {{{
