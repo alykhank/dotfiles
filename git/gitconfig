@@ -7,6 +7,7 @@
 	co = checkout
 	d = diff
 	dc = diff --cached
+	graph = log --graph --decorate --oneline
 	remote = remote --verbose
 	s = status --short --branch
 	sl = stash list
