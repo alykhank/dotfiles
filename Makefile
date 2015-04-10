@@ -1,3 +1,5 @@
+GITCONFIG_USER := ~/.gitconfig_user
+
 .PHONY: all cider submodules shells vim vimdotfiles vimplugins vimcompletion vimfonts git gitdotfiles gitconfiguration uninstall
 
 all: cider submodules shells vim git
@@ -56,27 +58,30 @@ gitdotfiles: $(wildcard git/*)
 	$(foreach df, $(^F), ln -s $(CURDIR)/git/$(df) ~/.$(df);)
 
 gitconfiguration:
-	@echo "Setting up global Git configuration...";
-	@if [[ -z `git config --global user.name` ]]; then \
+	@echo "Setting up user Git configuration..."; \
+	if [[ ! -e $(GITCONFIG_USER) ]]; then \
+		touch $(GITCONFIG_USER); \
+	fi; \
+	if [[ -z `git config --file $(GITCONFIG_USER) user.name` ]]; then \
 		echo "What is your full name?"; \
 		read user_name; \
-		git config --global user.name "$$user_name"; \
+		git config --file $(GITCONFIG_USER) user.name "$$user_name"; \
 	else \
-		echo "user.name=`git config --global user.name`"; \
-	fi
-	@if [[ -z `git config --global user.email` ]]; then \
+		echo "user.name=`git config --file $(GITCONFIG_USER) user.name`"; \
+	fi; \
+	if [[ -z `git config --file $(GITCONFIG_USER) user.email` ]]; then \
 		echo "What is your email?"; \
-		read email; \
-		git config --global user.email "$$email"; \
+		read user_email; \
+		git config --file $(GITCONFIG_USER) user.email "$$user_email"; \
 	else \
-		echo "user.email=`git config --global user.email`"; \
-	fi
-	@if [[ -z `git config --global github.user` ]]; then \
+		echo "user.email=`git config --file $(GITCONFIG_USER) user.email`"; \
+	fi; \
+	if [[ -z `git config --file $(GITCONFIG_USER) github.user` ]]; then \
 		echo "What is your GitHub username?"; \
 		read github_user; \
-		git config --global github.user "$$github_user"; \
+		git config --file $(GITCONFIG_USER) github.user "$$github_user"; \
 	else \
-		echo "github.user=`git config --global github.user`"; \
+		echo "github.user=`git config --file $(GITCONFIG_USER) github.user`"; \
 	fi
 
 uninstall: $(wildcard shells/*) $(wildcard vim/*) $(wildcard git/*)

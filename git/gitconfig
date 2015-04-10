@@ -23,5 +23,7 @@
 	helper = osxkeychain
 [hub]
 	protocol = https
+[include]
+	path = ~/.gitconfig_user
 [push]
 	default = simple
