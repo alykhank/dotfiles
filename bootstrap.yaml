@@ -11,6 +11,7 @@ after-scripts:
 - !!python/unicode 'brew-cask'
 - !!python/unicode 'cmake'
 - !!python/unicode 'ctags'
+- !!python/unicode 'ffind'
 - !!python/unicode 'gdbm'
 - !!python/unicode 'git'
 - !!python/unicode 'hub'
