@@ -17,6 +17,14 @@ function pandocmark() {
 }
 # }}}
 
+# Options {{{
+### Append to history file instead of overwriting
+shopt -s histappend
+### Increase session and persisted history sizes
+HISTSIZE=10000
+HISTFILESIZE=10000
+# }}}
+
 # Exports {{{
 export CLICOLOR=1
 export EDITOR='vim'
