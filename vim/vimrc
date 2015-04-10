@@ -238,6 +238,8 @@ noremap gk k
 set pastetoggle=<leader>p       " Toggle paste mode
 " Display Tagbar
 nnoremap <silent> <leader>t :TagbarToggle<CR>
+" Invoke CtrlP in Buffer search mode
+nnoremap <C-J> :CtrlPBuffer<CR>
 " Reformat JSON to pretty print format
 nnoremap <leader>j :%!python -m json.tool<CR>
 " }}}
