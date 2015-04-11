@@ -15,7 +15,9 @@ cider:
 		pip install cider; \
 	fi; \
 	ln -hfs $(CURDIR) ~/.cider; \
-	cider restore
+	if hash cider 2>/dev/null; then \
+		cider restore; \
+	fi
 
 submodules:
 	git submodule update --init --recursive
