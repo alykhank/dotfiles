@@ -6,8 +6,6 @@ Bash, Vim, and Git dotfiles.
 
 ## Install
 
-Install [Xcode](https://macappsto.re/ca/Bk9QD.m)
-
 ```bash
 make
 ```

@@ -12,6 +12,8 @@ GITCONFIG_USER := ~/.gitconfig_user
 all: configure submodules shells vim git
 
 configure:
+	# Install Xcode Command Line Tools if nonexistent
+	@xcode-select --print-path >/dev/null 2>&1 || xcode-select --install
 	# Install Homebrew if nonexistent
 	@hash brew 2>/dev/null || $(HOMEBREW_INSTALL_SCRIPT)
 	# Install Python and Pip via Homebrew if nonexistent
