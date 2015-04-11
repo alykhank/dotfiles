@@ -1,3 +1,6 @@
+HOMEBREW_INSTALL_SCRIPT := ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+POWERLINE_FONT_URL := https://raw.githubusercontent.com/powerline/fonts/master/Meslo/Meslo%20LG%20S%20Regular%20for%20Powerline.otf
+POWERLINE_FONT_FILE := ~/Library/Fonts/Meslo\ LG\ S\ Regular\ for\ Powerline.otf
 GITCONFIG_USER := ~/.gitconfig_user
 
 .PHONY: all cider submodules shells vim vimdotfiles vimplugins vimcompletion vimfonts git gitdotfiles gitconfiguration uninstall
@@ -5,63 +8,53 @@ GITCONFIG_USER := ~/.gitconfig_user
 all: cider submodules shells vim git
 
 cider:
-	@if !hash brew 2>/dev/null; then \
-		ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"; \
-	fi; \
-	if !hash pip 2>/dev/null; then \
-		brew install python; \
-	fi; \
-	if !hash cider 2>/dev/null; then \
-		pip install cider; \
-	fi; \
-	ln -hfs $(CURDIR) ~/.cider; \
-	if hash cider 2>/dev/null; then \
-		cider restore; \
-	fi
+	# Install Homebrew if nonexistent
+	@hash brew 2>/dev/null || $(HOMEBREW_INSTALL_SCRIPT)
+	# Install Python and Pip via Homebrew if nonexistent
+	@hash pip 2>/dev/null || brew install python
+	# Install Cider if nonexistent
+	@hash cider 2>/dev/null || pip install cider
+	# Symlink $(CURDIR) to ~/.cider
+	@ln -hfs $(CURDIR) ~/.cider
+	# Restore Cider configuration if Cider is available
+	@hash cider 2>/dev/null && cider restore
 
 submodules:
-	git submodule update --init --recursive
+	# Initialize and update Git submodules
+	@git submodule update --init --recursive
 
 shells: $(wildcard shells/*)
-	@echo Removing $(^F); \
-	$(foreach df, $(^F), rm -rf ~/.$(df))
-	@echo Installing $(^F); \
-	$(foreach df, $(^F), ln -s $(CURDIR)/shells/$(df) ~/.$(df);)
+	# Symlink [$^] to [$(addprefix ~/.,$(^F))]
+	@$(foreach df, $(^F), ln -hfs $(CURDIR)/shells/$(df) ~/.$(df);)
 
 vim: vimdotfiles vimplugins vimfonts
 
 vimdotfiles: $(wildcard vim/*)
-	@echo Removing $(^F); \
-	$(foreach df, $(^F), rm -rf ~/.$(df))
-	@echo Installing $(^F); \
-	$(foreach df, $(^F), ln -s $(CURDIR)/vim/$(df) ~/.$(df);)
+	# Symlink [$^] to [$(addprefix ~/.,$(^F))]
+	@$(foreach df, $(^F), ln -hfs $(CURDIR)/vim/$(df) ~/.$(df);)
 
-vimplugins:
-	@echo "Installing Vim Plugins..."; \
-	vim +PluginInstall +qall
-
-vimcompletion:
-	@echo "Installing YouCompleteMe with --clang-completer option..."; \
-	~/.vim/bundle/YouCompleteMe/install.sh --clang-completer
+vimplugins: vimdotfiles
+	# Install Vim plugins
+	@vim +PluginInstall +qall
 
 vimfonts:
-	@if [[ ! -e ~/Library/Fonts/Meslo\ LG\ S\ Regular\ for\ Powerline.otf ]]; then \
-		echo "Installing Vim Fonts..."; \
-		curl https://raw.githubusercontent.com/powerline/fonts/master/Meslo/Meslo%20LG%20S%20Regular%20for%20Powerline.otf -o ~/Library/Fonts/Meslo\ LG\ S\ Regular\ for\ Powerline.otf; \
-		echo "Font installs may require you to log out and log back in to take effect."; \
-	fi
+	# Install custom font for Vim statusline if nonexistent
+	@[[ -e $(POWERLINE_FONT_FILE) ]] || curl $(POWERLINE_FONT_URL) -o $(POWERLINE_FONT_FILE); \
+	echo "Font installs may require you to log out and log back in to take effect."
+
+vimcompletion: vimplugins
+	# Install YouCompleteMe with --clang-completer option
+	@~/.vim/bundle/YouCompleteMe/install.sh --clang-completer
 
 git: gitdotfiles gitconfiguration
 
 gitdotfiles: $(wildcard git/*)
-	@echo Removing $(^F); \
-	$(foreach df, $(^F), rm -rf ~/.$(df))
-	@echo Installing $(^F); \
-	$(foreach df, $(^F), ln -s $(CURDIR)/git/$(df) ~/.$(df);)
+	# Symlink [$^] to [$(addprefix ~/.,$(^F))]
+	@$(foreach df, $(^F), ln -hfs $(CURDIR)/git/$(df) ~/.$(df);)
 
 gitconfiguration:
-	@echo "Setting up user Git configuration..."; \
-	if [[ ! -e $(GITCONFIG_USER) ]]; then \
+	# Set up user Git configuration
+	@if [[ ! -e $(GITCONFIG_USER) ]]; then \
 		touch $(GITCONFIG_USER); \
 	fi; \
 	if [[ -z `git config --file $(GITCONFIG_USER) user.name` ]]; then \
@@ -87,10 +80,8 @@ gitconfiguration:
 	fi
 
 uninstall: $(wildcard shells/*) $(wildcard vim/*) $(wildcard git/*)
-	@echo Removing $(^F); \
-	$(foreach df, $(^F), rm -rf ~/.$(df))
-	@if [[ -e ~/Library/Fonts/Meslo\ LG\ S\ Regular\ for\ Powerline.otf ]]; then \
-		echo "Uninstalling Vim Fonts..."; \
-		rm ~/Library/Fonts/Meslo\ LG\ S\ Regular\ for\ Powerline.otf; \
-		echo "Font uninstalls may require you to log out and log back in to take effect."; \
-	fi
+	# Unlink [$^] from [$(addprefix ~/.,$(^F))]
+	@$(foreach df, $(^F), rm -rf ~/.$(df))
+	# Uninstall custom font for Vim statusline
+	@[[ -e $(POWERLINE_FONT_FILE) ]] && rm $(POWERLINE_FONT_FILE); \
+	echo "Font uninstalls may require you to log out and log back in to take effect."
