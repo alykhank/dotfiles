@@ -1,9 +1,7 @@
 # Functions {{{
 ### Retrieve current virtualenv info
 function get_virtualenv() {
-  if [[ -n "$VIRTUAL_ENV" ]]; then
-    echo "($(basename "$VIRTUAL_ENV"))"
-  fi
+  [[ -n "$VIRTUAL_ENV" ]] && echo "($(basename "$VIRTUAL_ENV"))"
 }
 
 ### Set flags for converting GitHub Markdown to HTML5 with Pandoc

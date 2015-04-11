@@ -16,6 +16,8 @@ configure:
 	@hash brew 2>/dev/null || $(HOMEBREW_INSTALL_SCRIPT)
 	# Install Python and Pip via Homebrew if nonexistent
 	@hash pip 2>/dev/null || brew install python
+	# Install Virtualenv if nonexistent
+	@hash virtualenv 2>/dev/null || pip install virtualenv
 	# Install Cider if nonexistent
 	@hash cider 2>/dev/null || pip install cider
 	@echo "Symlink $(GREEN)$(CURDIR)$(RESET) to $(GREEN)~/.cider$(RESET)"
