@@ -29,11 +29,12 @@ make
 
 - All Vim plugins in `.vimrc` will be installed
 
-- `Meslo LG S Regular for Powerline.otf` (a patched font for symbols on the Vim statusline) will be installed
+- Meslo for Powerline (a patched font for symbols on the Vim statusline) will be installed
     - Font installs may require you to log out and log back in to take effect
 
-- You will be prompted to complete the `.gitconfig`
-    - You can temporarily prevent these changes from marking this repo as dirty with `git update-index --assume-unchanged .gitconfig`
+- You will be prompted to complete `~/.gitconfig_user`
+
+- Feel free to add custom bash commands in `~/.bashrc`, it is sourced from `~/.bash_profile`
 
 Once `make` has completed, please close your shell and open a new instance.
 
@@ -52,10 +53,3 @@ make vimcompletion
 ```bash
 make uninstall
 ```
-
-- All dotfiles/folders will be removed from your home directory
-
-- `Meslo LG S Regular for Powerline.otf` will be uninstalled
-    - Font uninstalls may require you to log out and log back in to take effect
-
-Once `make` has completed, please close your shell and open a new instance.
