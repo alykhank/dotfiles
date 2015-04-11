@@ -48,16 +48,16 @@ fi
 
 # Prompt {{{
 # Reset
-Color_Off='\e[0m'       # Text Reset
+Color_Off='\e[0m'
 # Regular Colors
-Black='\e[0;30m'        # Black
-Red='\e[0;31m'          # Red
-Green='\e[0;32m'        # Green
-Yellow='\e[0;33m'       # Yellow
-Blue='\e[0;34m'         # Blue
-Purple='\e[0;35m'       # Purple
-Cyan='\e[0;36m'         # Cyan
-White='\e[0;37m'        # White
+Black='\e[0;30m'
+Red='\e[0;31m'
+Green='\e[0;32m'
+Yellow='\e[0;33m'
+Blue='\e[0;34m'
+Purple='\e[0;35m'
+Cyan='\e[0;36m'
+White='\e[0;37m'
 
 # Git PS1 Options {{{
 # * indicates repo with unstaged changes
@@ -85,7 +85,7 @@ GIT_PS1_SHOWUPSTREAM="auto git"
 # }}}
 
 # Display path, git info, and prompt character
-PROMPT_COMMAND='__git_ps1 "$(get_virtualenv)\[$Blue\]\w\[$Color_Off\]" " \[$White\]\\\$\[$Color_Off\] "'
+PROMPT_COMMAND='__git_ps1 "$(get_virtualenv)\[$Blue\]\w\[$Color_Off\]" " \[$Green\]\\\$\[$Color_Off\] "'
 # }}}
 
 # Aliases {{{
