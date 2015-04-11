@@ -1,28 +1,28 @@
 after-scripts:
-- brew linkapps
-!!python/unicode 'casks':
-- !!python/unicode 'dropbox'
-- !!python/unicode 'flux'
-- !!python/unicode 'heroku-toolbelt'
-- !!python/unicode 'iterm2'
-- !!python/unicode 'spectacle'
-!!python/unicode 'formulas':
-- !!python/unicode 'ack'
-- !!python/unicode 'brew-cask'
-- !!python/unicode 'cmake'
-- !!python/unicode 'ctags'
-- !!python/unicode 'ffind'
-- !!python/unicode 'gdbm'
-- !!python/unicode 'git'
-- !!python/unicode 'hub'
-- !!python/unicode 'openssl'
-- !!python/unicode 'pandoc'
-- !!python/unicode 'pkg-config'
-- !!python/unicode 'python'
-- !!python/unicode 'readline'
-- !!python/unicode 'sqlite'
-- !!python/unicode 'vim'
-!!python/unicode 'icons':
-    !!python/unicode 'iTerm': !!python/unicode 'https://dribbble.com/shots/1702947-iTerm-Replacement-Icon/attachments/271548'
-!!python/unicode 'taps':
-- !!python/unicode 'caskroom/cask'
+  - brew linkapps
+'casks':
+  - 'dropbox'
+  - 'flux'
+  - 'heroku-toolbelt'
+  - 'iterm2'
+  - 'spectacle'
+'formulas':
+  - 'ack'
+  - 'brew-cask'
+  - 'cmake'
+  - 'ctags'
+  - 'ffind'
+  - 'gdbm'
+  - 'git'
+  - 'hub'
+  - 'openssl'
+  - 'pandoc'
+  - 'pkg-config'
+  - 'python'
+  - 'readline'
+  - 'sqlite'
+  - 'vim'
+'icons':
+    'iTerm': 'https://dribbble.com/shots/1702947-iTerm-Replacement-Icon/attachments/271548'
+'taps':
+  - 'caskroom/cask'
