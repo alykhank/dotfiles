@@ -1,8 +1,10 @@
 HOMEBREW_INSTALL_SCRIPT := ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 POWERLINE_FONT_URL := https://raw.githubusercontent.com/powerline/fonts/master/Meslo/Meslo%20LG%20S%20Regular%20for%20Powerline.otf
 POWERLINE_FONT_FILE := ~/Library/Fonts/Meslo\ LG\ S\ Regular\ for\ Powerline.otf
-ECHO_RESET := \033[0m
-ECHO_BLUE := \033[0;34m
+RESET := \033[0m
+RED := \033[0;31m
+GREEN := \033[0;32m
+BLUE := \033[0;34m
 GITCONFIG_USER := ~/.gitconfig_user
 
 .PHONY: all configure cider submodules shells vim vimdotfiles vimplugins vimcompletion vimfonts git gitdotfiles gitconfiguration uninstall
@@ -16,7 +18,7 @@ configure:
 	@hash pip 2>/dev/null || brew install python
 	# Install Cider if nonexistent
 	@hash cider 2>/dev/null || pip install cider
-	# Symlink $(CURDIR) to ~/.cider
+	@echo "Symlink $(GREEN)$(CURDIR)$(RESET) to $(GREEN)~/.cider$(RESET)"
 	@ln -hfs $(CURDIR) ~/.cider
 
 cider:
@@ -28,13 +30,13 @@ submodules:
 	@git submodule update --init --recursive
 
 shells: $(wildcard shells/*)
-	# Symlink [$^] to [$(addprefix ~/.,$(^F))]
+	@echo "Symlink $(GREEN)[$^]$(RESET) to $(GREEN)[$(addprefix ~/.,$(^F))]$(RESET)"
 	@$(foreach df, $(^F), ln -hfs $(CURDIR)/shells/$(df) ~/.$(df);)
 
 vim: vimdotfiles vimplugins vimfonts
 
 vimdotfiles: $(wildcard vim/*)
-	# Symlink [$^] to [$(addprefix ~/.,$(^F))]
+	@echo "Symlink $(GREEN)[$^]$(RESET) to $(GREEN)[$(addprefix ~/.,$(^F))]$(RESET)"
 	@$(foreach df, $(^F), ln -hfs $(CURDIR)/vim/$(df) ~/.$(df);)
 
 vimplugins: vimdotfiles
@@ -44,7 +46,7 @@ vimplugins: vimdotfiles
 vimfonts:
 	# Install custom font for Vim statusline if nonexistent
 	@[[ -e $(POWERLINE_FONT_FILE) ]] || curl $(POWERLINE_FONT_URL) -o $(POWERLINE_FONT_FILE); \
-	echo "$(ECHO_BLUE)Font installs may require you to log out and log back in to take effect.$(ECHO_RESET)"
+	echo "$(BLUE)Font installs may require you to log out and log back in to take effect.$(RESET)"
 
 vimcompletion: vimplugins
 	# Install YouCompleteMe with --clang-completer option
@@ -53,7 +55,7 @@ vimcompletion: vimplugins
 git: gitdotfiles gitconfiguration
 
 gitdotfiles: $(wildcard git/*)
-	# Symlink [$^] to [$(addprefix ~/.,$(^F))]
+	@echo "Symlink $(GREEN)[$^]$(RESET) to $(GREEN)[$(addprefix ~/.,$(^F))]$(RESET)"
 	@$(foreach df, $(^F), ln -hfs $(CURDIR)/git/$(df) ~/.$(df);)
 
 gitconfiguration:
@@ -84,8 +86,8 @@ gitconfiguration:
 	fi
 
 uninstall: $(wildcard shells/*) $(wildcard vim/*) $(wildcard git/*)
-	# Unlink [$^] from [$(addprefix ~/.,$(^F))]
+	@echo "Unlink $(RED)[$^]$(RESET) from $(RED)[$(addprefix ~/.,$(^F))]$(RESET)"
 	@$(foreach df, $(^F), rm -rf ~/.$(df))
 	# Uninstall custom font for Vim statusline
 	@[[ -e $(POWERLINE_FONT_FILE) ]] && rm $(POWERLINE_FONT_FILE); \
-	echo "$(ECHO_BLUE)Font uninstalls may require you to log out and log back in to take effect.$(ECHO_RESET)"
+	echo "$(BLUE)Font uninstalls may require you to log out and log back in to take effect.$(RESET)"
