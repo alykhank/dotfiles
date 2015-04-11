@@ -60,29 +60,27 @@ gitdotfiles: $(wildcard git/*)
 
 gitconfiguration:
 	# Set up user Git configuration
-	@if [[ ! -e $(GITCONFIG_USER) ]]; then \
-		touch $(GITCONFIG_USER); \
-	fi; \
-	if [[ -z `git config --file $(GITCONFIG_USER) user.name` ]]; then \
-		echo "What is your full name?"; \
-		read user_name; \
-		git config --file $(GITCONFIG_USER) user.name "$$user_name"; \
+	@[[ -e $(GITCONFIG_USER) ]] || touch $(GITCONFIG_USER)
+	@USER_NAME=`git config --file $(GITCONFIG_USER) user.name`; \
+	if [[ -z "$$USER_NAME" ]]; then \
+		echo "What is your full name?"; read USER_NAME; \
+		git config --file $(GITCONFIG_USER) user.name "$$USER_NAME"; \
 	else \
-		echo "user.name=`git config --file $(GITCONFIG_USER) user.name`"; \
-	fi; \
-	if [[ -z `git config --file $(GITCONFIG_USER) user.email` ]]; then \
-		echo "What is your email?"; \
-		read user_email; \
-		git config --file $(GITCONFIG_USER) user.email "$$user_email"; \
+		echo "$(BLUE)user.name="$$USER_NAME"$(RESET)"; \
+	fi
+	@USER_EMAIL=`git config --file $(GITCONFIG_USER) user.email`; \
+	if [[ -z "$$USER_EMAIL" ]]; then \
+		echo "What is your email?"; read USER_EMAIL; \
+		git config --file $(GITCONFIG_USER) user.email "$$USER_EMAIL"; \
 	else \
-		echo "user.email=`git config --file $(GITCONFIG_USER) user.email`"; \
-	fi; \
-	if [[ -z `git config --file $(GITCONFIG_USER) github.user` ]]; then \
-		echo "What is your GitHub username?"; \
-		read github_user; \
-		git config --file $(GITCONFIG_USER) github.user "$$github_user"; \
+		echo "$(BLUE)user.email="$$USER_EMAIL"$(RESET)"; \
+	fi
+	@GITHUB_USER=`git config --file $(GITCONFIG_USER) github.user`; \
+	if [[ -z "$$GITHUB_USER" ]]; then \
+		echo "What is your GitHub username?"; read GITHUB_USER; \
+		git config --file $(GITCONFIG_USER) github.user "$$GITHUB_USER"; \
 	else \
-		echo "github.user=`git config --file $(GITCONFIG_USER) github.user`"; \
+		echo "$(BLUE)github.user="$$GITHUB_USER"$(RESET)"; \
 	fi
 
 uninstall: $(wildcard shells/*) $(wildcard vim/*) $(wildcard git/*)
