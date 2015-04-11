@@ -29,23 +29,19 @@ export EDITOR="vim"
 # }}}
 
 # Tab Completion {{{
-### If git completion script exists, enable it
-if [ -f ~/.git-completion.bash ]; then
-  source ~/.git-completion.bash
-fi
-### If git prompt script exists, enable it
-if [ -f ~/.git-prompt.sh ]; then
-  source ~/.git-prompt.sh
-fi
-### If homebrew completion script exists, enable it
+### Enable Git Bash completion
+GIT_COMPLETION="/usr/local/etc/bash_completion.d/git-completion.bash"
+[[ -f "$GIT_COMPLETION" ]] && source "$GIT_COMPLETION"
+### Enable Git prompt
+GIT_PROMPT="/usr/local/etc/bash_completion.d/git-prompt.sh"
+[[ -f "$GIT_PROMPT" ]] && source "$GIT_PROMPT"
+### Enable Hub Bash completion
+HUB_COMPLETION="/usr/local/etc/bash_completion.d/hub.bash_completion.sh"
+[[ -f "$HUB_COMPLETION" ]] && source "$HUB_COMPLETION"
+### Enable Homebrew Bash completion
 if hash brew 2>/dev/null; then
-  if [ -f `brew --repository`/Library/Contributions/brew_bash_completion.sh ]; then
-    source `brew --repository`/Library/Contributions/brew_bash_completion.sh
-  fi
-fi
-### If hub bash completion script exists, enable it
-if [ -f ~/.hub.bash_completion.sh ]; then
-  source ~/.hub.bash_completion.sh
+  BREW_COMPLETION="`brew --repository`/Library/Contributions/brew_bash_completion.sh"
+  [[ -f "$BREW_COMPLETION" ]] && source "$BREW_COMPLETION"
 fi
 # }}}
 

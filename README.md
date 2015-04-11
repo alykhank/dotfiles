@@ -12,17 +12,17 @@ make
 
 - **WARNING**: The following files/folders will be symlinked into your home directory **(replacing any existing versions)**:
 ```
-.bash_profile
-.inputrc
-.ackrc
-.vim/
-.vimrc
-.gvimrc
-.gitconfig
-.gitignore_global
-.git-completion.bash
-.git-prompt.sh
-.hub.bash_completion.sh
+shells/:
+  ackrc               => ~/.ackrc
+  bash_profile        => ~/.bash_profile
+  inputrc             => ~/.inputrc
+vim/:
+  vim/                => ~/.vim
+  vimrc               => ~/.vimrc
+  gvimrc              => ~/.gvimrc
+git/:
+  gitconfig           => ~/.gitconfig
+  gitignore_global    => ~/.gitignore_global
 ```
 
 - Git submodules will be initialized and updated recursively (currently only Vim plugin manager, Vundle)
