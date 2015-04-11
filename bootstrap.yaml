@@ -1,31 +1,31 @@
 after-scripts:
-  - 'brew linkapps'
-'casks':
-  - 'dropbox'
-  - 'flux'
-  - 'font-meslo-lg-for-powerline'
-  - 'google-chrome'
-  - 'heroku-toolbelt'
-  - 'iterm2'
-  - 'spectacle'
-'formulas':
-  - 'ack'
-  - 'brew-cask'
-  - 'cmake'
-  - 'ctags'
-  - 'ffind'
-  - 'gdbm'
-  - 'git'
-  - 'hub'
-  - 'openssl'
-  - 'pandoc'
-  - 'pkg-config'
-  - 'python'
-  - 'readline'
-  - 'sqlite'
-  - 'vim'
-'icons':
-    'iTerm': 'https://dribbble.com/shots/1702947-iTerm-Replacement-Icon/attachments/271548'
-'taps':
-  - 'caskroom/cask'
-  - 'caskroom/fonts'
+- brew linkapps
+casks:
+- caskroom/fonts/font-meslo-lg-for-powerline
+- dropbox
+- flux
+- google-chrome
+- heroku-toolbelt
+- iterm2
+- spectacle
+formulas:
+- ack
+- caskroom/cask/brew-cask
+- cmake
+- ctags
+- ffind
+- gdbm
+- git
+- hub
+- openssl
+- pandoc
+- pkg-config
+- python
+- readline
+- sqlite
+- vim
+icons:
+    iTerm: https://dribbble.com/shots/1702947-iTerm-Replacement-Icon/attachments/271548
+taps:
+- caskroom/cask
+- caskroom/fonts

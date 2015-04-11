@@ -20,6 +20,9 @@ configure:
 	@hash cider 2>/dev/null || pip install cider
 	@echo "Symlink $(GREEN)$(CURDIR)$(RESET) to $(GREEN)~/.cider$(RESET)"
 	@ln -hfs $(CURDIR) ~/.cider
+	# Install prerequisites for dotfiles via Cider
+	@hash cider 2>/dev/null && cider install caskroom/cask/brew-cask cmake ctags git vim
+	@hash cider 2>/dev/null && cider cask install caskroom/fonts/font-meslo-lg-for-powerline
 
 cider:
 	# Restore Cider configuration if Cider is available
