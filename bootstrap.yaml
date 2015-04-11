@@ -1,8 +1,10 @@
 after-scripts:
-  - brew linkapps
+  - 'brew linkapps'
 'casks':
   - 'dropbox'
   - 'flux'
+  - 'font-meslo-lg-for-powerline'
+  - 'google-chrome'
   - 'heroku-toolbelt'
   - 'iterm2'
   - 'spectacle'
@@ -26,3 +28,4 @@ after-scripts:
     'iTerm': 'https://dribbble.com/shots/1702947-iTerm-Replacement-Icon/attachments/271548'
 'taps':
   - 'caskroom/cask'
+  - 'caskroom/fonts'
