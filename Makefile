@@ -1,4 +1,4 @@
-HOMEBREW_INSTALL_SCRIPT := ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+HOMEBREW_INSTALL_SCRIPT := ruby -e "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 RESET := \033[0m
 RED := \033[0;31m
 GREEN := \033[0;32m
