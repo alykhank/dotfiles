@@ -40,6 +40,12 @@ fi
 if [ -f ~/.git-prompt.sh ]; then
   source ~/.git-prompt.sh
 fi
+### If homebrew completion script exists, enable it
+if hash brew 2>/dev/null; then
+  if [ -f `brew --repository`/Library/Contributions/brew_bash_completion.sh ]; then
+    source `brew --repository`/Library/Contributions/brew_bash_completion.sh
+  fi
+fi
 ### If hub bash completion script exists, enable it
 if [ -f ~/.hub.bash_completion.sh ]; then
   source ~/.hub.bash_completion.sh
@@ -96,22 +102,13 @@ alias ls='ls -FAh'
 alias g='git'
 __git_complete g __git_main
 
-### Pretty print JSON
-alias json='python -m json.tool'
-# }}}
-
-# Boxen {{{
-[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
-### Alias [hub](https://hub.github.com) to git (must define after sourcing boxen env)
+### Alias [hub](https://hub.github.com) to git
 if hash hub 2>/dev/null; then
   eval "$(hub alias -s)"
 fi
-### If homebrew completion script exists, enable it
-if hash brew 2>/dev/null; then
-  if [ -f `brew --repository`/Library/Contributions/brew_bash_completion.sh ]; then
-    source `brew --repository`/Library/Contributions/brew_bash_completion.sh
-  fi
-fi
+
+### Pretty print JSON
+alias json='python -m json.tool'
 # }}}
 
 # Extras {{{
