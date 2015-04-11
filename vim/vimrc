@@ -33,6 +33,7 @@ Plugin 'jiangmiao/auto-pairs'   " Automatically close braces, parens, and quotes
 Plugin 'docunext/closetag.vim'  " HTML/XML tags will close automatically with '</'
 Plugin 'tpope/vim-endwise'      " Automatically close blocks
 Plugin 'jszakmeister/vim-togglecursor' " Change cursor shape in insert and replace modes
+Plugin 'altercation/vim-colors-solarized' " Solarized colorscheme
 " }}}
 
 " VCS {{{
@@ -91,11 +92,11 @@ set synmaxcol=200               " Limit syntax highlighting by column number
 " }}}
 
 " Colorscheme {{{
-set background=dark
-nnoremap <leader>b :let &background = ( &background ==? "dark" ? "light" : "dark" )<CR>
-highlight clear FoldColumn
-highlight clear SignColumn
-highlight clear Folded
+set background=dark             " Prefer dark style
+nnoremap <silent> <leader>b :let &background = ( &background ==? "dark" ? "light" : "dark" )<CR>:highlight Folded cterm=bold<CR>
+colorscheme solarized           " Use vim-colors-solarized plugin
+" Remove underline but keep bold in folds
+highlight Folded cterm=bold
 augroup highlights
   autocmd!
   " Hide the cursor line when the split is not in focus
@@ -115,8 +116,6 @@ set laststatus=2                " Always display status line
 set number                      " Show line numbers
 set ruler                       " Show the current row and column
 set cursorline                  " Highlight current line
-" Remove underline and set cursorline color
-highlight CursorLine cterm=NONE ctermbg=black
 set linespace=4                 " Set line widths
 set display+=lastline           " Display as much as possible of long lines
 set scrolloff=10                " Scroll frame when close to top or bottom
@@ -176,8 +175,6 @@ if v:version + has("patch541") >= 704
   set formatoptions+=j
 endif
 " }}}
-" Set colorcolumn highlight color to black
-highlight ColorColumn ctermbg=black
 " }}}
 
 " Searching {{{
