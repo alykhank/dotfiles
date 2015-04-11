@@ -25,9 +25,7 @@ git/:
   gitignore_global    => ~/.gitignore_global
 ```
 
-- Git submodules will be initialized and updated recursively (currently only Vim plugin manager, Vundle)
-
-- All Vim plugins in `.vimrc` will be installed
+- Vundle.vim plugin manager and all Vim plugins in `.vimrc` will be installed
 
 - Meslo for Powerline (a patched font for symbols on the Vim statusline) will be installed
     - Font installs may require you to log out and log back in to take effect

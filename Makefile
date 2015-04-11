@@ -1,13 +1,15 @@
 HOMEBREW_INSTALL_SCRIPT := ruby -e "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+VUNDLE_URL := https://github.com/gmarik/Vundle.vim.git
+VUNDLE_PATH := $(CURDIR)/vim/vim/bundle/Vundle.vim
 RESET := \033[0m
 RED := \033[0;31m
 GREEN := \033[0;32m
 BLUE := \033[0;34m
 GITCONFIG_USER := ~/.gitconfig_user
 
-.PHONY: all configure cider submodules shells vim vimdotfiles vimplugins vimcompletion git gitdotfiles gitconfiguration uninstall
+.PHONY: all configure cider shells vim vimvundle vimdotfiles vimplugins vimcompletion git gitdotfiles gitconfiguration uninstall
 
-all: configure submodules shells vim git
+all: configure shells vim git
 
 configure:
 	# Install Xcode Command Line Tools if nonexistent
@@ -30,17 +32,17 @@ cider:
 	# Restore Cider configuration if Cider is available
 	@hash cider 2>/dev/null && cider restore
 
-submodules:
-	# Initialize and update Git submodules
-	@git submodule update --init --recursive
-
 shells: $(wildcard shells/*)
 	@echo "Symlink $(GREEN)[$^]$(RESET) to $(GREEN)[$(addprefix ~/.,$(^F))]$(RESET)"
 	@$(foreach df, $(^F), ln -hfs $(CURDIR)/shells/$(df) ~/.$(df);)
 
-vim: vimdotfiles vimplugins
+vim: vimvundle vimdotfiles vimplugins
 
-vimdotfiles: $(wildcard vim/*)
+vimvundle:
+	# Install Vundle.vim plugin manager if nonexistent
+	@[[ -d $(VUNDLE_PATH) ]] || git clone $(VUNDLE_URL) $(VUNDLE_PATH)
+
+vimdotfiles: vimvundle $(wildcard vim/*)
 	@echo "Symlink $(GREEN)[$^]$(RESET) to $(GREEN)[$(addprefix ~/.,$(^F))]$(RESET)"
 	@$(foreach df, $(^F), ln -hfs $(CURDIR)/vim/$(df) ~/.$(df);)
 
