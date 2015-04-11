@@ -5,11 +5,11 @@ ECHO_RESET := \033[0m
 ECHO_BLUE := \033[0;34m
 GITCONFIG_USER := ~/.gitconfig_user
 
-.PHONY: all cider submodules shells vim vimdotfiles vimplugins vimcompletion vimfonts git gitdotfiles gitconfiguration uninstall
+.PHONY: all configure cider submodules shells vim vimdotfiles vimplugins vimcompletion vimfonts git gitdotfiles gitconfiguration uninstall
 
-all: cider submodules shells vim git
+all: configure submodules shells vim git
 
-cider:
+configure:
 	# Install Homebrew if nonexistent
 	@hash brew 2>/dev/null || $(HOMEBREW_INSTALL_SCRIPT)
 	# Install Python and Pip via Homebrew if nonexistent
@@ -18,6 +18,8 @@ cider:
 	@hash cider 2>/dev/null || pip install cider
 	# Symlink $(CURDIR) to ~/.cider
 	@ln -hfs $(CURDIR) ~/.cider
+
+cider:
 	# Restore Cider configuration if Cider is available
 	@hash cider 2>/dev/null && cider restore
 
