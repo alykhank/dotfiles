@@ -25,10 +25,9 @@ git/:
   gitignore_global    => ~/.gitignore_global
 ```
 
-- Vundle.vim plugin manager and all Vim plugins in `.vimrc` will be installed
+- [Vundle.vim](https://github.com/gmarik/Vundle.vim) plugin manager and all Vim plugins in `.vimrc` will be installed
 
-- Meslo for Powerline (a patched font for symbols on the Vim statusline) will be installed
-    - Font installs may require you to log out and log back in to take effect
+- [Meslo for Powerline](https://github.com/powerline/fonts/tree/master/Meslo) (a patched font for symbols on the Vim statusline) will be installed
 
 - You will be prompted to complete `~/.gitconfig_user`
 
