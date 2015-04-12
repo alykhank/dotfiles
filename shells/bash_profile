@@ -46,18 +46,6 @@ fi
 # }}}
 
 # Prompt {{{
-# Reset
-Color_Off='\e[0m'
-# Regular Colors
-Black='\e[0;30m'
-Red='\e[0;31m'
-Green='\e[0;32m'
-Yellow='\e[0;33m'
-Blue='\e[0;34m'
-Purple='\e[0;35m'
-Cyan='\e[0;36m'
-White='\e[0;37m'
-
 # Git PS1 Options {{{
 # * indicates repo with unstaged changes
 # + indicates repo with staged changes
@@ -69,22 +57,37 @@ GIT_PS1_SHOWSTASHSTATE=1
 # % indicates repo with untracked files
 GIT_PS1_SHOWUNTRACKEDFILES=1
 
-# see more information about the identity of commits checked out as a detached HEAD
-GIT_PS1_DESCRIBE_STYLE="branch"
-
-# colored hint about the current dirty state
-GIT_PS1_SHOWCOLORHINTS=1
-
 # show difference between HEAD and its upstream
 # "<" indicates you are behind
 # ">" indicates you are ahead
 # "<>" indicates you have diverged
 # "=" indicates that there is no difference
 GIT_PS1_SHOWUPSTREAM="auto git"
+
+# see more information about the identity of commits checked out as a detached HEAD
+GIT_PS1_DESCRIBE_STYLE="branch"
+
+# colored hint about the current dirty state
+GIT_PS1_SHOWCOLORHINTS=1
 # }}}
 
+c_clear='\[\e[0m\]'
+c_black='\[\e[0;30m\]'
+c_red='\[\e[0;31m\]'
+c_green='\[\e[0;32m\]'
+c_yellow='\[\e[0;33m\]'
+c_blue='\[\e[0;34m\]'
+c_purple='\[\e[0;35m\]'
+c_cyan='\[\e[0;36m\]'
+c_white='\[\e[0;37m\]'
+
+function test_exit() {
+  local exit=$?
+  [[ $exit -eq 0 ]] && echo "$c_blue" || echo "$c_red"
+}
+
 # Display path, git info, and prompt character
-PROMPT_COMMAND='__git_ps1 "$(get_virtualenv)\[$Blue\]\w\[$Color_Off\]" " \[$Green\]\\\$\[$Color_Off\] "'
+PROMPT_COMMAND='color=$(test_exit); __git_ps1 "$(get_virtualenv)$color\w$c_clear" " $color\$$c_clear "'
 # }}}
 
 # Aliases {{{
