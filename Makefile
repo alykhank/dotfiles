@@ -7,7 +7,7 @@ GREEN := \033[0;32m
 BLUE := \033[0;34m
 GITCONFIG_USER := ~/.gitconfig_user
 
-.PHONY: all configure cider shells vim vimvundle vimdotfiles vimplugins vimcompletion git gitdotfiles gitconfiguration uninstall
+.PHONY: all configure cider shells vim vimvundle vimdotfiles vimplugins vimcompletion git gitdotfiles gituser uninstall
 
 all: configure shells vim git
 
@@ -54,13 +54,13 @@ vimcompletion: vimplugins
 	# Install YouCompleteMe with --clang-completer option
 	@~/.vim/bundle/YouCompleteMe/install.sh --clang-completer
 
-git: gitdotfiles gitconfiguration
+git: gitdotfiles gituser
 
 gitdotfiles: $(wildcard git/*)
 	@echo "Symlink $(GREEN)[$^]$(RESET) to $(GREEN)[$(addprefix ~/.,$(^F))]$(RESET)"
 	@$(foreach df, $(^F), ln -hfs $(CURDIR)/git/$(df) ~/.$(df);)
 
-gitconfiguration:
+gituser:
 	# Set up user Git configuration
 	@[[ -e $(GITCONFIG_USER) ]] || touch $(GITCONFIG_USER)
 	@USER_NAME=`git config --file $(GITCONFIG_USER) user.name`; \
