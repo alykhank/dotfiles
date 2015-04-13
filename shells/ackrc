@@ -1,20 +1,7 @@
-# Ignore case distinctions in PATTERN,
-# only if PATTERN contains no upper case.
-# Ignored if -i is specified
+# Ignore case in the search strings if PATTERN contains no uppercase characters.
+# This is similar to "smartcase" in vim. This option is off by default, and
+# ignored if "-i" is specified.
 --smart-case
-
-# Same as --heading --break
-# --heading
-# Print a filename heading above each file's
-# results.  (default: on when used interactively)
-# --break
-# Print a break between results from different
-# files.  (default: on when used interactively)
---group
-
-# Highlight the matching text (default: on unless
-# output is redirected, or on Windows) 
---color
 
 # Ignore Virtualenv directories
 --ignore-dir=venv
