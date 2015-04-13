@@ -42,11 +42,11 @@ vimvundle:
 	# Install Vundle.vim plugin manager if nonexistent
 	@[[ -d $(VUNDLE_PATH) ]] || git clone $(VUNDLE_URL) $(VUNDLE_PATH)
 
-vimdotfiles: vimvundle $(wildcard vim/*)
+vimdotfiles: $(wildcard vim/*)
 	@echo "Symlink $(GREEN)[$^]$(RESET) to $(GREEN)[$(addprefix ~/.,$(^F))]$(RESET)"
 	@$(foreach df, $(^F), ln -hfs $(CURDIR)/vim/$(df) ~/.$(df);)
 
-vimplugins: vimdotfiles
+vimplugins: vimvundle vimdotfiles
 	# Install Vim plugins
 	@vim +PluginInstall +qall
 
