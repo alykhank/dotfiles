@@ -7,43 +7,63 @@ Bash, Vim, and Git dotfiles.
 ## Install
 
 ```bash
-make
+make [basics | shells | vim | git]
 ```
+Once `make` has completed, please close your shell and open a new instance.
 
-- **WARNING**: The following files/folders will be symlinked into your home directory **(replacing any existing versions)**:
+### Basics
+
+- Installs Xcode Command Line Tools, [Homebrew](http://brew.sh), [Python](https://www.python.org) (including [pip](https://pip.pypa.io/)), and [Virtualenv](https://virtualenv.pypa.io)
+
+### Shells
+
+- Symlinks the following **(overwriting existing versions)**:
+
 ```
 shells/:
   ackrc               => ~/.ackrc
   bash_profile        => ~/.bash_profile
   inputrc             => ~/.inputrc
+```
+
+- Feel free to add custom bash commands in `~/.bashrc`, it is sourced from `~/.bash_profile`
+
+### Vim
+
+- Symlinks the following **(overwriting existing versions)**:
+
+```
 vim/:
   vim/                => ~/.vim
   vimrc               => ~/.vimrc
   gvimrc              => ~/.gvimrc
+```
+
+- Installs latest [Vim](http://www.vim.org), [Vundle.vim](https://github.com/gmarik/Vundle.vim) plugin manager, all Vim plugins in `~/.vimrc`, [Exuberant Ctags](http://ctags.sourceforge.net), and [Meslo for Powerline](https://github.com/powerline/fonts/tree/master/Meslo) (a patched font for symbols on the statusline)
+
+### Git
+
+- Symlinks the following **(overwriting existing versions)**:
+
+```
 git/:
   gitconfig           => ~/.gitconfig
   gitignore_global    => ~/.gitignore_global
 ```
 
-- [Vundle.vim](https://github.com/gmarik/Vundle.vim) plugin manager and all Vim plugins in `.vimrc` will be installed
+- Installs latest [Git](http://git-scm.com) and prompts you to complete `~/.gitconfig_user`
 
-- [Meslo for Powerline](https://github.com/powerline/fonts/tree/master/Meslo) (a patched font for symbols on the Vim statusline) will be installed
-
-- You will be prompted to complete `~/.gitconfig_user`
-
-- Feel free to add custom bash commands in `~/.bashrc`, it is sourced from `~/.bash_profile`
-
-Once `make` has completed, please close your shell and open a new instance.
-
-## Load Custom [iTerm](http://iterm2.com) Preferences
+## Custom [iTerm](http://iterm2.com) Preferences
 
 Launch [iTerm](http://iterm2.com), check and set "Preferences > General > Load preferences from a custom folder or URL" to this repository.
 
-## Install Vim Autocomplete ([YouCompleteMe](http://valloric.github.io/YouCompleteMe/))
+## Autocomplete in Vim
 
 ```bash
 make vimcompletion
 ```
+
+- Installs [CMake](http://www.cmake.org) and [YouCompleteMe](http://valloric.github.io/YouCompleteMe/)
 
 ## Uninstall
 
