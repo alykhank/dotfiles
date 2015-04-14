@@ -4,8 +4,6 @@ VUNDLE_PATH := $(CURDIR)/vim/vim/bundle/Vundle.vim
 RESET := \033[0m
 RED := \033[0;31m
 GREEN := \033[0;32m
-BLUE := \033[0;34m
-GITCONFIG_USER := ~/.gitconfig_user
 
 .PHONY: all configure cider shells vim vimvundle vimdotfiles vimplugins vimcompletion git gitdotfiles gituser uninstall
 
@@ -62,28 +60,7 @@ gitdotfiles: $(wildcard git/*)
 
 gituser:
 	# Set up user Git configuration
-	@[[ -e $(GITCONFIG_USER) ]] || touch $(GITCONFIG_USER)
-	@USER_NAME=`git config --file $(GITCONFIG_USER) user.name`; \
-	if [[ -z "$$USER_NAME" ]]; then \
-		echo "What is your full name?"; read USER_NAME; \
-		git config --file $(GITCONFIG_USER) user.name "$$USER_NAME"; \
-	else \
-		echo "$(BLUE)user.name="$$USER_NAME"$(RESET)"; \
-	fi
-	@USER_EMAIL=`git config --file $(GITCONFIG_USER) user.email`; \
-	if [[ -z "$$USER_EMAIL" ]]; then \
-		echo "What is your email?"; read USER_EMAIL; \
-		git config --file $(GITCONFIG_USER) user.email "$$USER_EMAIL"; \
-	else \
-		echo "$(BLUE)user.email="$$USER_EMAIL"$(RESET)"; \
-	fi
-	@GITHUB_USER=`git config --file $(GITCONFIG_USER) github.user`; \
-	if [[ -z "$$GITHUB_USER" ]]; then \
-		echo "What is your GitHub username?"; read GITHUB_USER; \
-		git config --file $(GITCONFIG_USER) github.user "$$GITHUB_USER"; \
-	else \
-		echo "$(BLUE)github.user="$$GITHUB_USER"$(RESET)"; \
-	fi
+	@$(CURDIR)/script/gituser
 
 uninstall: $(wildcard shells/*) $(wildcard vim/*) $(wildcard git/*)
 	@echo "Unlink $(RED)[$^]$(RESET) from $(RED)[$(addprefix ~/.,$(^F))]$(RESET)"
