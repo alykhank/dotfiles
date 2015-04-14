@@ -1,6 +1,6 @@
 # dotfiles
 
-Bash, Vim, and Git dotfiles.
+[Bash](https://www.gnu.org/software/bash/), [Vim](http://www.vim.org), and [Git](http://git-scm.com) dotfiles.
 
 ![Vim screenshot](img/vim.png)
 
@@ -53,7 +53,7 @@ git/:
 
 - Installs latest [Git](http://git-scm.com) and prompts you to complete `~/.gitconfig_user`
 
-## Custom [iTerm](http://iterm2.com) Preferences
+## Custom iTerm Preferences
 
 Launch [iTerm](http://iterm2.com), check and set "Preferences > General > Load preferences from a custom folder or URL" to this repository.
 
