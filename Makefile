@@ -4,12 +4,13 @@ VUNDLE_PATH := $(CURDIR)/vim/vim/bundle/Vundle.vim
 RESET := \033[0m
 RED := \033[0;31m
 GREEN := \033[0;32m
+BLUE := \033[0;34m
 
-.PHONY: all configure cider shells vim vimvundle vimdotfiles vimplugins vimcompletion git gitdotfiles gituser uninstall
+.PHONY: all basics cider ciderrestore shells vim vimvundle vimdotfiles vimplugins vimcompletion git gitdotfiles gituser uninstall
 
-all: configure shells vim git
+all: basics shells vim git
 
-configure:
+basics:
 	# Install Xcode Command Line Tools if nonexistent
 	@xcode-select --print-path >/dev/null 2>&1 || xcode-select --install
 	# Install Homebrew if nonexistent
@@ -18,15 +19,14 @@ configure:
 	@hash pip 2>/dev/null || brew install python
 	# Install Virtualenv if nonexistent
 	@hash virtualenv 2>/dev/null || pip install virtualenv
+
+cider:
 	# Install Cider if nonexistent
 	@hash cider 2>/dev/null || pip install cider
 	@echo "Symlink $(GREEN)$(CURDIR)$(RESET) to $(GREEN)~/.cider$(RESET)"
 	@ln -hfs $(CURDIR) ~/.cider
-	# Install prerequisites for dotfiles via Cider
-	@hash cider 2>/dev/null && cider install caskroom/cask/brew-cask cmake ctags git vim
-	@hash cider 2>/dev/null && cider cask install caskroom/fonts/font-meslo-lg-for-powerline
 
-cider:
+ciderrestore:
 	# Restore Cider configuration if Cider is available
 	@hash cider 2>/dev/null && cider restore
 
@@ -34,7 +34,10 @@ shells: $(wildcard shells/*)
 	@echo "Symlink $(GREEN)[$^]$(RESET) to $(GREEN)[$(addprefix ~/.,$(^F))]$(RESET)"
 	@$(foreach df, $(^F), ln -hfs $(CURDIR)/shells/$(df) ~/.$(df);)
 
-vim: vimvundle vimdotfiles vimplugins
+vim: vimvundle vimdotfiles vimplugins cider
+	@echo "Install prerequisites for $(BLUE)$@$(RESET) via Cider"
+	@hash cider 2>/dev/null && cider install caskroom/cask/brew-cask ctags vim
+	@hash cider 2>/dev/null && cider cask install caskroom/fonts/font-meslo-lg-for-powerline
 
 vimvundle:
 	# Install Vundle.vim plugin manager if nonexistent
@@ -48,11 +51,15 @@ vimplugins: vimvundle vimdotfiles
 	# Install Vim plugins
 	@vim +PluginInstall +qall
 
-vimcompletion: vimplugins
+vimcompletion: vimplugins cider
+	@echo "Install prerequisites for $(BLUE)$@$(RESET) via Cider"
+	@hash cider 2>/dev/null && cider install cmake
 	# Install YouCompleteMe with --clang-completer option
 	@~/.vim/bundle/YouCompleteMe/install.sh --clang-completer
 
-git: gitdotfiles gituser
+git: gitdotfiles gituser cider
+	@echo "Install prerequisites for $(BLUE)$@$(RESET) via Cider"
+	@hash cider 2>/dev/null && cider install git
 
 gitdotfiles: $(wildcard git/*)
 	@echo "Symlink $(GREEN)[$^]$(RESET) to $(GREEN)[$(addprefix ~/.,$(^F))]$(RESET)"
