@@ -70,3 +70,15 @@ make vimcompletion
 ```bash
 make uninstall
 ```
+
+## Inspiration
+
+Inspired by the dotfiles of:
+
+- [Zameer Manji](https://github.com/zmanji/dotfiles)
+- [Steve Losh](https://bitbucket.org/sjl/dotfiles/src)
+- [Tim Pope](https://github.com/tpope/tpope)
+- [Gary Bernhardt](https://github.com/garybernhardt/dotfiles)
+- [Zach Holman](https://github.com/holman/dotfiles)
+- [Mathias Bynens](https://github.com/mathiasbynens/dotfiles)
+- [Mislav Marohnić](https://github.com/mislav/vimfiles)
