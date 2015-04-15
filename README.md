@@ -28,6 +28,7 @@ shells/:
 ```
 
 - Feel free to add custom bash commands in `~/.bashrc`, it is sourced from `~/.bash_profile`
+- Feel free to add custom zsh commands in `~/.localrc`, it is sourced from `~/.zshrc`
 
 ### Vim
 
