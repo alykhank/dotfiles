@@ -34,6 +34,10 @@ shells: $(wildcard shells/*)
 	@echo "Symlink $(GREEN)[$^]$(RESET) to $(GREEN)[$(addprefix ~/.,$(^F))]$(RESET)"
 	@$(foreach df, $(^F), ln -hfs $(CURDIR)/shells/$(df) ~/.$(df);)
 
+zsh:
+	@echo "Change default shell to $(BLUE)$@$(RESET)"
+	@chsh -s /bin/zsh
+
 vim: vimvundle vimdotfiles vimplugins cider
 	@echo "Install prerequisites for $(BLUE)$@$(RESET) via Cider"
 	@hash cider 2>/dev/null && cider install caskroom/cask/brew-cask ctags vim
