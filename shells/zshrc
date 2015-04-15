@@ -68,14 +68,19 @@ GIT_PS1_DESCRIBE_STYLE="branch"
 GIT_PS1_SHOWCOLORHINTS=1
 # }}}
 
-# function test_exit() {
-#   local exit=$?
-#   [[ $exit -eq 0 ]] && echo "$c_blue" || echo "$c_red"
-# }
+c_clear=%f
+c_red=%F{red}
+c_blue=%F{blue}
+
+function test_exit() {
+  local exit=$?
+  [[ $exit -eq 0 ]] && echo "$c_blue" || echo "$c_red"
+}
 
 # Display path, git info, and prompt character
 precmd() {
-  __git_ps1 "$(get_virtualenv)%F{blue}%~%f" " %F{blue}%#%f "
+  color=$(test_exit)
+  __git_ps1 "$(get_virtualenv)$color%~$c_clear" " $color%#$c_clear "
 }
 # }}}
 
