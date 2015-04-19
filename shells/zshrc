@@ -105,7 +105,9 @@ alias json='python -m json.tool'
 
 # Extras {{{
 ### Use ~/.localrc to extend ~/.zshrc with custom options
-[[ -f ~/.localrc ]] && source ~/.localrc
+if [[ -f ~/.localrc ]]; then
+  source ~/.localrc
+fi
 # }}}
 
 # vim:ft=sh:fdm=marker
