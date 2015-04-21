@@ -1,12 +1,14 @@
 after-scripts:
 - brew linkapps
 casks:
+- basictex
 - caskroom/fonts/font-meslo-lg-for-powerline
 - dropbox
 - flux
 - google-chrome
 - heroku-toolbelt
 - iterm2
+- skim
 - spectacle
 formulas:
 - ack
@@ -16,6 +18,7 @@ formulas:
 - ffind
 - git
 - hub
+- node
 - pandoc
 - python
 - vim
