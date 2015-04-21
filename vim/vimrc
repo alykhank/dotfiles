@@ -59,6 +59,9 @@ Plugin 'tpope/vim-liquid'       " Liquid runtime files
 Plugin 'Keithbsmiley/swift.vim' " Swift runtime files
 Plugin 'kchmck/vim-coffee-script' " CoffeeScript runtime files
 Plugin 'ap/vim-css-color'       " Highlight colors in CSS files
+Plugin 'lervag/vimtex'          " LaTeX runtime files
+" Open Skim.app in the background with the corresponding line in the PDF highlighted
+noremap <leader>lr :silent !displayline -b -g <C-r>=line('.')<CR> <C-r>=expand('%:r')<CR>.pdf<CR><C-l>
 " }}}
 
 " Ctags {{{
