@@ -24,6 +24,7 @@ shells/:
   ackrc               => ~/.ackrc
   bash_profile        => ~/.bash_profile
   inputrc             => ~/.inputrc
+  latexmkrc           => ~/.latexmkrc
   zshrc               => ~/.zshrc
 ```
 
