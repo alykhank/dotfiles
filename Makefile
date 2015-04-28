@@ -26,7 +26,7 @@ cider:
 	@echo "Symlink $(GREEN)$(CURDIR)$(RESET) to $(GREEN)~/.cider$(RESET)"
 	@ln -hfs $(CURDIR) ~/.cider
 
-ciderrestore:
+ciderrestore: cider
 	# Restore Cider configuration if Cider is available
 	@hash cider 2>/dev/null && cider restore
 
