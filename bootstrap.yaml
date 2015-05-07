@@ -9,6 +9,7 @@ casks:
 - heroku-toolbelt
 - iterm2
 - skim
+- slack
 - spectacle
 formulas:
 - ack
