@@ -63,6 +63,7 @@ Plugin 'lervag/vimtex'          " LaTeX runtime files
 let g:tex_flavor = "latex"      " Use LaTeX instead of plain TeX
 " Open Skim.app in the background with the corresponding line in the PDF highlighted
 noremap <leader>lr :silent !displayline -b -g <C-r>=line('.')<CR> <C-r>=expand('%:r')<CR>.pdf<CR><C-l>
+Plugin 'solarnz/thrift.vim'     " Apache Thrift runtime files
 " }}}
 
 " Ctags {{{
