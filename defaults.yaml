@@ -9,6 +9,8 @@
     'KeyRepeat': 0
     # General > Ask to keep changes when closing documents
     'NSCloseAlwaysConfirmsChanges': true
+    # General > Close windows when quitting an app
+    'NSQuitAlwaysKeepsWindows': true
 'com.apple.Safari':
     # Safari > General > Open "safe" files after downloading
     'AutoOpenSafeDownloads': false
