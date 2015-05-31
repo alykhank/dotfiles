@@ -11,6 +11,8 @@ casks:
 - skim
 - slack
 - spectacle
+- spotify
+- spotify-notifications
 formulas:
 - ack
 - caskroom/cask/brew-cask
@@ -22,6 +24,8 @@ formulas:
 - node
 - pandoc
 - python
+- python3
+- ruby
 - vim
 icons:
     iTerm: https://dribbble.com/shots/1702947-iTerm-Replacement-Icon/attachments/271548
