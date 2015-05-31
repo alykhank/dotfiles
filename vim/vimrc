@@ -34,6 +34,8 @@ Plugin 'docunext/closetag.vim'  " HTML/XML tags will close automatically with '<
 Plugin 'tpope/vim-endwise'      " Automatically close blocks
 Plugin 'jszakmeister/vim-togglecursor' " Change cursor shape in insert and replace modes
 Plugin 'altercation/vim-colors-solarized' " Solarized colorscheme
+Plugin 'editorconfig/editorconfig-vim' " Automatically adhere to project editor configurations
+let g:EditorConfig_exclude_patterns = ['fugitive://.*'] " Play nice with vim-fugitive
 " }}}
 
 " VCS {{{

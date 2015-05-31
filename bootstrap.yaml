@@ -18,6 +18,7 @@ formulas:
 - caskroom/cask/brew-cask
 - cmake
 - ctags
+- editorconfig
 - ffind
 - git
 - hub
