@@ -662,7 +662,7 @@
 		</dict>
 	</dict>
 	<key>Default Bookmark Guid</key>
-	<string>21A0F0E1-B7EA-4F1F-A4B0-A6FAB7C43557</string>
+	<string>A1D752D7-546E-4096-BCC4-776AAC52A77B</string>
 	<key>DimBackgroundWindows</key>
 	<true/>
 	<key>DimInactiveSplitPanes</key>
@@ -742,6 +742,17 @@
 	<array/>
 	<key>NSTableView Sort Ordering KeyBingingTable</key>
 	<array/>
+	<key>NSToolbar Configuration Terminal Toolbar</key>
+	<dict>
+		<key>TB Display Mode</key>
+		<integer>1</integer>
+		<key>TB Icon Size Mode</key>
+		<integer>1</integer>
+		<key>TB Is Shown</key>
+		<integer>0</integer>
+		<key>TB Size Mode</key>
+		<integer>1</integer>
+	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>929 110 445 298 0 0 1440 877 </string>
 	<key>NSWindow Frame Preferences</key>
@@ -3683,6 +3694,10 @@
 			<string></string>
 		</dict>
 	</array>
+	<key>NoSyncTimeOfLastPromo</key>
+	<real>453245664.60102803</real>
+	<key>NoSyncTimeOfLastPromoDownload</key>
+	<real>454907218.61700201</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -3749,7 +3764,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-04-12T07:51:17Z</date>
+	<date>2015-06-02T03:06:49Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -3797,6 +3812,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>2.0.0.20141103</string>
+	<string>2.1.1</string>
 </dict>
 </plist>
