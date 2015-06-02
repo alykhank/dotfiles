@@ -15,7 +15,7 @@ function pandocmark() {
 }
 
 ### Compile Thrift files
-function thrift() {
+function dockerthrift() {
   [[ "$#" -eq 1 ]] || { echo "Usage: thrift infile.thrift"; return; }
   docker run -v "$PWD:/data" thrift thrift -o /data --gen java /data/$1
 }
