@@ -99,7 +99,7 @@ set synmaxcol=200               " Limit syntax highlighting by column number
 " }}}
 
 " Colorscheme {{{
-set background=dark             " Prefer dark style
+set background=light             " Set default background colour
 nnoremap <silent> <leader>b :let &background = ( &background ==? "dark" ? "light" : "dark" )<CR>:highlight Folded cterm=bold<CR>
 colorscheme solarized           " Use vim-colors-solarized plugin
 " Remove underline but keep bold in folds
