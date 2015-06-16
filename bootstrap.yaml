@@ -19,6 +19,7 @@ formulas:
 - cmake
 - ctags
 - editorconfig
+- fasd
 - ffind
 - git
 - hub

@@ -123,6 +123,9 @@ alias ios='open "$SIMULATOR"'
 
 ### Pretty print JSON
 alias json='python -m json.tool'
+
+### Initialize [fasd](https://github.com/clvv/fasd)
+hash fasd 2>/dev/null && eval "$(fasd --init auto)"
 # }}}
 
 # Extras {{{
