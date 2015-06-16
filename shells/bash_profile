@@ -107,11 +107,14 @@ alias ls='ls -FAh'
 ### Move up one directory
 alias ..='cd ..'
 
+### Alias find to [ffind](https://github.com/sjl/friendly-find)
+hash ffind 2>/dev/null && alias find='ffind'
+
 ### Create shorthand for git
 alias g='git'
 __git_complete g __git_main
 
-### Alias [hub](https://hub.github.com) to git
+### Alias git to [hub](https://hub.github.com)
 hash hub 2>/dev/null && eval "$(hub alias -s)"
 
 ### Launch iOS Simulator
