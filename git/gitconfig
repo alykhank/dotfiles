@@ -8,6 +8,7 @@
 	d = diff
 	dc = diff --cached
 	graph = log --graph --decorate --oneline
+	ls-ignored = ls-files --others --ignored --exclude-standard
 	remote = remote --verbose
 	s = status --short --branch
 	sl = stash list
