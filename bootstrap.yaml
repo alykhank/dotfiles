@@ -9,7 +9,6 @@ casks:
 - github
 - google-chrome
 - heroku-toolbelt
-- iterm2
 - qlmarkdown
 - skim
 - slack
@@ -32,8 +31,6 @@ formulas:
 - python3
 - ruby
 - vim
-icons:
-    iTerm: https://dribbble.com/shots/1702947-iTerm-Replacement-Icon/attachments/271548
 taps:
 - caskroom/cask
 - caskroom/fonts
