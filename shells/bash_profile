@@ -14,13 +14,6 @@ function pandocmark() {
   open "$outfile"
 }
 
-### Compile Thrift files
-function dockerthrift() {
-  [[ "$#" -eq 1 ]] || { echo "Usage: thrift infile.thrift"; return; }
-  docker run -v "$PWD:/data" thrift thrift -o /data --gen java /data/$1
-}
-# }}}
-
 # Options {{{
 ### Append to history file instead of overwriting
 shopt -s histappend
@@ -32,10 +25,6 @@ HISTFILESIZE=10000
 # Exports {{{
 export CLICOLOR=1
 export EDITOR="vim"
-### Automatically configure Docker environment variables
-if hash docker-machine 2>/dev/null; then
-  eval "$(docker-machine env dev)"
-fi
 # }}}
 
 # Tab Completion {{{
