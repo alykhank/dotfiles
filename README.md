@@ -56,9 +56,15 @@ git/:
 
 - Installs latest [Git](http://git-scm.com) and prompts you to complete `~/.gitconfig_user`
 
-## Custom iTerm Preferences
+## Custom Terminal Profiles
 
-Launch [iTerm](http://iterm2.com), check and set "Preferences > General > Load preferences from a custom folder or URL" to this repository.
+```bash
+open profiles/One\ Dark.terminal
+```
+
+Next, either change the value of "Preferences > General > On startup, open:" to "New window with profile: One Dark" or set up your Terminal windows as you wish and select "Window > Save Windows as Group…" while ensuring that you check "Use window group when Terminal starts".
+
+A light variant, One Light, is also included. The underlying color themes for these profiles may be found at [One Dark Terminal](https://github.com/nathanbuchar/one-dark-terminal), and the license may be found [here](https://github.com/nathanbuchar/one-dark-terminal/blob/master/LICENSE).
 
 ## Autocomplete in Vim
 
