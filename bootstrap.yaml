@@ -3,7 +3,7 @@ after-scripts:
 casks:
 - atom
 - basictex
-- caskroom/fonts/font-meslo-lg-for-powerline
+- caskroom/fonts/font-fira-mono-for-powerline
 - dropbox
 - flux
 - github

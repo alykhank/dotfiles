@@ -42,7 +42,7 @@ vim/:
   gvimrc              => ~/.gvimrc
 ```
 
-- Installs latest [Vim](http://www.vim.org), [Vundle.vim](https://github.com/gmarik/Vundle.vim) plugin manager, all Vim plugins in `~/.vimrc`, [Exuberant Ctags](http://ctags.sourceforge.net), and [Meslo for Powerline](https://github.com/powerline/fonts/tree/master/Meslo) (a patched font for symbols on the statusline)
+- Installs latest [Vim](http://www.vim.org), [Vundle.vim](https://github.com/gmarik/Vundle.vim) plugin manager, all Vim plugins in `~/.vimrc`, [Exuberant Ctags](http://ctags.sourceforge.net), and [Fira Mono for Powerline](https://github.com/powerline/fonts/tree/master/FiraMono) (a patched font for symbols on the statusline)
 
 ### Git
 

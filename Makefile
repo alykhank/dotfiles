@@ -41,7 +41,7 @@ zsh:
 vim: vimvundle vimdotfiles vimplugins cider
 	@echo "Install prerequisites for $(BLUE)$@$(RESET) via Cider"
 	@hash cider 2>/dev/null && cider install caskroom/cask/brew-cask ctags vim
-	@hash cider 2>/dev/null && cider cask install caskroom/fonts/font-meslo-lg-for-powerline
+	@hash cider 2>/dev/null && cider cask install caskroom/fonts/font-fira-mono-for-powerline
 
 vimvundle:
 	# Install Vundle.vim plugin manager if nonexistent
