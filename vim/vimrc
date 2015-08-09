@@ -33,7 +33,6 @@ Plugin 'jiangmiao/auto-pairs'   " Automatically close braces, parens, and quotes
 Plugin 'docunext/closetag.vim'  " HTML/XML tags will close automatically with '</'
 Plugin 'tpope/vim-endwise'      " Automatically close blocks
 Plugin 'jszakmeister/vim-togglecursor' " Change cursor shape in insert and replace modes
-Plugin 'altercation/vim-colors-solarized' " Solarized colorscheme
 Plugin 'editorconfig/editorconfig-vim' " Automatically adhere to project editor configurations
 let g:EditorConfig_exclude_patterns = ['fugitive://.*'] " Play nice with vim-fugitive
 " }}}
@@ -46,7 +45,6 @@ Plugin 'airblade/vim-gitgutter' " Show diff symbols in gutter
 
 " Status Line {{{
 Plugin 'bling/vim-airline'      " Supercharged statusline
-let g:airline_theme = 'solarized'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 " }}}
@@ -101,16 +99,10 @@ set synmaxcol=200               " Limit syntax highlighting by column number
 " }}}
 
 " Colorscheme {{{
-set background=light             " Set default background colour
-nnoremap <silent> <leader>b :let &background = ( &background ==? "dark" ? "light" : "dark" )<CR>:highlight Folded cterm=bold<CR>
-colorscheme solarized           " Use vim-colors-solarized plugin
-" Remove underline but keep bold in folds
-highlight Folded cterm=bold
+set background=dark             " Set default background colour
+nnoremap <silent> <leader>b :let &background = ( &background ==? "dark" ? "light" : "dark" )<CR>
 augroup highlights
   autocmd!
-  " Hide the cursor line when the split is not in focus
-  autocmd WinLeave * setlocal nocursorline
-  autocmd WinEnter * setlocal cursorline
   " Hide the column line when the split is not in focus
   autocmd WinLeave * setlocal colorcolumn=""
   autocmd WinEnter * setlocal colorcolumn=+1
@@ -124,8 +116,6 @@ set noshowmode                  " Hide default mode indicator
 set laststatus=2                " Always display status line
 set number                      " Show line numbers
 set ruler                       " Show the current row and column
-set cursorline                  " Highlight current line
-set linespace=4                 " Set line widths
 set display+=lastline           " Display as much as possible of long lines
 set scrolloff=10                " Scroll frame when close to top or bottom
 set sidescrolloff=20            " Scroll frame when close to left or right
@@ -134,9 +124,6 @@ set visualbell                  " Flash instead of beeping
 set title                       " Display `titlestring` as the TERM title
 set wildmenu                    " Show command-line completions in statusline
 set autoread                    " Automatically reread externally changed files
-set mouse=a                     " Allow mouse interaction, prevent scrolling console UI
-" Toggle mouse interaction to allow iTerm ⌘-Click in Vim
-noremap <silent> <leader>m :let &mouse = ( &mouse ==? "a" ? "" : "a" )<CR>
 set clipboard=unnamed           " Use system clipboard for yank and put
 set ttimeoutlen=50              " Set explicit timeout for mapped key sequences
 " }}}
