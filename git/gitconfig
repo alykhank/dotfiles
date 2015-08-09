@@ -2,6 +2,7 @@
 	statusHints = false
 [alias]
 	amend = commit --amend
+	b = branch
 	ci = commit
 	civ = commit --verbose
 	co = checkout
@@ -12,6 +13,7 @@
 	remote = remote --verbose
 	s = status --short --branch
 	sl = stash list
+	sp = stash pop
 	unstage = reset HEAD
 [branch]
 	autosetupmerge = always
