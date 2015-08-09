@@ -1,13 +1,16 @@
 after-scripts:
 - brew linkapps
 casks:
+- atom
 - basictex
 - caskroom/fonts/font-meslo-lg-for-powerline
 - dropbox
 - flux
+- github
 - google-chrome
 - heroku-toolbelt
 - iterm2
+- qlmarkdown
 - skim
 - slack
 - spectacle
