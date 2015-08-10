@@ -223,6 +223,8 @@
 	QXJjaGl2ZXLRFxhUcm9vdIABCBEaIy0yNztBSE5bYpGTlZqlrra5wtTX3AAAAAAAAAEB
 	AAAAAAAAABkAAAAAAAAAAAAAAAAAAADe
 	</data>
+	<key>Bell</key>
+	<false/>
 	<key>BlinkText</key>
 	<false/>
 	<key>CursorColor</key>
@@ -299,7 +301,7 @@
 	<key>UseBrightBold</key>
 	<false/>
 	<key>VisualBell</key>
-	<true/>
+	<false/>
 	<key>WindowTitle</key>
 	<string></string>
 	<key>blackColour</key>
