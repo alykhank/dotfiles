@@ -20,8 +20,10 @@ function pandocmark() {
 bindkey -e
 ### Enable smart directory navigation
 setopt auto_cd
+### Allow comments in interactive session
+setopt interactivecomments
 ### Delete path segments separately with ^-W or ⌥-⌫
-autoload -U select-word-style && select-word-style bash
+autoload -Uz select-word-style && select-word-style bash
 # }}}
 
 # Exports {{{
@@ -40,9 +42,7 @@ fi
 
 ### Enable tab completions
 fpath=(/usr/local/share/zsh/site-functions $fpath)
-autoload -U compinit && compinit
-### Automatically select the first completion
-setopt menu_complete
+autoload -Uz compinit && compinit
 ### Allow case-insensitive completion
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 ### Colorize completions
@@ -55,6 +55,9 @@ _comp_options+=(globdots)
 setopt complete_in_word
 ### Use Shift-Tab to move backwards in completion list
 bindkey '^[[Z' reverse-menu-complete
+### Use history substring search
+bindkey '^[[A' history-beginning-search-backward
+bindkey '^[[B' history-beginning-search-forward
 # }}}
 
 # Prompt {{{
