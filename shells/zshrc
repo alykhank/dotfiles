@@ -80,6 +80,8 @@ function test_exit() {
 # Display path, git info, and prompt character
 precmd() {
   color=$(test_exit)
+  ### put the current directory in title bar
+  print -Pn "\e]2;%~\a"
   __git_ps1 "$(get_virtualenv)$color%~$c_clear" " $color%#$c_clear "
 }
 # }}}
