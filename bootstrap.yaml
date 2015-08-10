@@ -18,6 +18,7 @@ casks:
 formulas:
 - ack
 - caskroom/cask/brew-cask
+- ccat
 - cmake
 - ctags
 - editorconfig
