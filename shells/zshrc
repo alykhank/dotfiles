@@ -41,6 +41,8 @@ fi
 ### Enable tab completions
 fpath=(/usr/local/share/zsh/site-functions $fpath)
 autoload -U compinit && compinit
+### Automatically select the first completion
+setopt menu_complete
 ### Allow case-insensitive completion
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 ### Colorize completions
@@ -49,6 +51,10 @@ zstyle ':completion:*' list-colors ''
 zstyle ':completion:*:*:*:*:*' menu select
 ### Enable completions on dotfiles
 _comp_options+=(globdots)
+### Enable completion from the middle of a word
+setopt complete_in_word
+### Use Shift-Tab to move backwards in completion list
+bindkey '^[[Z' reverse-menu-complete
 # }}}
 
 # Prompt {{{
