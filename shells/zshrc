@@ -10,7 +10,7 @@ function pandocmark() {
   infile=$1
   outfile=$(basename "$infile")
   outfile=${outfile%.*}.html
-  pandoc -f markdown_github -t html5 "$infile" -o "$outfile"
+  pandoc -f markdown_github -t html5 --smart -s "$infile" -o "$outfile"
   open "$outfile"
 }
 # }}}
@@ -88,11 +88,16 @@ precmd() {
 ### Enable colourized output for listing directory contents, append '/' to directories, and extra symbols after various filetypes for differentiation
 alias ls='ls -FAh'
 
+### Alias cat to [ccat](https://github.com/jingweno/ccat)
+hash ccat 2>/dev/null && alias cat='ccat'
+
+### Alias find to [ffind](https://github.com/sjl/friendly-find)
+hash ffind 2>/dev/null && alias find='ffind'
+
 ### Create shorthand for git
 alias g='git'
-# __git_complete g __git_main
 
-### Alias [hub](https://hub.github.com) to git
+### Alias git to [hub](https://hub.github.com)
 hash hub 2>/dev/null && eval "$(hub alias -s)"
 
 ### Launch iOS Simulator
@@ -101,6 +106,9 @@ alias ios='open "$SIMULATOR"'
 
 ### Pretty print JSON
 alias json='python -m json.tool'
+
+### Initialize [fasd](https://github.com/clvv/fasd)
+hash fasd 2>/dev/null && eval "$(fasd --init auto)"
 # }}}
 
 # Extras {{{
