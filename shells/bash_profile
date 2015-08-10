@@ -10,9 +10,10 @@ function pandocmark() {
   infile=$1
   outfile=$(basename "$infile")
   outfile=${outfile%.*}.html
-  pandoc -f markdown_github -t html5 -s "$infile" -o "$outfile"
+  pandoc -f markdown_github -t html5 --smart -s "$infile" -o "$outfile"
   open "$outfile"
 }
+# }}}
 
 # Options {{{
 ### Append to history file instead of overwriting
