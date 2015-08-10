@@ -56,8 +56,8 @@ setopt complete_in_word
 ### Use Shift-Tab to move backwards in completion list
 bindkey '^[[Z' reverse-menu-complete
 ### Use history substring search
-bindkey '^[[A' history-beginning-search-backward
-bindkey '^[[B' history-beginning-search-forward
+bindkey '^[[A' up-line-or-search
+bindkey '^[[B' down-line-or-search
 # }}}
 
 # Prompt {{{
