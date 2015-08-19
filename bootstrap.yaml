@@ -6,7 +6,7 @@ casks:
 - caskroom/fonts/font-fira-mono-for-powerline
 - dropbox
 - flux
-- github
+- github-desktop
 - google-chrome
 - heroku-toolbelt
 - qlmarkdown
