@@ -29,6 +29,7 @@ autoload -Uz select-word-style && select-word-style bash
 # Exports {{{
 export CLICOLOR=1
 export EDITOR="vim"
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 # }}}
 
 # Tab Completion {{{
