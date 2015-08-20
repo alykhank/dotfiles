@@ -6,15 +6,12 @@ casks:
 - caskroom/fonts/font-fira-mono-for-powerline
 - dropbox
 - flux
-- github-desktop
 - google-chrome
 - heroku-toolbelt
 - qlmarkdown
 - skim
 - slack
 - spectacle
-- spotify
-- spotify-notifications
 formulas:
 - ack
 - caskroom/cask/brew-cask
