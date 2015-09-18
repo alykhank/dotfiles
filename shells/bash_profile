@@ -112,7 +112,7 @@ __git_complete g __git_main
 hash hub 2>/dev/null && eval "$(hub alias -s)"
 
 ### Launch iOS Simulator
-SIMULATOR='/Applications/Xcode.app/Contents/Developer/Applications/iOS Simulator.app/'
+SIMULATOR='/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/'
 alias ios='open "$SIMULATOR"'
 
 ### Pretty print JSON
