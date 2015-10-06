@@ -16,6 +16,16 @@ function pandocmark() {
 # }}}
 
 # Options {{{
+HISTFILE=$HOME/.zsh_history
+### Increase session and persisted history sizes
+HISTSIZE=10000
+SAVEHIST=10000
+### (zsh: Options)[http://zsh.sourceforge.net/Doc/Release/Options.html]
+### If a new command line being added to the history list duplicates an older one, the older command is removed from the list (even if it is not the previous event).
+setopt hist_ignore_all_dups
+### This option both imports new commands from the history file, and also causes your typed commands to be appended to the history file.
+setopt share_history
+
 ### Use emacs line editing mode
 bindkey -e
 ### Enable smart directory navigation
