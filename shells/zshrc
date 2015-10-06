@@ -99,6 +99,7 @@ GIT_PS1_SHOWCOLORHINTS=1
 
 c_clear=%f
 c_red=%F{red}
+c_green=%F{green}
 c_blue=%F{blue}
 
 function test_exit() {
@@ -108,10 +109,15 @@ function test_exit() {
 
 # Display path, git info, and prompt character
 precmd() {
-  color=$(test_exit)
+  local color=$(test_exit)
   ### put the current directory in title bar
   print -Pn "\e]2;%~\a"
   __git_ps1 "$(get_virtualenv)$color%~$c_clear" " $color%#$c_clear "
+  local battery_current=$(ioreg -rc AppleSmartBattery | sed -En 's/.*"CurrentCapacity" = ([0-9]+)/\1/p')
+  local battery_max=$(ioreg -rc AppleSmartBattery | sed -En 's/.*"MaxCapacity" = ([0-9]+)/\1/p')
+  local filled=$((((10*battery_current+battery_max-1)/battery_max)))
+  local empty=$(((10-filled)))
+  RPROMPT="$c_green${(r:filled::▸:)}${(r:empty::▹:)}$c_clear"
 }
 # }}}
 
