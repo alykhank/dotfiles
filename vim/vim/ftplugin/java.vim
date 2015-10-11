@@ -1,8 +1,8 @@
 "" Wrapping
-set textwidth=120               " Set wrap width
+setlocal textwidth=120               " Set wrap width
 
 "" Whitespace
-set tabstop=4                   " Set literal tab width and display
-set softtabstop=4               " Set tab width for insertion and <BS>
-set shiftwidth=4                " Set CTRL-T, > (add indent) & CTRL-D, < (remove indent) widths
-set expandtab                   " Ensure tabs are expanded to spaces
+setlocal tabstop=4                   " Set literal tab width and display
+setlocal softtabstop=4               " Set tab width for insertion and <BS>
+setlocal shiftwidth=4                " Set CTRL-T, > (add indent) & CTRL-D, < (remove indent) widths
+setlocal expandtab                   " Ensure tabs are expanded to spaces

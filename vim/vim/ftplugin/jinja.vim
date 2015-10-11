@@ -1,2 +1,2 @@
 " Use {# ... #} for comments
-set commentstring={#\ %s\ #}
+setlocal commentstring={#\ %s\ #}
