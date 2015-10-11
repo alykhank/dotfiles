@@ -138,9 +138,9 @@ augroup trailing
   au InsertEnter * :setlocal listchars-=trail:•
   au InsertLeave * :setlocal listchars+=trail:•
 augroup END
-set tabstop=2                   " Set literal tab width and display
-set softtabstop=2               " Set tab width for insertion and <BS>
-set shiftwidth=2                " Set CTRL-T, > (add indent) & CTRL-D, < (remove indent) widths
+set tabstop=4                   " Set literal tab width and display
+set softtabstop=4               " Set tab width for insertion and <BS>
+set shiftwidth=4                " Set CTRL-T, > (add indent) & CTRL-D, < (remove indent) widths
 set expandtab                   " Ensure tabs are expanded to spaces
 set smarttab                    " Insert shiftwidth tabs at start of line, softtabstop tabs elsewhere
 set shiftround                  " Round indents to multiples of shiftwidth
