@@ -219,6 +219,7 @@ endif
 nnoremap <leader>ev :e $MYVIMRC<CR>
 nnoremap <leader>vv :vsplit $MYVIMRC<CR>
 nnoremap <leader>vb :vsplit ~/.bash_profile<CR>
+nnoremap <leader>vz :vsplit ~/.zshrc<CR>
 nnoremap <leader>vg :vsplit ~/.gitconfig<CR>
 " Quickly source .vimrc
 nnoremap <leader>sv :source $MYVIMRC<CR>
