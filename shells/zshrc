@@ -32,8 +32,8 @@ bindkey -e
 setopt auto_cd
 ### Allow comments in interactive session
 setopt interactivecomments
-### Delete path segments separately with ^-W or ⌥-⌫
-autoload -Uz select-word-style && select-word-style bash
+### Delete path segments separately with ^-W
+bindkey '^W' vi-backward-kill-word
 # }}}
 
 # Exports {{{
