@@ -125,11 +125,14 @@ precmd() {
 ### Enable colourized output for listing directory contents, append '/' to directories, and extra symbols after various filetypes for differentiation
 alias ls='ls -FAh'
 
+### Count number of lines
+alias lc='wc -l'
+
 ### Alias cat to [ccat](https://github.com/jingweno/ccat)
 hash ccat 2>/dev/null && alias cat='ccat'
 
 ### Alias find to [ffind](https://github.com/sjl/friendly-find)
-hash ffind 2>/dev/null && alias find='ffind'
+hash ffind 2>/dev/null && alias find='ffind -S'
 
 ### Create shorthand for git
 alias g='git'
