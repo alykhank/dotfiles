@@ -15,3 +15,6 @@
 
 # Ignore SQLite db files
 --ignore-file=ext:db
+
+# Ignore Build output directories
+--ignore-dir=build
