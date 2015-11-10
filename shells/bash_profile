@@ -107,6 +107,9 @@ hash ccat 2>/dev/null && alias cat='ccat'
 ### Alias find to [ffind](https://github.com/sjl/friendly-find)
 hash ffind 2>/dev/null && alias find='ffind -S'
 
+### Alias diff to [colordiff](http://www.colordiff.org)
+hash colordiff 2>/dev/null && alias diff='colordiff'
+
 ### Create shorthand for git
 alias g='git'
 __git_complete g __git_main

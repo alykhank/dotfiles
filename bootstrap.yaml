@@ -20,6 +20,7 @@ formulas:
 - caskroom/cask/brew-cask
 - ccat
 - cmake
+- colordiff
 - ctags
 - editorconfig
 - fasd
