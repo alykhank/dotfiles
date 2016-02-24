@@ -24,8 +24,10 @@ formulas:
 - editorconfig
 - fasd
 - ffind
+- ghi
 - git
 - hub
+- jq
 - node
 - pandoc
 - python
