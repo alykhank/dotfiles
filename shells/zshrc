@@ -127,6 +127,14 @@ alias ls='ls -FAh'
 ### Count number of lines
 alias lc='wc -l'
 
+### Create tar archives
+alias ctar='tar -cvf'
+alias ctarz='tar -cvzf'
+
+### Extract files from tar archives
+alias untar='tar -xvf'
+alias untarz='tar -xvzf'
+
 ### Alias cat to [ccat](https://github.com/jingweno/ccat)
 hash ccat 2>/dev/null && alias cat='ccat'
 
