@@ -32,3 +32,6 @@ $pdflatex = 'pdflatex -synctex=1 %O %S';
 #               file.   By  default, for pdf files this association is to OS-X's
 #               preview, which is quite satisfactory.
 $pdf_previewer = "open -a Skim.app";
+
+# Extra file extensions to clean when latexmk -c or latexmk -C is used
+$clean_ext = '%R.synctex.gz';
