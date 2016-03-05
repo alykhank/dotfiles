@@ -1,0 +1,42 @@
+# Taps
+tap 'caskroom/cask'
+tap 'caskroom/fonts'
+
+# Args
+cask_args appdir: '/Applications'
+
+# Formulas
+brew 'ack'
+brew 'ccat'
+brew 'cmake'
+brew 'colordiff'
+brew 'ctags'
+brew 'editorconfig'
+brew 'fasd'
+brew 'ffind'
+brew 'ghi'
+brew 'git'
+brew 'hub'
+brew 'jq'
+brew 'node'
+brew 'pandoc'
+brew 'python'
+brew 'python3'
+brew 'ruby'
+brew 'tree'
+brew 'vim'
+
+# Casks
+cask 'atom'
+cask 'basictex'
+cask 'font-dejavu-sans-mono-for-powerline'
+cask 'dropbox'
+cask 'flux'
+cask 'github-desktop'
+cask 'google-chrome'
+cask 'heroku-toolbelt'
+cask 'messenger'
+cask 'qlmarkdown'
+cask 'quicklook-json'
+cask 'skim'
+cask 'spectacle'
