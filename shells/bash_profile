@@ -24,6 +24,7 @@ HISTFILESIZE=10000
 # }}}
 
 # Exports {{{
+export PATH="/usr/local/bin:$PATH"
 export CLICOLOR=1
 export EDITOR="vim"
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
