@@ -13,7 +13,7 @@ Once `make` has completed, please close your shell and open a new instance.
 
 ### Basics
 
-- Installs Xcode Command Line Tools, [Homebrew](http://brew.sh), [Python](https://www.python.org) (including [pip](https://pip.pypa.io/)), and [Virtualenv](https://virtualenv.pypa.io)
+- Installs Xcode Command Line Tools and [Homebrew](http://brew.sh)
 
 ### Shells
 
@@ -39,7 +39,6 @@ shells/:
 vim/:
   vim/                => ~/.vim
   vimrc               => ~/.vimrc
-  gvimrc              => ~/.gvimrc
 ```
 
 - Installs latest [Vim](http://www.vim.org), [Vundle.vim](https://github.com/gmarik/Vundle.vim) plugin manager, all Vim plugins in `~/.vimrc`, [Exuberant Ctags](http://ctags.sourceforge.net), and [DejaVu Sans Mono for Powerline](https://github.com/powerline/fonts/tree/master/DejaVuSansMono) (a patched font for symbols on the statusline)
@@ -78,6 +77,12 @@ make vimcompletion
 
 ```bash
 make zsh
+```
+
+## Install all Homebrew formulas and casks
+
+```bash
+make brewbundle
 ```
 
 ## Uninstall
