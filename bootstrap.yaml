@@ -16,7 +16,6 @@ casks:
 - spectacle
 formulas:
 - ack
-- caskroom/cask/brew-cask
 - ccat
 - cmake
 - colordiff

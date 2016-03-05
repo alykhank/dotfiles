@@ -42,7 +42,7 @@ vim/:
   gvimrc              => ~/.gvimrc
 ```
 
-- Installs latest [Vim](http://www.vim.org), [Vundle.vim](https://github.com/gmarik/Vundle.vim) plugin manager, all Vim plugins in `~/.vimrc`, [Exuberant Ctags](http://ctags.sourceforge.net), and [Fira Mono for Powerline](https://github.com/powerline/fonts/tree/master/FiraMono) (a patched font for symbols on the statusline)
+- Installs latest [Vim](http://www.vim.org), [Vundle.vim](https://github.com/gmarik/Vundle.vim) plugin manager, all Vim plugins in `~/.vimrc`, [Exuberant Ctags](http://ctags.sourceforge.net), and [DejaVu Sans Mono for Powerline](https://github.com/powerline/fonts/tree/master/DejaVuSansMono) (a patched font for symbols on the statusline)
 
 ### Git
 
@@ -59,12 +59,12 @@ git/:
 ## Custom Terminal Profiles
 
 ```bash
-open profiles/One\ Dark.terminal
+open profiles/Solarized\ Dark.terminal
 ```
 
-Next, either change the value of "Preferences > General > On startup, open:" to "New window with profile: One Dark" or set up your Terminal windows as you wish and select "Window > Save Windows as Group…" while ensuring that you check "Use window group when Terminal starts".
+Next, either change the value of "Preferences > General > On startup, open:" to "New window with profile:" or set up your Terminal windows as you wish and select "Window > Save Windows as Group…" while ensuring that you check "Use window group when Terminal starts".
 
-A light variant, One Light, is also included. The underlying color themes for these profiles may be found at [One Dark Terminal](https://github.com/nathanbuchar/one-dark-terminal), and the license may be found [here](https://github.com/nathanbuchar/one-dark-terminal/blob/master/LICENSE).
+A light variant, Solarized Light, is also included. The underlying color themes for these profiles may be found at [osx-terminal.app-colors-solarized](https://github.com/tomislav/osx-terminal.app-colors-solarized).
 
 ## Autocomplete in Vim
 
