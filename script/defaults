@@ -1,0 +1,76 @@
+#!/usr/bin/env bash
+
+function write() {
+  domain="$1"
+  key="$2"
+  type="$3"
+  value="$4"
+  defaults write "${domain}" "${key}" "${type}" "${value}"
+}
+
+function global_write() {
+  write NSGlobalDomain "$1" "$2" "$3"
+}
+
+# General
+
+# Use dark menu bar and Dock
+global_write AppleInterfaceStyle -string Dark
+# Automatically hide and show the menu bar
+global_write _HIHideMenuBar -bool TRUE
+# Keyboard > Shortcuts > Full Keyboard Access: All controls
+global_write AppleKeyboardUIMode -int 3
+# Keyboard > Keyboard > Delay Until Repeat: Short
+global_write InitialKeyRepeat -int 25
+# Keyboard > Keyboard > Key Repeat: Fast
+global_write KeyRepeat -int 0
+# Ask to keep changes when closing documents
+global_write NSCloseAlwaysConfirmsChanges -bool TRUE
+# Close windows when quitting an app
+global_write NSQuitAlwaysKeepsWindows -bool TRUE
+
+
+# Trackpad
+d='com.apple.AppleMultitouchTrackpad'
+
+# Point & Click > Look up & data detectors
+write $d TrackpadThreeFingerTapGesture -int 2
+# Point & Click > Tap to click
+write $d Clicking -bool TRUE
+# More Gestures > App Exposé
+write 'com.apple.dock' showAppExposeGestureEnabled -bool TRUE
+
+
+# Safari
+d='com.apple.Safari'
+
+# General > Open "safe" files after downloading
+write $d AutoOpenSafeDownloads -bool FALSE
+# Advanced > Smart Search Field: Show full website address
+write $d ShowFullURLInSmartSearchField -bool TRUE
+# View > Show Status Bar
+write $d ShowStatusBar -bool TRUE
+
+
+# Dock
+d='com.apple.dock'
+
+# Automatically hide and show the Dock
+write $d autohide -bool TRUE
+
+
+# Finder
+d='com.apple.finder'
+
+# View > Show Path Bar
+write $d ShowPathbar -bool TRUE
+# View > Show Status Bar
+write $d ShowStatusBar -bool TRUE
+
+
+# Security & Privacy
+d='com.apple.screensaver'
+
+# General > Require password `askForPasswordDelay` seconds after sleep or screen saver begins
+write $d askForPassword -int 1
+write $d askForPasswordDelay -int 5
