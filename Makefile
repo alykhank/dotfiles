@@ -6,7 +6,7 @@ RED := \033[0;31m
 GREEN := \033[0;32m
 BLUE := \033[0;34m
 
-.PHONY: all basics shells zsh vim vimvundle vimdotfiles vimplugins vimcompletion git gitdotfiles gituser brewbundle uninstall
+.PHONY: all basics shells zsh vim vimvundle vimdotfiles vimplugins vimcompletion git gitdotfiles gituser brewbundle osx uninstall
 
 all: basics shells vim git
 
@@ -60,8 +60,12 @@ gituser:
 	@$(CURDIR)/script/gituser
 
 brewbundle: basics
-	@echo "Install all Homebrew formulas and casks"
+	# Install all Homebrew formulas and casks
 	@brew bundle
+
+osx:
+	# Configure OS X
+	@$(CURDIR)/script/defaults
 
 uninstall: $(wildcard shells/*) $(wildcard vim/*) $(wildcard git/*)
 	@echo "Unlink $(RED)[$^]$(RESET) from $(RED)[$(addprefix ~/.,$(^F))]$(RESET)"

@@ -80,10 +80,16 @@ make vimcompletion
 make zsh
 ```
 
-## Install all Homebrew formulas and casks
+## Install Homebrew Formulas
 
 ```bash
 make brewbundle
+```
+
+## Configure OS X
+
+```bash
+make osx
 ```
 
 ## Uninstall
