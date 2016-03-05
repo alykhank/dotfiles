@@ -1,6 +1,8 @@
 'NSGlobalDomain':
     # General > Use dark menu bar and Dock
     'AppleInterfaceStyle':  'Dark'
+    # General > Automatically hide and show the menu bar
+    '_HIHideMenuBar': true
     # Keyboard > Shortcuts > Full Keyboard Access: All controls
     'AppleKeyboardUIMode': 3
     # Keyboard > Keyboard > Delay Until Repeat: Short
