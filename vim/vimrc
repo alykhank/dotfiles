@@ -32,7 +32,6 @@ Plugin 'vim-scripts/matchit.zip' " Navigate between matching tags with '%'
 Plugin 'jiangmiao/auto-pairs'   " Automatically close braces, parens, and quotes
 Plugin 'docunext/closetag.vim'  " HTML/XML tags will close automatically with '</'
 Plugin 'tpope/vim-endwise'      " Automatically close blocks
-Plugin 'jszakmeister/vim-togglecursor' " Change cursor shape in insert and replace modes
 Plugin 'editorconfig/editorconfig-vim' " Automatically adhere to project editor configurations
 let g:EditorConfig_exclude_patterns = ['fugitive://.*'] " Play nice with vim-fugitive
 " }}}
