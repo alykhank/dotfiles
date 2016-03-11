@@ -7,34 +7,34 @@ c_blue='\033[0;34m'
 GITCONFIG_USER="$HOME/.gitconfig_user"
 
 # Create $GITCONFIG_USER if nonexistent
-[[ -e "$GITCONFIG_USER" ]] || touch "$GITCONFIG_USER"
+[ -e "$GITCONFIG_USER" ] || touch "$GITCONFIG_USER"
 
 # Set user.name if nonexistent
 USER_NAME=$(git config --file "$GITCONFIG_USER" user.name)
-if [[ -z "$USER_NAME" ]]; then
+if [ -z "$USER_NAME" ]; then
   echo "What is your full name?"
-  read USER_NAME
+  read -r USER_NAME
   git config --file "$GITCONFIG_USER" user.name "$USER_NAME"
 else
-  echo "${c_blue}user.name="$USER_NAME"${c_clear}"
+  echo "${c_blue}user.name=$USER_NAME${c_clear}"
 fi
 
 # Set user.email if nonexistent
 USER_EMAIL=$(git config --file "$GITCONFIG_USER" user.email)
-if [[ -z "$USER_EMAIL" ]]; then
+if [ -z "$USER_EMAIL" ]; then
   echo "What is your email?"
-  read USER_EMAIL
+  read -r USER_EMAIL
   git config --file "$GITCONFIG_USER" user.email "$USER_EMAIL"
 else
-  echo "${c_blue}user.email="$USER_EMAIL"${c_clear}"
+  echo "${c_blue}user.email=$USER_EMAIL${c_clear}"
 fi
 
 # Set github.user if nonexistent
 GITHUB_USER=$(git config --file "$GITCONFIG_USER" github.user)
-if [[ -z "$GITHUB_USER" ]]; then
+if [ -z "$GITHUB_USER" ]; then
   echo "What is your GitHub username?"
-  read GITHUB_USER
+  read -r GITHUB_USER
   git config --file "$GITCONFIG_USER" github.user "$GITHUB_USER"
 else
-  echo "${c_blue}github.user="$GITHUB_USER"${c_clear}"
+  echo "${c_blue}github.user=$GITHUB_USER${c_clear}"
 fi
