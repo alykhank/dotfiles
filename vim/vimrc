@@ -100,12 +100,14 @@ set synmaxcol=200               " Limit syntax highlighting by column number
 " Colorscheme {{{
 set background=dark             " Set default background colour
 nnoremap <silent> <leader>b :let &background = ( &background ==? "dark" ? "light" : "dark" )<CR>
-augroup highlights
-  autocmd!
-  " Hide the column line when the split is not in focus
-  autocmd WinLeave * setlocal colorcolumn=""
-  autocmd WinEnter * setlocal colorcolumn=+1
-augroup END
+if exists('+colorcolumn')
+  augroup highlights
+    autocmd!
+    " Hide the column line when the split is not in focus
+    autocmd WinLeave * setlocal colorcolumn=""
+    autocmd WinEnter * setlocal colorcolumn=+1
+  augroup END
+endif
 " }}}
 
 " Basics {{{
@@ -155,7 +157,9 @@ if exists("+breakindent")
   set breakindent               " Indent wrapped portion of lines to matching level
 endif
 set showbreak=↪                 " Use character to indicate wrapped lines
-set colorcolumn=+1              " Highlight the column after `textwidth`
+if exists('+colorcolumn')
+  set colorcolumn=+1            " Highlight the column after `textwidth`
+endif
 " Disabled Format Options {{{
 " t: Auto-wrap text using textwidth
 set formatoptions-=t
@@ -196,20 +200,21 @@ set splitright
 " }}}
 
 " Temporary Files {{{
-set undofile                    " Persist undo tree across launches
 " Store temporarily files globally instead of in working directory
 set backupdir=~/.vim/tmp/backup
-set directory=~/.vim/tmp/swap
-set undodir=~/.vim/tmp/undo
-" Make directories automatically if nonexistent
 if !isdirectory(expand(&backupdir))
   call mkdir(expand(&backupdir), "p")
 endif
+set directory=~/.vim/tmp/swap
 if !isdirectory(expand(&directory))
   call mkdir(expand(&directory), "p")
 endif
-if !isdirectory(expand(&undodir))
-  call mkdir(expand(&undodir), "p")
+if has('persistent_undo')
+  set undofile                  " Persist undo tree across launches
+  set undodir=~/.vim/tmp/undo
+  if !isdirectory(expand(&undodir))
+    call mkdir(expand(&undodir), "p")
+  endif
 endif
 " }}}
 
