@@ -6,7 +6,7 @@ RED := \033[0;31m
 GREEN := \033[0;32m
 BLUE := \033[0;34m
 
-.PHONY: all basics shells zsh vim vimvundle vimdotfiles vimplugins vimcompletion git gitdotfiles gituser brewbundle osx uninstall
+.PHONY: all basics shells zsh vim vimvundle vimdotfiles vimplugins vimcompletion git gitdotfiles gituser brewbundle osx linux uninstall
 
 all: basics shells vim git
 
@@ -66,6 +66,9 @@ brewbundle: basics
 osx:
 	# Configure OS X
 	@$(CURDIR)/script/defaults
+
+linux: shells vimvundle vimdotfiles vimplugins gitdotfiles gituser
+	@echo "Set up minimal configuration for Linux environment"
 
 uninstall: $(wildcard shells/*) $(wildcard vim/*) $(wildcard git/*)
 	@echo "Unlink $(RED)[$^]$(RESET) from $(RED)[$(addprefix ~/.,$(^F))]$(RESET)"
