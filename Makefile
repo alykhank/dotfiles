@@ -18,7 +18,7 @@ basics:
 
 shells: $(wildcard shells/*)
 	@echo "Symlink $(GREEN)[$^]$(RESET) to $(GREEN)[$(addprefix ~/.,$(^F))]$(RESET)"
-	@$(foreach df, $(^F), ln -hfs $(CURDIR)/shells/$(df) ~/.$(df);)
+	@$(foreach df, $(^F), ln -nfs $(CURDIR)/shells/$(df) ~/.$(df);)
 
 zsh:
 	@echo "Change default shell to $(BLUE)$@$(RESET)"
@@ -35,7 +35,7 @@ vimvundle:
 
 vimdotfiles: $(wildcard vim/*)
 	@echo "Symlink $(GREEN)[$^]$(RESET) to $(GREEN)[$(addprefix ~/.,$(^F))]$(RESET)"
-	@$(foreach df, $(^F), ln -hfs $(CURDIR)/vim/$(df) ~/.$(df);)
+	@$(foreach df, $(^F), ln -nfs $(CURDIR)/vim/$(df) ~/.$(df);)
 
 vimplugins: vimvundle vimdotfiles
 	# Install Vim plugins
@@ -53,7 +53,7 @@ git: basics gitdotfiles gituser
 
 gitdotfiles: $(wildcard git/*)
 	@echo "Symlink $(GREEN)[$^]$(RESET) to $(GREEN)[$(addprefix ~/.,$(^F))]$(RESET)"
-	@$(foreach df, $(^F), ln -hfs $(CURDIR)/git/$(df) ~/.$(df);)
+	@$(foreach df, $(^F), ln -nfs $(CURDIR)/git/$(df) ~/.$(df);)
 
 gituser:
 	# Set up user Git configuration

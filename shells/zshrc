@@ -49,7 +49,7 @@ GIT_PROMPT="/usr/local/etc/bash_completion.d/git-prompt.sh"
 [[ -f "$GIT_PROMPT" ]] && source "$GIT_PROMPT"
 ### Enable Homebrew completion
 if hash brew 2>/dev/null; then
-  ln -hfs "`brew --repository`/Library/Contributions/brew_zsh_completion.zsh" /usr/local/share/zsh/site-functions/_brew
+  ln -nfs "`brew --repository`/Library/Contributions/brew_zsh_completion.zsh" /usr/local/share/zsh/site-functions/_brew
 fi
 
 ### Enable tab completions
