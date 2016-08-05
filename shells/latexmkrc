@@ -1,5 +1,24 @@
 # latexmk Initialization File
-# http://users.phys.psu.edu/~collins/software/latexmk-jcc/latexmk-443a.txt
+# http://users.phys.psu.edu/~collins/software/latexmk-jcc/latexmk-444.txt
+
+# $clean_ext [""]
+#               Extra extensions of files for latexmk to remove when any of  the
+#               clean-up  options  (-c  or  -C)  is selected.  The value of this
+#               variable is a string  containing  the  extensions  separated  by
+#               spaces.
+
+#               It is also possible to specify a more general pattern of file to
+#               be deleted, by using the place holder %R, as in commands, and it
+#               is also possible to use wildcards.  Thus setting
+
+#                  $clean_ext = "out %R-blx.bib %R-figures*.log";
+
+#               in an initialization file will imply that when a clean-up opera-
+#               tion is specified,  not  only  is  the  standard  set  of  files
+#               deleted,  but  also  files of the form FOO.out, FOO-blx.bib, and
+#               %R-figures*.log, where FOO stands for the basename of  the  file
+#               being processed (as in FOO.tex).
+$clean_ext = '%R.synctex.gz';
 
 # $pdf_mode [0]
 #               If zero, do NOT generate a pdf  version  of  the  document.   If
@@ -9,7 +28,7 @@
 #               able.  If equal to 3, generate a pdf  version  of  the  document
 #               from the dvi file, by using the command specified by the $dvipdf
 #               variable.
-#
+
 #               Equivalent to the -pdf-, -pdf, -pdfdvi, -pdfps options.
 $pdf_mode = 1;
 
@@ -20,18 +39,15 @@ $pdflatex = 'pdflatex -synctex=1 %O %S';
 
 # $pdf_previewer ["start acroread %O %S"]
 #               The command to invoke a pdf-previewer.
-#
+
 #               On  MS-WINDOWS,  the  default  is  changed to "cmd /c start """;
 #               under more recent versions of Windows, this will cause to be run
 #               whatever command the system has associated with .pdf files.  But
 #               this may be undesirable if this association is  to  acroread  --
 #               see the notes in the explanation of the -pvc option.]
-#
+
 #               On  OS-X  the  default is changed to "open %S", which results in
 #               OS-X starting up (and detaching) the viewer associated with  the
 #               file.   By  default, for pdf files this association is to OS-X's
 #               preview, which is quite satisfactory.
-$pdf_previewer = "open -a Skim.app";
-
-# Extra file extensions to clean when latexmk -c or latexmk -C is used
-$clean_ext = '%R.synctex.gz';
+$pdf_previewer = 'open -a Skim.app';
