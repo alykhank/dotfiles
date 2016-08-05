@@ -2,7 +2,7 @@
 	statusHints = false
 [alias]
 	amend = commit --amend
-	b = branch
+	branches = branch --all
 	churn = "!f() { git log --all -M -C --name-only --format='format:' \"$@\" | sort | grep -v '^$' | uniq -c | sort | awk 'BEGIN {print \"count\tfile\"} {print $1 \"\t\" $2}'; }; f"
 	ci = commit
 	civ = commit --verbose
@@ -12,9 +12,9 @@
 	graph = log --graph --decorate --oneline
 	ls-ignored = ls-files --others --ignored --exclude-standard
 	pretty = "log --graph --pretty=\"tformat:%C(yellow)%h%Creset %Cgreen(%ar)%Creset %C(bold blue)<%an>%Creset %C(red)%d%Creset %s\""
-	remote = remote --verbose
+	remotes = remote --verbose
 	s = status --short --branch
-	sl = stash list
+	stashes = stash list
 	sp = stash pop
 	unstage = reset HEAD
 [branch]
