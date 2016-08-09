@@ -2,9 +2,6 @@
 tap 'caskroom/cask'
 tap 'caskroom/fonts'
 
-# Args
-cask_args appdir: '/Applications'
-
 # Formulas
 brew 'ack'
 brew 'ccat'

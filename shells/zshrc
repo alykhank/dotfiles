@@ -40,7 +40,6 @@ bindkey '^W' vi-backward-kill-word
 export PATH="/usr/local/bin:$PATH"
 export CLICOLOR=1
 export EDITOR="vim"
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 # }}}
 
 # Tab Completion {{{
