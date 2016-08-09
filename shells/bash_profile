@@ -39,11 +39,6 @@ GIT_PROMPT="/usr/local/etc/bash_completion.d/git-prompt.sh"
 ### Enable Hub Bash completion
 HUB_COMPLETION="/usr/local/etc/bash_completion.d/hub.bash_completion.sh"
 [[ -f "$HUB_COMPLETION" ]] && source "$HUB_COMPLETION"
-### Enable Homebrew Bash completion
-if hash brew 2>/dev/null; then
-  BREW_COMPLETION="`brew --repository`/Library/Contributions/brew_bash_completion.sh"
-  [[ -f "$BREW_COMPLETION" ]] && source "$BREW_COMPLETION"
-fi
 # }}}
 
 # Prompt {{{
