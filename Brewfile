@@ -37,3 +37,9 @@ cask 'qlmarkdown'
 cask 'quicklook-json'
 cask 'skim'
 cask 'spectacle'
+
+# Mac App Store
+mas '1Password', id: 443987910
+mas 'Slack', id: 803453959
+mas 'Twitter', id: 409789998
+mas 'Xcode', id: 497799835
