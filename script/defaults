@@ -23,7 +23,7 @@ global_write AppleKeyboardUIMode -int 3
 # Keyboard > Keyboard > Delay Until Repeat: Short
 global_write InitialKeyRepeat -int 25
 # Keyboard > Keyboard > Key Repeat: Fast
-global_write KeyRepeat -int 0
+global_write KeyRepeat -int 1
 # Ask to keep changes when closing documents
 global_write NSCloseAlwaysConfirmsChanges -bool TRUE
 # Close windows when quitting an app
@@ -49,7 +49,7 @@ write $d AutoOpenSafeDownloads -bool FALSE
 # Advanced > Smart Search Field: Show full website address
 write $d ShowFullURLInSmartSearchField -bool TRUE
 # View > Show Status Bar
-write $d ShowStatusBar -bool TRUE
+write $d ShowOverlayStatusBar -bool TRUE
 
 
 # Dock
