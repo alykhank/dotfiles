@@ -45,7 +45,7 @@ vimcompletion: vim
 	@echo "Install prerequisites for $(BLUE)$@$(RESET) via Homebrew"
 	@brew install cmake
 	# Install YouCompleteMe with --clang-completer option
-	@~/.vim/bundle/YouCompleteMe/install.sh --clang-completer
+	@~/.vim/bundle/YouCompleteMe/install.py --clang-completer
 
 git: basics gitdotfiles gituser
 	@echo "Install prerequisites for $(BLUE)$@$(RESET) via Homebrew"
