@@ -37,7 +37,6 @@ bindkey '^W' vi-backward-kill-word
 # }}}
 
 # Exports {{{
-export PATH="/usr/local/bin:$PATH"
 export CLICOLOR=1
 export EDITOR="vim"
 # }}}
