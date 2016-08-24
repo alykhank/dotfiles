@@ -44,7 +44,6 @@ Plugin 'airblade/vim-gitgutter' " Show diff symbols in gutter
 
 " Status Line {{{
 Plugin 'bling/vim-airline'      " Supercharged statusline
-let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 " }}}
 
@@ -101,6 +100,7 @@ set synmaxcol=200               " Limit syntax highlighting by column number
 " }}}
 
 " Colorscheme {{{
+colorscheme industry
 set background=dark             " Set default background colour
 nnoremap <silent> <leader>b :let &background = ( &background ==? "dark" ? "light" : "dark" )<CR>
 if exists('+colorcolumn')

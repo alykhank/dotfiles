@@ -27,7 +27,6 @@ zsh:
 vim: basics vimvundle vimdotfiles vimplugins
 	@echo "Install prerequisites for $(BLUE)$@$(RESET) via Homebrew"
 	@brew install ctags vim
-	@brew cask install caskroom/fonts/font-dejavu-sans-mono-for-powerline
 
 vimvundle:
 	# Install Vundle.vim plugin manager if nonexistent

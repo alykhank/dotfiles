@@ -42,7 +42,7 @@ vim/:
   vimrc               => ~/.vimrc
 ```
 
-- Installs latest [Vim](http://www.vim.org), [Vundle.vim](https://github.com/gmarik/Vundle.vim) plugin manager, all Vim plugins in `~/.vimrc`, [Exuberant Ctags](http://ctags.sourceforge.net), and [DejaVu Sans Mono for Powerline](https://github.com/powerline/fonts/tree/master/DejaVuSansMono) (a patched font for symbols on the statusline)
+- Installs latest [Vim](http://www.vim.org), [Vundle.vim](https://github.com/gmarik/Vundle.vim) plugin manager, all Vim plugins in `~/.vimrc`, and [Exuberant Ctags](http://ctags.sourceforge.net)
 
 ### Git
 
