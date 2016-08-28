@@ -3,7 +3,6 @@ tap 'caskroom/cask'
 tap 'caskroom/fonts'
 
 # Formulas
-brew 'ack'
 brew 'ccat'
 brew 'cmake'
 brew 'colordiff'
@@ -20,6 +19,7 @@ brew 'pandoc'
 brew 'python'
 brew 'python3'
 brew 'ruby'
+brew 'the_silver_searcher'
 brew 'tree'
 brew 'vim'
 

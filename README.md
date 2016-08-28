@@ -21,7 +21,6 @@ Once `make` has completed, please close your shell and open a new instance.
 
 ```
 shells/:
-  ackrc               => ~/.ackrc
   bash_profile        => ~/.bash_profile
   gemrc               => ~/.gemrc
   inputrc             => ~/.inputrc
