@@ -1,6 +1,5 @@
 # Taps
 tap 'caskroom/cask'
-tap 'caskroom/fonts'
 
 # Formulas
 brew 'ccat'
@@ -14,7 +13,6 @@ brew 'ghi'
 brew 'git'
 brew 'hub'
 brew 'jq'
-brew 'node'
 brew 'pandoc'
 brew 'python'
 brew 'python3'
@@ -24,7 +22,6 @@ brew 'tree'
 brew 'vim'
 
 # Casks
-cask 'atom'
 cask 'basictex'
 cask 'beardedspice'
 cask 'crashplan'
