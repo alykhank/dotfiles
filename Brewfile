@@ -39,6 +39,7 @@ cask 'wmail'
 # Mac App Store
 mas '1Password', id: 443987910
 mas 'Amphetamine', id: 937984704
+mas 'feedly', id: 865500966
 mas 'FreeChat for Facebook Messenger', id: 1077753332
 mas 'Pixelmator', id: 407963104
 mas 'Slack', id: 803453959
