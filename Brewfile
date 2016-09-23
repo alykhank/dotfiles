@@ -29,6 +29,7 @@ cask 'dropbox'
 cask 'flux'
 cask 'google-chrome'
 cask 'google-play-music-desktop-player'
+cask 'macdown'
 cask 'qlmarkdown'
 cask 'quicklook-json'
 cask 'rescuetime'
@@ -44,6 +45,5 @@ mas 'FreeChat for Facebook Messenger', id: 1077753332
 mas 'Pixelmator', id: 407963104
 mas 'Slack', id: 803453959
 mas 'Twitter', id: 409789998
-mas 'Writed', id: 973510001
 mas 'Wunderlist', id: 410628904
 mas 'Xcode', id: 497799835
