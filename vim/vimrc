@@ -25,13 +25,14 @@ Plugin 'gmarik/Vundle.vim'      " Plugin manager
 
 " Core Improvements {{{
 Plugin 'tpope/vim-commentary'   " Comment lines with 'gcc'
-Plugin 'tpope/vim-repeat'       " Repeat actions with '.'
-Plugin 'tpope/vim-surround'     " Surround text with tags using 'ys{motion}'
-Plugin 'vim-scripts/IndexedSearch' " Number search results
-Plugin 'vim-scripts/matchit.zip' " Navigate between matching tags with '%'
-Plugin 'jiangmiao/auto-pairs'   " Automatically close braces, parens, and quotes
-Plugin 'docunext/closetag.vim'  " HTML/XML tags will close automatically with '</'
 Plugin 'tpope/vim-endwise'      " Automatically close blocks
+Plugin 'tpope/vim-repeat'       " Repeat actions with '.'
+Plugin 'tpope/vim-speeddating'  " Increment dates and times with ^A/^X
+Plugin 'tpope/vim-surround'     " Surround text with tags using 'ys{motion}'
+Plugin 'tpope/vim-unimpaired'   " Pairs of handy bracket mappings
+Plugin 'vim-scripts/matchit.zip' " Navigate between matching tags with '%'
+Plugin 'henrik/vim-indexed-search' " Number search results
+Plugin 'docunext/closetag.vim'  " HTML/XML tags will close automatically with '</'
 Plugin 'editorconfig/editorconfig-vim' " Automatically adhere to project editor configurations
 let g:EditorConfig_exclude_patterns = ['fugitive://.*'] " Play nice with vim-fugitive
 " }}}
