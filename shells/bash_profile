@@ -82,7 +82,13 @@ function test_exit() {
 }
 
 # Display path, git info, and prompt character
-PROMPT_COMMAND='color=$(test_exit); __git_ps1 "$(get_virtualenv)$color\w$c_clear" " $color\$$c_clear "'
+PROMPT_COMMAND='color=$(test_exit);
+__git_ps1 "$(get_virtualenv)\
+$c_yellow(\A)$c_clear \
+$c_red\u$c_clear \
+at $c_green\h$c_clear \
+in $c_blue\w$c_clear" "
+$color\$$c_clear "'
 # }}}
 
 # Aliases {{{
