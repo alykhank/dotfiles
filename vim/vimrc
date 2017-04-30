@@ -119,7 +119,8 @@ set encoding=utf-8              " Set encoding to UTF-8
 set showcmd                     " Display incomplete commands
 set noshowmode                  " Hide default mode indicator
 set laststatus=2                " Always display status line
-set number                      " Show line numbers
+set number                      " Show current line number
+set relativenumber              " Show relative distance to surrounding lines
 set ruler                       " Show the current row and column
 set display+=lastline           " Display as much as possible of long lines
 set scrolloff=10                " Scroll frame when close to top or bottom
