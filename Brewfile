@@ -16,8 +16,8 @@ brew 'jq'
 brew 'pandoc'
 brew 'python'
 brew 'python3'
+brew 'ripgrep'
 brew 'ruby'
-brew 'the_silver_searcher'
 brew 'tree'
 brew 'vim'
 
@@ -26,7 +26,6 @@ cask 'basictex'
 cask 'beardedspice'
 cask 'crashplan'
 cask 'dropbox'
-cask 'flux'
 cask 'google-chrome'
 cask 'google-play-music-desktop-player'
 cask 'macdown'
@@ -44,6 +43,5 @@ mas 'feedly', id: 865500966
 mas 'FreeChat for Facebook Messenger', id: 1077753332
 mas 'Pixelmator', id: 407963104
 mas 'Slack', id: 803453959
-mas 'Twitter', id: 409789998
 mas 'Wunderlist', id: 410628904
 mas 'Xcode', id: 497799835
