@@ -27,14 +27,12 @@ cask 'beardedspice'
 cask 'crashplan'
 cask 'dropbox'
 cask 'google-chrome'
-cask 'google-play-music-desktop-player'
 cask 'macdown'
 cask 'qlmarkdown'
 cask 'quicklook-json'
 cask 'rescuetime'
 cask 'skim'
 cask 'spectacle'
-cask 'wmail'
 
 # Mac App Store
 mas '1Password', id: 443987910
