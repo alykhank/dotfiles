@@ -23,7 +23,6 @@ brew 'vim'
 
 # Casks
 cask 'basictex'
-cask 'beardedspice'
 cask 'crashplan'
 cask 'dropbox'
 cask 'google-chrome'
