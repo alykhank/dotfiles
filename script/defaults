@@ -14,10 +14,6 @@ function global_write() {
 
 # General
 
-# Use dark menu bar and Dock
-global_write AppleInterfaceStyle -string Dark
-# Automatically hide and show the menu bar
-global_write _HIHideMenuBar -bool TRUE
 # Keyboard > Shortcuts > Full Keyboard Access: All controls
 global_write AppleKeyboardUIMode -int 2
 # Keyboard > Keyboard > Delay Until Repeat: Short
