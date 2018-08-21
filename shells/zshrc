@@ -146,7 +146,7 @@ alias g='git'
 hash hub 2>/dev/null && eval "$(hub alias -s)"
 
 ### Launch iOS Simulator
-SIMULATOR='/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/'
+SIMULATOR="$(xcode-select -p)/Applications/Simulator.app/"
 alias ios='open "$SIMULATOR"'
 
 ### Pretty print JSON
