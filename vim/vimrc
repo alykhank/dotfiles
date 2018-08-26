@@ -55,7 +55,6 @@ Plugin 'othree/html5.vim'       " HTML5 runtime files
 Plugin 'Glench/Vim-Jinja2-Syntax' " Jinja2 runtime files
 Plugin 'tpope/vim-liquid'       " Liquid runtime files
 Plugin 'Keithbsmiley/swift.vim' " Swift runtime files
-Plugin 'kchmck/vim-coffee-script' " CoffeeScript runtime files
 Plugin 'ap/vim-css-color'       " Highlight colors in CSS files
 Plugin 'lervag/vimtex'          " LaTeX runtime files
 let g:tex_flavor = "latex"      " Use LaTeX instead of plain TeX
@@ -64,9 +63,6 @@ let g:vimtex_view_general_viewer
 let g:vimtex_view_general_options = '-r @line @pdf'
 " Open Skim.app in the background with the corresponding line in the PDF highlighted
 noremap <leader>lr :silent !displayline -b -g <C-r>=line('.')<CR> <C-r>=expand('%:r')<CR>.pdf<CR><C-l>
-Plugin 'solarnz/thrift.vim'     " Apache Thrift runtime files
-Plugin 'vim-scripts/groovy.vim' " Groovy runtime files
-Plugin 'tfnico/vim-gradle'      " Recognize .gradle files as Groovy
 " }}}
 
 " Ctags {{{
