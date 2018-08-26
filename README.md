@@ -58,12 +58,12 @@ git/:
 ## Custom Terminal Profiles
 
 ```bash
-open profiles/Solarized\ Dark.terminal
+open profiles/Afterglow.terminal
 ```
 
 Next, either change the value of "Preferences > General > On startup, open:" to "New window with profile:" or set up your Terminal windows as you wish and select "Window > Save Windows as Group…" while ensuring that you check "Use window group when Terminal starts".
 
-A light variant, Solarized Light, is also included. The underlying color themes for these profiles may be found at [osx-terminal.app-colors-solarized](https://github.com/tomislav/osx-terminal.app-colors-solarized).
+The underlying color themes for these profiles may be found at [macos-terminal-themes](https://github.com/lysyi3m/macos-terminal-themes).
 
 ## Autocomplete in Vim
 
