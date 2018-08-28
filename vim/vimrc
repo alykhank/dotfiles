@@ -45,7 +45,7 @@ Plugin 'airblade/vim-gitgutter' " Show diff symbols in gutter
 " }}}
 
 " Status Line {{{
-Plugin 'bling/vim-airline'      " Supercharged statusline
+Plugin 'vim-airline/vim-airline' " Supercharged statusline
 let g:airline#extensions#tabline#enabled = 1
 " }}}
 
