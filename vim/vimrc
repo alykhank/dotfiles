@@ -39,6 +39,7 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*'] " Play nice with vim-fug
 
 " VCS {{{
 Plugin 'tpope/vim-fugitive'     " Git integration
+Plugin 'tpope/vim-rhubarb'      " GitHub integration
 Plugin 'tommcdo/vim-fugitive-blame-ext' " Show commit message subject lines in :Gblame view
 Plugin 'airblade/vim-gitgutter' " Show diff symbols in gutter
 " }}}
