@@ -11,6 +11,7 @@
 	dc = diff --cached
 	graph = log --graph --decorate --oneline
 	ls-ignored = ls-files --others --ignored --exclude-standard
+	po = push --set-upstream origin HEAD
 	pretty = "log --graph --pretty=\"tformat:%C(yellow)%h%Creset %Cgreen(%ar)%Creset %C(bold blue)<%an>%Creset %C(red)%d%Creset %s\""
 	remotes = remote --verbose
 	s = status --short --branch
