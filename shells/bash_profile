@@ -113,8 +113,8 @@ alias untarz='tar -xvzf'
 ### Alias cat to [ccat](https://github.com/jingweno/ccat)
 hash ccat 2>/dev/null && alias cat='ccat'
 
-### Alias find to [ffind](https://github.com/sjl/friendly-find)
-hash ffind 2>/dev/null && alias find='ffind -S'
+### Alias find to [fd](https://github.com/sharkdp/fd)
+hash fd 2>/dev/null && alias find='fd'
 
 ### Alias diff to [colordiff](http://www.colordiff.org)
 hash colordiff 2>/dev/null && alias diff='colordiff'
