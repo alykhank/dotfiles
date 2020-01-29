@@ -19,6 +19,7 @@ brew 'vim'
 
 # Casks
 cask 'dropbox'
+cask 'github'
 cask 'macdown'
 cask 'qlmarkdown'
 cask 'quicklook-json'
