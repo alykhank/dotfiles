@@ -26,7 +26,7 @@ cask 'rescuetime'
 cask 'spectacle'
 
 # Mac App Store
-mas '1Password', id: 443987910
+mas '1Password', id: 1333542190
 mas 'Amphetamine', id: 937984704
 mas 'Ka-Block!', id: 1335413823
 mas 'Keynote', id: 409183694
