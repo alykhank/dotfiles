@@ -107,11 +107,13 @@ precmd() {
   print -Pn "\e]2;%~\a"
   __git_ps1 "$c_yellow(%T)%f $c_red%B%n%b%f at $c_green%B%m%b%f in $c_blue%B%~%b%f" "
 $(get_virtualenv)%(?.$c_blue.$c_red%S)%#%s%f "
-  local battery_current=$(ioreg -rc AppleSmartBattery | sed -En 's/.*"CurrentCapacity" = ([0-9]+)/\1/p')
-  local battery_max=$(ioreg -rc AppleSmartBattery | sed -En 's/.*"MaxCapacity" = ([0-9]+)/\1/p')
-  local filled=$((((10*battery_current+battery_max-1)/battery_max)))
-  local empty=$(((10-filled)))
-  RPROMPT="$c_green${(r:filled::▸:)}${(r:empty::▹:)}%f"
+  if [[ -n "$(ioreg -rc AppleSmartBattery)" ]]; then
+    local battery_current=$(ioreg -rc AppleSmartBattery | sed -En 's/.*"CurrentCapacity" = ([0-9]+)/\1/p')
+    local battery_max=$(ioreg -rc AppleSmartBattery | sed -En 's/.*"MaxCapacity" = ([0-9]+)/\1/p')
+    local filled=$((((10*battery_current+battery_max-1)/battery_max)))
+    local empty=$(((10-filled)))
+    RPROMPT="$c_green${(r:filled::▸:)}${(r:empty::▹:)}%f"
+  fi
 }
 # }}}
 
