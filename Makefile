@@ -6,7 +6,7 @@ RED := \033[0;31m
 GREEN := \033[0;32m
 BLUE := \033[0;34m
 
-.PHONY: all basics shells zsh vim vimvundle vimdotfiles vimplugins vimcompletion git gitdotfiles gituser brewbundle osx linux uninstall
+.PHONY: all basics shells vim vimvundle vimdotfiles vimplugins vimcompletion git gitdotfiles gituser brewbundle osx linux uninstall
 
 all: basics shells vim git
 
@@ -19,10 +19,6 @@ basics:
 shells: $(wildcard shells/*)
 	@echo "Symlink $(GREEN)[$^]$(RESET) to $(GREEN)[$(addprefix ~/.,$(^F))]$(RESET)"
 	@$(foreach df, $(^F), ln -nfs $(CURDIR)/shells/$(df) ~/.$(df);)
-
-zsh:
-	@echo "Change default shell to $(BLUE)$@$(RESET)"
-	@chsh -s /bin/zsh
 
 vim: basics vimvundle vimdotfiles vimplugins
 	@echo "Install prerequisites for $(BLUE)$@$(RESET) via Homebrew"
