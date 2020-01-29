@@ -2,7 +2,7 @@
 tap 'homebrew/cask'
 
 # Formulas
-brew 'ccat'
+brew 'bat'
 brew 'cmake'
 brew 'colordiff'
 brew 'ctags'

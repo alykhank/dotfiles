@@ -130,8 +130,8 @@ alias ctarz='tar -cvzf'
 alias untar='tar -xvf'
 alias untarz='tar -xvzf'
 
-### Alias cat to [ccat](https://github.com/jingweno/ccat)
-hash ccat 2>/dev/null && alias cat='ccat'
+### Alias cat to [bat](https://github.com/sharkdp/bat)
+hash bat 2>/dev/null && alias cat='bat'
 
 ### Alias find to [fd](https://github.com/sharkdp/fd)
 hash fd 2>/dev/null && alias find='fd'
