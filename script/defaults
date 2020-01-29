@@ -29,23 +29,10 @@ global_write NSQuitAlwaysKeepsWindows -bool TRUE
 # Trackpad
 d='com.apple.AppleMultitouchTrackpad'
 
-# Point & Click > Look up & data detectors
-write $d TrackpadThreeFingerTapGesture -int 2
 # Point & Click > Tap to click
 write $d Clicking -bool TRUE
 # More Gestures > App Exposé
 write 'com.apple.dock' showAppExposeGestureEnabled -bool TRUE
-
-
-# Safari
-d='com.apple.Safari'
-
-# General > Open "safe" files after downloading
-write $d AutoOpenSafeDownloads -bool FALSE
-# Advanced > Smart Search Field: Show full website address
-write $d ShowFullURLInSmartSearchField -bool TRUE
-# View > Show Status Bar
-write $d ShowOverlayStatusBar -bool TRUE
 
 
 # Dock
