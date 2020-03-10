@@ -23,7 +23,6 @@ cask 'github'
 cask 'macdown'
 cask 'qlmarkdown'
 cask 'quicklook-json'
-cask 'rescuetime'
 cask 'spectacle'
 
 # Mac App Store
