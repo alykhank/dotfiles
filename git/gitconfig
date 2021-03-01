@@ -27,11 +27,18 @@
 	excludesfile = ~/.gitignore_global
 [credential]
 	helper = osxkeychain
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
 [ghi]
 	token = !security find-internet-password -a alykhank -s github.com -l 'ghi token' -w
 [hub]
 	protocol = https
 [include]
 	path = ~/.gitconfig_user
+[pull]
+	rebase = true
 [push]
 	default = simple
