@@ -22,7 +22,6 @@ Once `make` has completed, please close your shell and open a new instance.
 ```
 shells/:
   gemrc               => ~/.gemrc
-  inputrc             => ~/.inputrc
   latexmkrc           => ~/.latexmkrc
   zshrc               => ~/.zshrc
 ```
