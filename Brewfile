@@ -1,5 +1,6 @@
 # Taps
 tap 'homebrew/cask'
+tap 'homebrew/cask-fonts'
 
 # Formulas
 brew 'bat'
@@ -22,6 +23,7 @@ brew 'vim'
 # Casks
 cask 'dropbox'
 cask 'github'
+cask 'font-jetbrains-mono'
 cask 'macdown'
 cask 'qlmarkdown'
 cask 'quicklook-json'
