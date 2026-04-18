@@ -7,7 +7,7 @@
 ## Install
 
 ```bash
-make [basics | shells | vim | git]
+make [basics | shells | vim | git | brewbundle]
 ```
 Once `make` has completed, please close your shell and open a new instance.
 
@@ -38,7 +38,7 @@ vim/:
   vimrc               => ~/.vimrc
 ```
 
-- Installs latest [Vim](http://www.vim.org), [Vundle.vim](https://github.com/gmarik/Vundle.vim) plugin manager, all Vim plugins in `~/.vimrc`, and [Exuberant Ctags](http://ctags.sourceforge.net)
+- Installs latest [Vim](http://www.vim.org), [vim-plug](https://github.com/junegunn/vim-plug) plugin manager, all Vim plugins in `~/.vimrc`, and [Exuberant Ctags](http://ctags.sourceforge.net)
 
 ### Git
 
@@ -51,6 +51,10 @@ git/:
 ```
 
 - Installs latest [Git](http://git-scm.com) and prompts you to complete `~/.gitconfig_user`
+
+### Brewbundle
+
+- Installs all formulae, casks, taps, and Mac App Store apps specified in `Brewfile`
 
 ## Custom Terminal Profiles
 
