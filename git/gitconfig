@@ -1,7 +1,7 @@
 [advice]
 	statusHints = false
 [alias]
-	amend = commit --amend
+	amend = commit --amend --no-edit
 	branches = branch --all
 	churn = "!f() { git log --all -M -C --name-only --format='format:' \"$@\" | sort | grep -v '^$' | uniq -c | sort | awk 'BEGIN {print \"count\tfile\"} {print $1 \"\t\" $2}'; }; f"
 	ci = commit
@@ -13,6 +13,7 @@
 	ls-ignored = ls-files --others --ignored --exclude-standard
 	po = push --set-upstream origin HEAD
 	pretty = "log --graph --pretty=\"tformat:%C(yellow)%h%Creset %Cgreen(%ar)%Creset %C(bold blue)<%an>%Creset %C(red)%d%Creset %s\""
+	pushf = push --force-with-lease --force-if-includes
 	remotes = remote --verbose
 	s = status --short --branch
 	stashes = stash list
@@ -36,7 +37,10 @@
 	token = !security find-internet-password -a alykhank -s github.com -l 'ghi token' -w
 [include]
 	path = ~/.gitconfig_user
+[init]
+	defaultBranch = main
 [pull]
 	rebase = true
 [push]
 	default = simple
+	autoSetupRemote = true
