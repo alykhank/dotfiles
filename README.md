@@ -1,6 +1,6 @@
 # dotfiles
 
-[Zsh](http://www.zsh.org), [Vim](http://www.vim.org), and [Git](http://git-scm.com) dotfiles.
+[Zsh](https://www.zsh.org), [Vim](https://www.vim.org), and [Git](https://git-scm.com) dotfiles.
 
 ![Vim screenshot](img/vim.png)
 
@@ -13,7 +13,7 @@ Once `make` has completed, please close your shell and open a new instance.
 
 ### Basics
 
-- Installs Xcode Command Line Tools and [Homebrew](http://brew.sh)
+- Installs Xcode Command Line Tools and [Homebrew](https://brew.sh)
 
 ### Shells
 
@@ -38,7 +38,7 @@ vim/:
   vimrc               => ~/.vimrc
 ```
 
-- Installs latest [Vim](http://www.vim.org), [vim-plug](https://github.com/junegunn/vim-plug) plugin manager, all Vim plugins in `~/.vimrc`, and [Exuberant Ctags](http://ctags.sourceforge.net)
+- Installs latest [Vim](https://www.vim.org), [vim-plug](https://github.com/junegunn/vim-plug) plugin manager, all Vim plugins in `~/.vimrc`, and [Exuberant Ctags](https://ctags.sourceforge.net)
 
 ### Git
 
@@ -50,7 +50,7 @@ git/:
   gitignore_global    => ~/.gitignore_global
 ```
 
-- Installs latest [Git](http://git-scm.com) and prompts you to complete `~/.gitconfig_user`
+- Installs latest [Git](https://git-scm.com) and prompts you to complete `~/.gitconfig_user`
 
 ### Brewbundle
 
@@ -72,7 +72,7 @@ The underlying color themes for these profiles may be found at [macos-terminal-t
 make vimcompletion
 ```
 
-- Installs [CMake](http://www.cmake.org) and [YouCompleteMe](http://valloric.github.io/YouCompleteMe/)
+- Installs [CMake](https://cmake.org) and [YouCompleteMe](http://ycm-core.github.io/YouCompleteMe/)
 
 ## Install Homebrew Formulas
 
