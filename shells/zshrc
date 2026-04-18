@@ -145,9 +145,6 @@ hash colordiff 2>/dev/null && alias diff='colordiff'
 ### Create shorthand for git
 alias g='git'
 
-### Alias git to [hub](https://hub.github.com)
-hash hub 2>/dev/null && eval "$(hub alias -s)"
-
 ### Launch iOS Simulator
 SIMULATOR="$(xcode-select -p)/Applications/Simulator.app/"
 alias ios='open "$SIMULATOR"'

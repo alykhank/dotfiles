@@ -34,8 +34,6 @@
 	required = true
 [ghi]
 	token = !security find-internet-password -a alykhank -s github.com -l 'ghi token' -w
-[hub]
-	protocol = https
 [include]
 	path = ~/.gitconfig_user
 [pull]
