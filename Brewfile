@@ -14,16 +14,18 @@ brew 'git'
 brew 'git-lfs'
 brew 'jq'
 brew 'mas'
+brew 'node'
 brew 'python'
 brew 'ripgrep'
 brew 'ruby'
 brew 'tree'
+brew 'uv'
 brew 'vim'
 
 # Casks
 cask 'dropbox'
 cask 'github'
-cask 'font-jetbrains-mono'
+cask 'font-sf-mono-nerd-font-ligaturized'
 cask 'macdown'
 cask 'qlmarkdown'
 cask 'quicklook-json'
@@ -33,19 +35,16 @@ cask 'rectangle'
 mas '1Password', id: 1333542190
 mas 'Amphetamine', id: 937984704
 mas 'DaisyDisk', id: 411643860
+mas 'Developer', id: 640199958
+mas 'Flighty', id: 1358823008
 mas 'Hush', id: 1544743900
 mas 'Ka-Block!', id: 1335413823
-mas 'Keynote', id: 409183694
-mas 'Messenger', id: 1480068668
-mas 'Numbers', id: 409203825
-mas 'Parcel', id: 639968404
-mas 'Pages', id: 409201541
-mas 'Pixelmator', id: 407963104
-mas 'Reeder', id: 1449412482
+mas 'Keynote', id: 361285480
+mas 'Numbers', id: 361304891
+mas 'Pages', id: 361309726
+mas 'Parcel 2', id: 375589283
 mas 'Scenecuts', id: 1540491573
 mas 'Screens', id: 446107677
 mas 'Slack', id: 803453959
 mas 'TripIt', id: 1475712010
-mas 'Twitter', id: 1482454543
 mas 'WhatsApp', id: 1147396723
-mas 'Xcode', id: 497799835
