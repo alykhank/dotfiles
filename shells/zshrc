@@ -37,17 +37,18 @@ bindkey '^W' vi-backward-kill-word
 # }}}
 
 # Exports {{{
+export PATH="/opt/homebrew/bin:$PATH"
 export CLICOLOR=1
 export EDITOR="vim"
 # }}}
 
 # Tab Completion {{{
 ### Enable Git prompt
-GIT_PROMPT="/usr/local/etc/bash_completion.d/git-prompt.sh"
+GIT_PROMPT="/opt/homebrew/etc/bash_completion.d/git-prompt.sh"
 [[ -f "$GIT_PROMPT" ]] && source "$GIT_PROMPT"
 
 ### Enable tab completions
-fpath=(/usr/local/share/zsh/site-functions $fpath)
+fpath=(/opt/homebrew/share/zsh/site-functions $fpath)
 autoload -Uz compinit && compinit
 ### Allow case-insensitive completion
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
