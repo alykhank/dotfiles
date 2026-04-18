@@ -1,12 +1,12 @@
-HOMEBREW_INSTALL_SCRIPT := /usr/bin/ruby -e "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-VUNDLE_URL := https://github.com/gmarik/Vundle.vim.git
-VUNDLE_PATH := $(CURDIR)/vim/vim/bundle/Vundle.vim
+HOMEBREW_INSTALL_SCRIPT := /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+VIM_PLUG_PATH := ~/.vim/autoload/plug.vim
+VIM_PLUG_INSTALLATION := curl -fLo $(VIM_PLUG_PATH) --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 RESET := \033[0m
 RED := \033[0;31m
 GREEN := \033[0;32m
 BLUE := \033[0;34m
 
-.PHONY: all basics shells vim vimvundle vimdotfiles vimplugins vimcompletion git gitdotfiles gituser brewbundle osx linux uninstall
+.PHONY: all basics shells vim vimplug vimdotfiles vimplugins vimcompletion git gitdotfiles gituser brewbundle osx linux uninstall
 
 all: basics shells vim git
 
@@ -20,21 +20,21 @@ shells: $(wildcard shells/*)
 	@echo "Symlink $(GREEN)[$^]$(RESET) to $(GREEN)[$(addprefix ~/.,$(^F))]$(RESET)"
 	@$(foreach df, $(^F), ln -nfs $(CURDIR)/shells/$(df) ~/.$(df);)
 
-vim: basics vimvundle vimdotfiles vimplugins
+vim: basics vimplug vimdotfiles vimplugins
 	@echo "Install prerequisites for $(BLUE)$@$(RESET) via Homebrew"
 	@brew install ctags vim
 
-vimvundle:
-	# Install Vundle.vim plugin manager if nonexistent
-	@[[ -d $(VUNDLE_PATH) ]] || git clone $(VUNDLE_URL) $(VUNDLE_PATH)
+vimplug:
+	# Install vim-plug plugin manager if nonexistent
+	@[[ -f $(VIM_PLUG_PATH) ]] || $(VIM_PLUG_INSTALLATION)
 
 vimdotfiles: $(wildcard vim/*)
 	@echo "Symlink $(GREEN)[$^]$(RESET) to $(GREEN)[$(addprefix ~/.,$(^F))]$(RESET)"
 	@$(foreach df, $(^F), ln -nfs $(CURDIR)/vim/$(df) ~/.$(df);)
 
-vimplugins: vimvundle vimdotfiles
+vimplugins: vimplug vimdotfiles
 	# Install Vim plugins
-	@vim +PluginInstall +qall
+	@vim +PlugInstall +qall
 
 vimcompletion: vim
 	@echo "Install prerequisites for $(BLUE)$@$(RESET) via Homebrew"
@@ -62,7 +62,7 @@ osx:
 	# Configure OS X
 	@$(CURDIR)/script/defaults
 
-linux: shells vimvundle vimdotfiles vimplugins gitdotfiles gituser
+linux: shells vimplug vimdotfiles vimplugins gitdotfiles gituser
 	@echo "Set up minimal configuration for Linux environment"
 
 uninstall: $(wildcard shells/*) $(wildcard vim/*) $(wildcard git/*)

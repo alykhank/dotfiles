@@ -1,5 +1,6 @@
 # Vim
 .netrwhist
+vim/vim/autoload/
 vim/vim/bundle/
 vim/vim/spell/*.spl
 vim/vim/tmp/

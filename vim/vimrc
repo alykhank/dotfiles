@@ -14,47 +14,41 @@ let maplocalleader = "\\"       " Map local leader key
 " }}}
 
 " Plugins {{{
-" Vundle {{{
-filetype off                    " required
-" set the runtime path to include Vundle and initialize
-set runtimepath+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'      " Plugin manager
+call plug#begin('~/.vim/bundle')
 " }}}
 
 " Core Improvements {{{
-Plugin 'tpope/vim-commentary'   " Comment lines with 'gcc'
-Plugin 'tpope/vim-endwise'      " Automatically close blocks
-Plugin 'tpope/vim-repeat'       " Repeat actions with '.'
-Plugin 'tpope/vim-speeddating'  " Increment dates and times with ^A/^X
-Plugin 'tpope/vim-surround'     " Surround text with tags using 'ys{motion}'
-Plugin 'tpope/vim-unimpaired'   " Pairs of handy bracket mappings
-Plugin 'vim-scripts/matchit.zip' " Navigate between matching tags with '%'
-Plugin 'henrik/vim-indexed-search' " Number search results
-Plugin 'docunext/closetag.vim'  " HTML/XML tags will close automatically with '</'
-Plugin 'editorconfig/editorconfig-vim' " Automatically adhere to project editor configurations
+Plug 'tpope/vim-commentary'   " Comment lines with 'gcc'
+Plug 'tpope/vim-endwise'      " Automatically close blocks
+Plug 'tpope/vim-repeat'       " Repeat actions with '.'
+Plug 'tpope/vim-speeddating'  " Increment dates and times with ^A/^X
+Plug 'tpope/vim-surround'     " Surround text with tags using 'ys{motion}'
+Plug 'tpope/vim-unimpaired'   " Pairs of handy bracket mappings
+Plug 'vim-scripts/matchit.zip' " Navigate between matching tags with '%'
+Plug 'henrik/vim-indexed-search' " Number search results
+Plug 'docunext/closetag.vim'  " HTML/XML tags will close automatically with '</'
+Plug 'editorconfig/editorconfig-vim' " Automatically adhere to project editor configurations
 let g:EditorConfig_exclude_patterns = ['fugitive://.*'] " Play nice with vim-fugitive
 " }}}
 
 " VCS {{{
-Plugin 'tpope/vim-fugitive'     " Git integration
-Plugin 'tpope/vim-rhubarb'      " GitHub integration
-Plugin 'tommcdo/vim-fugitive-blame-ext' " Show commit message subject lines in :Gblame view
-Plugin 'airblade/vim-gitgutter' " Show diff symbols in gutter
+Plug 'tpope/vim-fugitive'     " Git integration
+Plug 'tpope/vim-rhubarb'      " GitHub integration
+Plug 'tommcdo/vim-fugitive-blame-ext' " Show commit message subject lines in :Gblame view
+Plug 'airblade/vim-gitgutter' " Show diff symbols in gutter
 " }}}
 
 " Status Line {{{
-Plugin 'vim-airline/vim-airline' " Supercharged statusline
+Plug 'vim-airline/vim-airline' " Supercharged statusline
 let g:airline#extensions#tabline#enabled = 1
 " }}}
 
 " Language Support {{{
-Plugin 'w0rp/ale'               " Asynchronous linting/fixing
-Plugin 'sheerun/vim-polyglot'   " Collection of language packs
-Plugin 'Glench/Vim-Jinja2-Syntax' " Jinja2 runtime files
-Plugin 'ap/vim-css-color'       " Highlight colors in CSS files
-Plugin 'lervag/vimtex'          " LaTeX runtime files
+Plug 'w0rp/ale'               " Asynchronous linting/fixing
+Plug 'sheerun/vim-polyglot'   " Collection of language packs
+Plug 'Glench/Vim-Jinja2-Syntax' " Jinja2 runtime files
+Plug 'ap/vim-css-color'       " Highlight colors in CSS files
+Plug 'lervag/vimtex'          " LaTeX runtime files
 let g:tex_flavor = "latex"      " Use LaTeX instead of plain TeX
 let g:vimtex_view_general_viewer
     \ = '/Applications/Skim.app/Contents/SharedSupport/displayline'
@@ -64,28 +58,27 @@ noremap <leader>lr :silent !displayline -b -g <C-r>=line('.')<CR> <C-r>=expand('
 " }}}
 
 " Ctags {{{
-Plugin 'majutsushi/tagbar'      " Interface for browsing and navigating tags
-Plugin 'xolox/vim-easytags'     " Update ctags on save
-Plugin 'xolox/vim-misc'         " Required for vim-easytags
+Plug 'majutsushi/tagbar'      " Interface for browsing and navigating tags
+Plug 'xolox/vim-easytags'     " Update ctags on save
+Plug 'xolox/vim-misc'         " Required for vim-easytags
 " }}}
 
 " Autocomplete {{{
-Plugin 'Valloric/YouCompleteMe' " Autocomplete for most programming languages
+Plug 'ycm-core/YouCompleteMe' " Autocomplete for most programming languages
 " }}}
 
 " Snippets {{{
-Plugin 'SirVer/ultisnips'       " Provide user-editable snippets via triggers
+Plug 'SirVer/ultisnips'       " Provide user-editable snippets via triggers
 let g:UltiSnipsExpandTrigger="<C-j>"
 " }}}
 
 " Search {{{
-Plugin 'ctrlpvim/ctrlp.vim'     " Search through files, recently used, buffers
+Plug 'ctrlpvim/ctrlp.vim'     " Search through files, recently used, buffers
 let g:ctrlp_extensions = ['tag', 'buffertag'] " Also search through tags
 " }}}
 
 " All of your Plugins must be added before the following line
-call vundle#end()               " required
-filetype plugin indent on       " required
+call plug#end()                 " required
 " }}}
 
 " Syntax {{{
